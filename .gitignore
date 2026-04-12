@@ -3,4 +3,13 @@ venv/
 __pycache__/
 *.pyc
 .env
-db.sqlite3º
+db.sqlite3
+
+# mac
+.DS_Store
+
+# pycharm
+.idea/
+
+# media files
+config/media/
