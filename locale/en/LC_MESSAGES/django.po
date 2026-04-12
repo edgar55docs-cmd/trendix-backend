@@ -1,0 +1,72 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+
+msgid "User not found"
+msgstr "User not found"
+
+msgid "Invalid password"
+msgstr "Invalid password"
+
+msgid "User already exists"
+msgstr "User already exists"
+
+msgid "Phone is required"
+msgstr "Phone is required"
+
+msgid "OTP sent successfully"
+msgstr "OTP sent successfully"
+
+msgid "Phone and code are required"
+msgstr "Phone and code are required"
+
+msgid "OTP not found"
+msgstr "OTP not found"
+
+msgid "Verified successfully"
+msgstr "Verified successfully"
+
+msgid "Invalid code"
+msgstr "Invalid code"
+
+msgid "Code expired"
+msgstr "Code expired"
+
+msgid "Invalid data"
+msgstr "Invalid data"
+
+msgid "Email required"
+msgstr "Email required"
+
+msgid "Wait before requesting again"
+msgstr "Please wait before requesting another code"
+
+msgid "No token"
+msgstr "No token provided"
+
+msgid "No token provided"
+msgstr "No token provided"
+
+msgid "Invalid client ID"
+msgstr "Invalid client ID"
+
+msgid "No google id"
+msgstr "No Google ID"
+
+msgid "Invalid token"
+msgstr "Invalid token"
+
+msgid "No user id"
+msgstr "No user ID"
+
+msgid "Empty search query"
+msgstr "Empty search query"
+
+msgid "No username"
+msgstr "No username provided"
+
+msgid "No name"
+msgstr "No name provided"

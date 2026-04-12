@@ -1,0 +1,57 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-01 16:40+0400\n"
+"PO-Revision-Date: 2026-04-01 16:45+0400\n"
+"Last-Translator: Edgar <youremail@gmail.com>\n"
+"Language-Team: Russian\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
+"(n%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: apps/users/constants.py:3
+msgid "User not found"
+msgstr "Пользователь не найден"
+
+#: apps/users/constants.py:4
+msgid "Invalid password"
+msgstr "Неверный пароль"
+
+#: apps/users/constants.py:5
+msgid "User already exists"
+msgstr "Пользователь уже существует"
+
+#: apps/users/views.py:26
+msgid "Phone is required"
+msgstr "Требуется номер телефона"
+
+#: apps/users/views.py:35
+msgid "OTP sent successfully"
+msgstr "Код успешно отправлен"
+
+#: apps/users/views.py:44
+msgid "Phone and code are required"
+msgstr "Требуются номер телефона и код"
+
+#: apps/users/views.py:49
+msgid "OTP not found"
+msgstr "Код не найден"
+
+#: apps/users/views.py:54
+msgid "Verified successfully"
+msgstr "Успешно подтверждено"
+
+#: apps/users/views.py:56
+msgid "Invalid code"
+msgstr "Неверный код"
+
+msgid "No user id"
+msgstr "ID пользователя отсутствует"
+
+msgid "Empty search query"
+msgstr "Поисковый запрос пуст"
