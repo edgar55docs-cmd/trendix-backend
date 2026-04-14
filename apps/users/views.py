@@ -501,11 +501,30 @@ def verify_code(request):
 @api_view(['POST'])
 @permission_classes([AllowAny])
 def logs(request):
-    print("\n📱📱📱 LOG START 📱📱📱")
+
+    RESET = "\033[0m"
+    RED = "\033[91m"
+    YELLOW = "\033[93m"
+    GREEN = "\033[92m"
+    CYAN = "\033[96m"
+
+    event = request.data.get("event", "")
+    step = request.data.get("step", "")
+
+    if "error" in event or "fail" in step:
+        color = RED
+    elif "tap" in event or "pressed" in step:
+        color = YELLOW
+    elif "success" in event:
+        color = GREEN
+    else:
+        color = CYAN
+
+    print(f"\n{color}📱 LOG START{RESET}")
 
     for key, value in request.data.items():
-        print(f"{key}: {value}")
+        print(f"{color}{key}: {value}{RESET}")
 
-    print("📱📱📱 LOG END 📱📱📱\n")
+    print(f"{color}📱 LOG END{RESET}\n")
 
     return Response({"ok": True})
