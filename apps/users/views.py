@@ -356,12 +356,27 @@ def apple_login(request):
             print("❌ ERROR: No apple_id in token")
             return Response({"error": "No apple_id"}, status=400)
 
+        # 🔥 username ստացում email-ից
+        username = None
+
+        if email:
+            base_username = email.split("@")[0]
+            username = base_username
+
+            # 🔥 unique username սարքել
+            import random
+            while CustomUser.objects.filter(username=username).exists():
+                username = f"{base_username}{random.randint(1000,9999)}"
+
+        print("🟡 Generated username:", username)
+
         print("🔎 Searching or creating user...")
 
         user, created = CustomUser.objects.get_or_create(
             apple_id=apple_id,
             defaults={
                 "email": email,
+                "username": username,
                 "provider": "apple",
                 "is_email_verified": True
             }
@@ -369,9 +384,11 @@ def apple_login(request):
 
         if created:
             print("🆕 NEW USER CREATED:", user.id)
+            print("🆕 USERNAME:", username)
         else:
             print("👤 EXISTING USER:", user.id)
 
+        # 🔥 եթե հին user է ու email չկա → լրացնենք
         if not user.email and email:
             print("✏️ Updating user email...")
             user.email = email
@@ -386,6 +403,7 @@ def apple_login(request):
         response_data = {
             "user_id": user.id,
             "email": user.email,
+            "username": user.username,  # 🔥 ավելացրեցինք
             "access": tokens["access"],
             "refresh": tokens["refresh"]
         }
