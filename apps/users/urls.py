@@ -10,7 +10,7 @@ from .views import (app_start,
                     check_name,
                     send_verification_code,
                     verify_code,
-                    app_log)
+                    logs)
 
 urlpatterns = [
     path("start/", app_start),
@@ -24,5 +24,5 @@ urlpatterns = [
     path("auth/apple/", apple_login),
     path("auth/email/send-code/", send_verification_code),
     path("auth/email/verify-code/", verify_code),
-    path("api/logs/", app_log),
+    path('logs/', logs),
 ]

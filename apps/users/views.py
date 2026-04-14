@@ -1,6 +1,6 @@
 from django.contrib.auth import get_user_model
 from google.oauth2 import id_token
-from google.auth.transport import requests
+from google.auth.transport.requests import Request
 from django.utils.translation import gettext_lazy as _
 from rest_framework.permissions import AllowAny
 import jwt
@@ -14,7 +14,6 @@ from datetime import timedelta
 from django.core.mail import send_mail
 from .models import OTP
 from rest_framework.decorators import api_view, permission_classes
-from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework_simplejwt.tokens import RefreshToken
 
@@ -50,11 +49,12 @@ def google_auth(request):
     try:
         idinfo = None
 
+        # 🔐 verify token բոլոր client-ներով
         for client_id in GOOGLE_CLIENT_IDS:
             try:
                 idinfo = id_token.verify_oauth2_token(
                     token,
-                    requests.Request(),
+                    Request(),
                     client_id
                 )
                 break
@@ -64,38 +64,57 @@ def google_auth(request):
         if not idinfo:
             return Response({"error": _("Invalid token")}, status=400)
 
+        # 📦 տվյալներ Google-ից
         google_id = idinfo.get("sub")
         email = idinfo.get("email")
+        name = idinfo.get("name") or (email.split("@")[0] if email else None)
 
         if not google_id:
             return Response({"error": _("No google id")}, status=400)
 
-        name = idinfo.get("name") or (email.split("@")[0] if email else None)
+        # 🔥 ՀԻՄՆԱԿԱՆ LOGIC
 
-        user, created = User.objects.get_or_create(
-            google_id=google_id,
-            defaults={
-                "email": email,
-                "name": name,
-                "provider": "google",
-                "is_email_verified": True
-            }
-        )
+        user = None
 
-        if not created:
-            updated = False
+        # 1️⃣ փնտրում ենք ըստ EMAIL
+        if email:
+            user = User.objects.filter(email=email).first()
+
+        # 2️⃣ եթե ՉԿԱ → CREATE
+        try:
+            if not user:
+                user = User.objects.create(
+                    email=email,
+                    name=name,
+                    google_id=google_id,
+                    provider="google",
+                    is_email_verified=True
+                )
+                created = True
+            else:
+                created = False
+
+        except Exception:
+            # եթե duplicate եղավ → վերցնում ենք արդեն եղած user-ը
+            user = User.objects.filter(email=email).first()
+            created = False
+
+        # 3️⃣ եթե ԿԱ → UPDATE / LOGIN
+        else:
+            created = False
+
+            if not user.google_id:
+                user.google_id = google_id
 
             if not user.name and name:
                 user.name = name
-                updated = True
 
-            if not user.email and email:
-                user.email = email
-                updated = True
+            user.provider = "google"
+            user.is_email_verified = True
 
-            if updated:
-                user.save()
+            user.save()
 
+        # 🎯 RESPONSE
         return Response({
             "success": True,
             "user_id": user.id,
@@ -108,7 +127,15 @@ def google_auth(request):
     except ValueError:
         return Response({"error": _("Invalid token")}, status=400)
 
+
     except Exception as e:
+
+        import traceback
+
+        print("🔥 GOOGLE ERROR:")
+
+        traceback.print_exc()
+
         return Response({"error": str(e)}, status=500)
 
 @api_view(['POST'])
@@ -297,22 +324,41 @@ def get_tokens_for_user(user):
     }
 
 @api_view(['POST'])
+@permission_classes([AllowAny])
 def apple_login(request):
+    print("\n🍏🍏🍏 APPLE LOGIN START 🍏🍏🍏")
+    print("📥 RAW DATA:", request.data)
+
     token = request.data.get("id_token")
 
     if not token:
+        print("❌ ERROR: No token received")
         return Response({"error": "No token"}, status=400)
 
+    print("🟡 Token received length:", len(token))
+    print("🟡 Token preview:", token[:30], "...")
+
     try:
+        print("🔍 Decoding token...")
+
         decoded = jwt.decode(token, options={"verify_signature": False})
+
+        print("🟢 TOKEN DECODED SUCCESS")
+        print("📦 Decoded payload:", decoded)
 
         apple_id = decoded.get("sub")
         email = decoded.get("email")
 
+        print("🟡 Apple ID:", apple_id)
+        print("🟡 Email:", email)
+
         if not apple_id:
+            print("❌ ERROR: No apple_id in token")
             return Response({"error": "No apple_id"}, status=400)
 
-        user, _ = CustomUser.objects.get_or_create(
+        print("🔎 Searching or creating user...")
+
+        user, created = CustomUser.objects.get_or_create(
             apple_id=apple_id,
             defaults={
                 "email": email,
@@ -321,26 +367,50 @@ def apple_login(request):
             }
         )
 
+        if created:
+            print("🆕 NEW USER CREATED:", user.id)
+        else:
+            print("👤 EXISTING USER:", user.id)
+
         if not user.email and email:
+            print("✏️ Updating user email...")
             user.email = email
             user.save()
 
+        print("🔑 Generating tokens...")
+
         tokens = get_tokens_for_user(user)
 
-        return Response({
+        print("🟢 TOKENS GENERATED")
+
+        response_data = {
             "user_id": user.id,
             "email": user.email,
             "access": tokens["access"],
             "refresh": tokens["refresh"]
-        })
+        }
+
+        print("📤 RESPONSE:", response_data)
+        print("🍏🍏🍏 APPLE LOGIN SUCCESS 🍏🍏🍏\n")
+
+        return Response(response_data)
 
     except Exception as e:
+        print("🔥🔥🔥 APPLE LOGIN ERROR 🔥🔥🔥")
+        print("❌ ERROR:", str(e))
+        print("📛 TYPE:", type(e))
+        print("🍏🍏🍏 END WITH ERROR 🍏🍏🍏\n")
+
         return Response({"error": str(e)}, status=400)
+
 
 @csrf_exempt
 def send_verification_code(request):
-    if request.method == "POST":
 
+    if request.method != "POST":
+        return JsonResponse({"error": "Invalid method"}, status=405)
+
+    try:
         data = json.loads(request.body)
         email = data.get("email")
 
@@ -356,10 +426,7 @@ def send_verification_code(request):
 
         code = str(random.randint(100000, 999999))
 
-        otp = OTP.objects.create(
-            email=email,
-            code=code
-        )
+        OTP.objects.create(email=email, code=code)
 
         send_mail(
             "Trendix Verification Code",
@@ -370,6 +437,10 @@ def send_verification_code(request):
         )
 
         return JsonResponse({"success": True})
+
+    except Exception as e:
+        print("💥 ERROR:", str(e))
+        return JsonResponse({"error": "Server error"}, status=500)
 
 
 @csrf_exempt
@@ -427,21 +498,14 @@ def verify_code(request):
             return JsonResponse({"error": "Invalid code"}, status=400)
 
 
-@csrf_exempt
-def app_log(request):
-    if request.method == "POST":
-        try:
-            data = json.loads(request.body)
+@api_view(['POST'])
+@permission_classes([AllowAny])
+def logs(request):
+    print("\n📱📱📱 LOG START 📱📱📱")
 
-            log = data.get("log")
-            user_id = data.get("user_id")
+    for key, value in request.data.items():
+        print(f"{key}: {value}")
 
-            print("\n📱 APP LOG")
-            print("👤 USER:", user_id)
-            print("📝 LOG:", log)
-            print("----------\n")
+    print("📱📱📱 LOG END 📱📱📱\n")
 
-            return JsonResponse({"success": True})
-
-        except Exception as e:
-            return JsonResponse({"error": str(e)}, status=400)
+    return Response({"ok": True})
