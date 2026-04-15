@@ -27,16 +27,28 @@ GOOGLE_CLIENT_IDS = [
     "256913505653-h6g3uv6vrdrje6qfih25ehbrbu4tm39o.apps.googleusercontent.com"
 ]
 
+def extract_language(request):
+    lang = request.headers.get("Accept-Language", "en")
+
+    lang = lang.split(",")[0]
+    lang = lang.split("-")[0]
+
+    return lang.lower()
+
 @api_view(['GET'])
 @permission_classes([AllowAny])
 def app_start(request):
-    language = request.headers.get("Accept-Language", "en")
+    language = extract_language(request)
 
-    language = language.split(",")[0]
-    language = language.split("-")[0]
+    if request.user.is_authenticated:
+        request.user.language = language
+        request.user.save(update_fields=["language"])
+
+    print(f"🌍 APP START LANGUAGE: {language}")
 
     return Response({
-        "received_language": language
+        "language": language,
+        "is_authenticated": request.user.is_authenticated
     })
 
 @api_view(['POST'])
