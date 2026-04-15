@@ -554,7 +554,10 @@ def logs(request):
     print(f"{color}📱 LOG END{RESET}\n")
     log_lines.append("📱 LOG END\n")
 
-    log_path = os.path.join(os.getcwd(), "app_logs.txt")
+    log_dir = os.path.join(os.getcwd(), "logs")
+    os.makedirs(log_dir, exist_ok=True)
+
+    log_path = os.path.join(log_dir, "app_logs.txt")
 
     try:
         with open(log_path, "a", encoding="utf-8") as f:
