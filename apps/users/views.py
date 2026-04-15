@@ -63,7 +63,6 @@ def google_auth(request):
     try:
         idinfo = None
 
-        # 🔐 verify token բոլոր client-ներով
         for client_id in GOOGLE_CLIENT_IDS:
             try:
                 idinfo = id_token.verify_oauth2_token(
@@ -78,23 +77,25 @@ def google_auth(request):
         if not idinfo:
             return Response({"error": _("Invalid token")}, status=400)
 
-        # 📦 տվյալներ Google-ից
         google_id = idinfo.get("sub")
+
+        language = request.headers.get("Accept-Language", "en")
+        language = language.split(",")[0]
+        language = language.split("-")[0].lower()
+
+        print("🌍 GOOGLE LANG:", language)
         email = idinfo.get("email")
         name = idinfo.get("name") or (email.split("@")[0] if email else None)
 
         if not google_id:
             return Response({"error": _("No google id")}, status=400)
 
-        # 🔥 ՀԻՄՆԱԿԱՆ LOGIC
 
         user = None
 
-        # 1️⃣ փնտրում ենք ըստ EMAIL
         if email:
             user = User.objects.filter(email=email).first()
 
-        # 2️⃣ եթե ՉԿԱ → CREATE
         try:
             if not user:
                 user = User.objects.create(
@@ -102,18 +103,17 @@ def google_auth(request):
                     name=name,
                     google_id=google_id,
                     provider="google",
-                    is_email_verified=True
+                    is_email_verified=True,
+                    language=language
                 )
                 created = True
             else:
                 created = False
 
         except Exception:
-            # եթե duplicate եղավ → վերցնում ենք արդեն եղած user-ը
             user = User.objects.filter(email=email).first()
             created = False
 
-        # 3️⃣ եթե ԿԱ → UPDATE / LOGIN
         else:
             created = False
 
@@ -124,11 +124,11 @@ def google_auth(request):
                 user.name = name
 
             user.provider = "google"
+            user.language = language
             user.is_email_verified = True
 
             user.save()
 
-        # 🎯 RESPONSE
         return Response({
             "success": True,
             "user_id": user.id,
@@ -345,6 +345,12 @@ def apple_login(request):
 
     token = request.data.get("id_token")
 
+    language = request.headers.get("Accept-Language", "en")
+    language = language.split(",")[0]
+    language = language.split("-")[0].lower()
+
+    print("🌍 APPLE LANG:", language)
+
     if not token:
         print("❌ ERROR: No token received")
         return Response({"error": "No token"}, status=400)
@@ -370,14 +376,12 @@ def apple_login(request):
             print("❌ ERROR: No apple_id in token")
             return Response({"error": "No apple_id"}, status=400)
 
-        # 🔥 username ստացում email-ից
         username = None
 
         if email:
             base_username = email.split("@")[0]
             username = base_username
 
-            # 🔥 unique username սարքել
             import random
             while CustomUser.objects.filter(username=username).exists():
                 username = f"{base_username}{random.randint(1000,9999)}"
@@ -392,7 +396,8 @@ def apple_login(request):
                 "email": email,
                 "username": username,
                 "provider": "apple",
-                "is_email_verified": True
+                "is_email_verified": True,
+                "language": language
             }
         )
 
@@ -402,11 +407,13 @@ def apple_login(request):
         else:
             print("👤 EXISTING USER:", user.id)
 
-        # 🔥 եթե հին user է ու email չկա → լրացնենք
         if not user.email and email:
             print("✏️ Updating user email...")
             user.email = email
             user.save()
+
+        user.language = language
+        user.save(update_fields=["email", "language"] if email else ["language"])
 
         print("🔑 Generating tokens...")
 
@@ -417,7 +424,7 @@ def apple_login(request):
         response_data = {
             "user_id": user.id,
             "email": user.email,
-            "username": user.username,  # 🔥 ավելացրեցինք
+            "username": user.username,
             "access": tokens["access"],
             "refresh": tokens["refresh"]
         }
