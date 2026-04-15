@@ -2,7 +2,6 @@ from django.contrib.auth import get_user_model
 from google.oauth2 import id_token
 from google.auth.transport.requests import Request
 from django.utils.translation import gettext_lazy as _
-from rest_framework.permissions import AllowAny
 import jwt
 from .models import CustomUser
 import json
@@ -13,9 +12,12 @@ from django.utils import timezone
 from datetime import timedelta
 from django.core.mail import send_mail
 from .models import OTP
-from rest_framework.decorators import api_view, permission_classes
-from rest_framework.response import Response
 from rest_framework_simplejwt.tokens import RefreshToken
+from rest_framework.decorators import api_view, permission_classes
+from rest_framework.permissions import AllowAny
+from rest_framework.response import Response
+from datetime import datetime
+import os
 
 User = get_user_model()
 verification_codes = {}
@@ -515,7 +517,6 @@ def verify_code(request):
         except OTP.DoesNotExist:
             return JsonResponse({"error": "Invalid code"}, status=400)
 
-
 @api_view(['POST'])
 @permission_classes([AllowAny])
 def logs(request):
@@ -529,6 +530,7 @@ def logs(request):
     event = request.data.get("event", "")
     step = request.data.get("step", "")
 
+    # 🎨 color logic
     if "error" in event or "fail" in step:
         color = RED
     elif "tap" in event or "pressed" in step:
@@ -538,11 +540,27 @@ def logs(request):
     else:
         color = CYAN
 
-    print(f"\n{color}📱 LOG START{RESET}")
+    now = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S")
+
+    print(f"\n{color}📱 LOG START [{now}]{RESET}")
+
+    log_lines = []
+    log_lines.append(f"\n📱 LOG START [{now}]")
 
     for key, value in request.data.items():
         print(f"{color}{key}: {value}{RESET}")
+        log_lines.append(f"{key}: {value}")
 
     print(f"{color}📱 LOG END{RESET}\n")
+    log_lines.append("📱 LOG END\n")
+
+    log_path = os.path.join(os.getcwd(), "app_logs.txt")
+
+    try:
+        with open(log_path, "a", encoding="utf-8") as f:
+            for line in log_lines:
+                f.write(line + "\n")
+    except Exception as e:
+        print(f"{RED}❌ FILE LOG ERROR: {e}{RESET}")
 
     return Response({"ok": True})
