@@ -18,6 +18,7 @@ from rest_framework.permissions import AllowAny
 from rest_framework.response import Response
 from datetime import datetime
 import os
+from rest_framework.permissions import IsAuthenticated
 
 User = get_user_model()
 verification_codes = {}
@@ -60,7 +61,7 @@ def get_tokens_for_user(user):
 
 
 @api_view(['POST'])
-@permission_classes([AllowAny])
+@permission_classes([IsAuthenticated])
 def google_auth(request):
 
     token = request.data.get("id_token")
@@ -156,21 +157,14 @@ def google_auth(request):
         return Response({"error": str(e)}, status=500)
 
 @api_view(['POST'])
-@permission_classes([AllowAny])
+@permission_classes([IsAuthenticated])
 def setup_profile(request):
+
+    user = request.user
 
     username = request.data.get("username")
     avatar = request.FILES.get("avatar")
     cover = request.FILES.get("cover")
-    user_id = request.data.get("user_id")
-
-    if not user_id:
-        return Response({"error": _("No user id")}, status=400)
-
-    try:
-        user = User.objects.get(id=user_id)
-    except User.DoesNotExist:
-        return Response({"error": _("User not found")}, status=404)
 
     if username:
         user.username = username
@@ -196,18 +190,10 @@ def setup_profile(request):
     })
 
 @api_view(["GET", "PATCH"])
-@permission_classes([AllowAny])
+@permission_classes([IsAuthenticated])
 def me(request):
 
-    user_id = request.headers.get("X-User-Id")
-
-    if not user_id:
-        return Response({"error": _("No user id")}, status=400)
-
-    try:
-        user = User.objects.get(id=user_id)
-    except User.DoesNotExist:
-        return Response({"error": _("User not found")}, status=404)
+    user = request.user
 
     if request.method == "PATCH":
 
