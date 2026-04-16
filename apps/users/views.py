@@ -157,14 +157,21 @@ def google_auth(request):
         return Response({"error": str(e)}, status=500)
 
 @api_view(['POST'])
-@permission_classes([IsAuthenticated])
+@permission_classes([AllowAny])
 def setup_profile(request):
-
-    user = request.user
 
     username = request.data.get("username")
     avatar = request.FILES.get("avatar")
     cover = request.FILES.get("cover")
+    user = request.user
+
+    if not user:
+        return Response({"error": _("No user id")}, status=400)
+
+    try:
+        user = User.objects.get(id=user)
+    except User.DoesNotExist:
+        return Response({"error": _("User not found")}, status=404)
 
     if username:
         user.username = username
@@ -190,10 +197,18 @@ def setup_profile(request):
     })
 
 @api_view(["GET", "PATCH"])
-@permission_classes([IsAuthenticated])
+@permission_classes([AllowAny])
 def me(request):
 
-    user = request.user
+    user_id = request.headers.get("X-User-Id")
+
+    if not user_id:
+        return Response({"error": _("No user id")}, status=400)
+
+    try:
+        user = User.objects.get(id=user_id)
+    except User.DoesNotExist:
+        return Response({"error": _("User not found")}, status=404)
 
     if request.method == "PATCH":
 
