@@ -51,6 +51,14 @@ def app_start(request):
         "is_authenticated": request.user.is_authenticated
     })
 
+def get_tokens_for_user(user):
+    refresh = RefreshToken.for_user(user)
+    return {
+        "access": str(refresh.access_token),
+        "refresh": str(refresh)
+    }
+
+
 @api_view(['POST'])
 @permission_classes([AllowAny])
 def google_auth(request):
@@ -78,42 +86,33 @@ def google_auth(request):
             return Response({"error": _("Invalid token")}, status=400)
 
         google_id = idinfo.get("sub")
-
-        language = request.headers.get("Accept-Language", "en")
-        language = language.split(",")[0]
-        language = language.split("-")[0].lower()
-
-        print("🌍 GOOGLE LANG:", language)
         email = idinfo.get("email")
         name = idinfo.get("name") or (email.split("@")[0] if email else None)
 
         if not google_id:
             return Response({"error": _("No google id")}, status=400)
 
+        language = request.headers.get("Accept-Language", "en")
+        language = language.split(",")[0]
+        language = language.split("-")[0].lower()
+
+        print("🌍 GOOGLE LANG:", language)
 
         user = None
 
         if email:
             user = User.objects.filter(email=email).first()
 
-        try:
-            if not user:
-                user = User.objects.create(
-                    email=email,
-                    name=name,
-                    google_id=google_id,
-                    provider="google",
-                    is_email_verified=True,
-                    language=language
-                )
-                created = True
-            else:
-                created = False
-
-        except Exception:
-            user = User.objects.filter(email=email).first()
-            created = False
-
+        if not user:
+            user = User.objects.create(
+                email=email,
+                name=name,
+                google_id=google_id,
+                provider="google",
+                is_email_verified=True,
+                language=language
+            )
+            created = True
         else:
             created = False
 
@@ -126,8 +125,14 @@ def google_auth(request):
             user.provider = "google"
             user.language = language
             user.is_email_verified = True
-
             user.save()
+
+        tokens = get_tokens_for_user(user)
+
+        print("✅ USER:", user.id)
+        print("🔐 ACCESS:", tokens["access"])
+
+        tokens = get_tokens_for_user(user)
 
         return Response({
             "success": True,
@@ -135,21 +140,19 @@ def google_auth(request):
             "email": user.email,
             "name": user.name,
             "provider": "google",
-            "created": created
+            "created": created,
+
+            "access": tokens["access"],
+            "refresh": tokens["refresh"]
         })
 
     except ValueError:
         return Response({"error": _("Invalid token")}, status=400)
 
-
     except Exception as e:
-
         import traceback
-
         print("🔥 GOOGLE ERROR:")
-
         traceback.print_exc()
-
         return Response({"error": str(e)}, status=500)
 
 @api_view(['POST'])
