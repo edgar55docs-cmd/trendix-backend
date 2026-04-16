@@ -18,7 +18,6 @@ from rest_framework.permissions import AllowAny
 from rest_framework.response import Response
 from datetime import datetime
 import os
-from rest_framework.permissions import IsAuthenticated
 
 User = get_user_model()
 verification_codes = {}
@@ -61,7 +60,7 @@ def get_tokens_for_user(user):
 
 
 @api_view(['POST'])
-@permission_classes([IsAuthenticated])
+@permission_classes([AllowAny])
 def google_auth(request):
 
     token = request.data.get("id_token")
