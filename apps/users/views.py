@@ -167,11 +167,6 @@ def setup_profile(request):
     if not user:
         return Response({"error": _("No user id")}, status=400)
 
-    try:
-        user = User.objects.get(id=user)
-    except User.DoesNotExist:
-        return Response({"error": _("User not found")}, status=404)
-
     if username:
         user.username = username
 
