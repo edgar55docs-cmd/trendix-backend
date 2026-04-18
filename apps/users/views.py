@@ -84,16 +84,23 @@ def register(request):
             status=400
         )
 
-    final_name = generate_name(email, name)
-
     try:
+        base_name = generate_name(email, name)
+
+        username = base_name
+        counter = 1
+
+        while User.objects.filter(username=username).exists():
+            username = f"{base_name}{counter}"
+            counter += 1
+
         user = User.objects.create_user(
             email=email,
             password=password,
-            name=final_name
+            username=username,
+            name=base_name
         )
 
-        user.username = final_name
         user.provider = "email"
         user.save()
 
@@ -105,7 +112,8 @@ def register(request):
         })
 
     except Exception as e:
-        print("❌ REGISTER ERROR:", e)
+        print("❌ REGISTER ERROR:", str(e))
+
         return Response(
             {"error": "Something went wrong"},
             status=500

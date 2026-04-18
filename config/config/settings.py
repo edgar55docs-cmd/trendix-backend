@@ -6,10 +6,12 @@ from dotenv import load_dotenv
 # BASE
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-# ENV
-load_dotenv(BASE_DIR.parent / ".env")
-
 ENV = os.getenv("ENV", "dev")
+env_file = ".env" if ENV == "prod" else ".env.dev"
+load_dotenv(BASE_DIR.parent / env_file)
+
+print("🔥 ENV:", ENV)
+print("🔥 USING FILE:", env_file)
 
 SECRET_KEY = os.getenv("SECRET_KEY", "dev-secret")
 
