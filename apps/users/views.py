@@ -64,13 +64,15 @@ def get_tokens_for_user(user):
         "refresh": str(refresh)
     }
 
-
 @api_view(['POST'])
 @permission_classes([AllowAny])
 def register(request):
     email = request.data.get("email")
     password = request.data.get("password")
     name = request.data.get("name")
+
+    # 👇 ԱՅՍ ԱՎԵԼԱՑՐՈՒ
+    language = request.data.get("language") or extract_language(request)
 
     if not email or not password:
         return Response(
@@ -98,7 +100,8 @@ def register(request):
             email=email,
             password=password,
             username=username,
-            name=base_name
+            name=base_name,
+            language=language   # 👈 ԱՅՍ Է ԿԱՐԵՎՈՐԸ
         )
 
         user.provider = "email"
