@@ -64,6 +64,53 @@ def get_tokens_for_user(user):
         "refresh": str(refresh)
     }
 
+
+@api_view(['POST'])
+@permission_classes([AllowAny])
+def register(request):
+    email = request.data.get("email")
+    password = request.data.get("password")
+    name = request.data.get("name")
+
+    if not email or not password:
+        return Response(
+            {"error": "Email and password are required"},
+            status=400
+        )
+
+    if User.objects.filter(email=email).exists():
+        return Response(
+            {"error": "User already exists"},
+            status=400
+        )
+
+    final_name = generate_name(email, name)
+
+    try:
+        user = User.objects.create_user(
+            email=email,
+            password=password,
+            name=final_name
+        )
+
+        user.username = final_name
+        user.provider = "email"
+        user.save()
+
+        tokens = get_tokens_for_user(user)
+
+        return Response({
+            "access": tokens["access"],
+            "refresh": tokens["refresh"]
+        })
+
+    except Exception as e:
+        print("❌ REGISTER ERROR:", e)
+        return Response(
+            {"error": "Something went wrong"},
+            status=500
+        )
+
 @api_view(['POST'])
 @permission_classes([AllowAny])
 def logs(request):
