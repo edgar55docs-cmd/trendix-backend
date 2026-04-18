@@ -3,23 +3,42 @@ from django.db import models
 import random
 
 class CustomUser(AbstractUser):
-    username = models.CharField(max_length=150, blank=True, null=True)
+    username = models.CharField(
+        max_length=150,
+        unique=True,
+        null=True,
+        blank=True
+    )
+
     email = models.EmailField(unique=True)
 
     language = models.CharField(max_length=5, default='en')
+
     name = models.CharField(max_length=255, null=True, blank=True)
+
     avatar = models.ImageField(upload_to="avatars/", null=True, blank=True)
     cover = models.ImageField(upload_to="covers/", null=True, blank=True)
 
     is_email_verified = models.BooleanField(default=False)
 
-    google_id = models.CharField(max_length=255, null=True, blank=True, unique=True)
-    apple_id = models.CharField(max_length=255, null=True, blank=True)
+    google_id = models.CharField(
+        max_length=255,
+        null=True,
+        blank=True,
+        unique=True
+    )
+
+    apple_id = models.CharField(
+        max_length=255,
+        null=True,
+        blank=True,
+        unique=True
+    )
+
     provider = models.CharField(max_length=20, default="email")
 
     created_at = models.DateTimeField(auto_now_add=True)
 
-    # 🔥 LOGIN EMAIL-ով
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = []
 
@@ -28,7 +47,7 @@ class CustomUser(AbstractUser):
 
 
 class OTP(models.Model):
-    email = models.EmailField(null=True, blank=True)
+    email = models.EmailField()
     code = models.CharField(max_length=6)
 
     created_at = models.DateTimeField(auto_now_add=True)

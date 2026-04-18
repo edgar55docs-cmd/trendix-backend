@@ -36,6 +36,11 @@ def extract_language(request):
 
     return lang.lower()
 
+def generate_name(email, name=None):
+    if name:
+        return name.strip()
+    return email.split("@")[0]
+
 @api_view(['POST'])
 @permission_classes([AllowAny])
 def app_start(request):
