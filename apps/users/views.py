@@ -5,6 +5,7 @@ from django.utils.translation import gettext_lazy as _
 import jwt
 from .models import CustomUser
 import json
+from rest_framework.permissions import IsAuthenticated
 import random
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
@@ -58,15 +59,13 @@ def get_tokens_for_user(user):
         "refresh": str(refresh)
     }
 
-
 @api_view(['POST'])
 @permission_classes([AllowAny])
 def google_auth(request):
-
     token = request.data.get("id_token")
 
     if not token:
-        return Response({"error": _("No token provided")}, status=400)
+        return Response({"error": "No token provided"}, status=400)
 
     try:
         idinfo = None
@@ -83,22 +82,20 @@ def google_auth(request):
                 continue
 
         if not idinfo:
-            return Response({"error": _("Invalid token")}, status=400)
+            return Response({"error": "Invalid token"}, status=400)
 
         google_id = idinfo.get("sub")
         email = idinfo.get("email")
-        name = idinfo.get("name") or (email.split("@")[0] if email else None)
+        name = idinfo.get("name") or (email.split("@")[0] if email else "")
 
         if not google_id:
-            return Response({"error": _("No google id")}, status=400)
+            return Response({"error": "No google id"}, status=400)
 
         language = request.headers.get("Accept-Language", "en")
-        language = language.split(",")[0]
-        language = language.split("-")[0].lower()
-
-        print("🌍 GOOGLE LANG:", language)
+        language = language.split(",")[0].split("-")[0].lower()
 
         user = None
+        created = False
 
         if email:
             user = User.objects.filter(email=email).first()
@@ -114,8 +111,6 @@ def google_auth(request):
             )
             created = True
         else:
-            created = False
-
             if not user.google_id:
                 user.google_id = google_id
 
@@ -129,34 +124,29 @@ def google_auth(request):
 
         tokens = get_tokens_for_user(user)
 
-        print("✅ USER:", user.id)
-        print("🔐 ACCESS:", tokens["access"])
-
-        tokens = get_tokens_for_user(user)
-
         return Response({
-            "success": True,
-            "user_id": user.id,
-            "email": user.email,
-            "name": user.name,
-            "provider": "google",
-            "created": created,
-
             "access": tokens["access"],
-            "refresh": tokens["refresh"]
+            "refresh": tokens["refresh"],
+            "is_new": created,
+
+            "user": {
+                "id": user.id,
+                "email": user.email,
+                "name": user.name,
+                "username": user.username,
+                "avatar": request.build_absolute_uri(user.avatar.url) if user.avatar else None,
+                "cover": request.build_absolute_uri(user.cover.url) if user.cover else None,
+            }
         })
 
-    except ValueError:
-        return Response({"error": _("Invalid token")}, status=400)
-
     except Exception as e:
-        import traceback
-        print("🔥 GOOGLE ERROR:")
-        traceback.print_exc()
-        return Response({"error": str(e)}, status=500)
+        return Response({
+            "error": "Server error",
+            "details": str(e)
+        }, status=500)
 
 @api_view(['POST'])
-@permission_classes([AllowAny])
+@permission_classes([IsAuthenticated])
 def setup_profile(request):
 
     username = request.data.get("username")
@@ -190,43 +180,22 @@ def setup_profile(request):
         "email": user.email
     })
 
-@api_view(["GET", "PATCH"])
-@permission_classes([AllowAny])
+@api_view(["GET"])
+@permission_classes([IsAuthenticated])
 def me(request):
 
-    user_id = request.headers.get("X-User-Id")
+    user = request.user
 
-    if not user_id:
-        return Response({"error": _("No user id")}, status=400)
-
-    try:
-        user = User.objects.get(id=user_id)
-    except User.DoesNotExist:
-        return Response({"error": _("User not found")}, status=404)
-
-    if request.method == "PATCH":
-
-        name = request.data.get("name")
-        username = request.data.get("username")
-
-        if name is not None:
-            user.name = name
-
-        if username is not None:
-            user.username = username
-
-        user.save()
+    print("👤 USER:", user)
+    print("👤 ID:", user.id)
+    print("👤 AUTH:", user.is_authenticated)
 
     return Response({
         "id": user.id,
         "name": user.name,
         "username": user.username,
-        "avatar": request.build_absolute_uri(
-            user.avatar.url
-        ) if user.avatar else None,
-        "cover": request.build_absolute_uri(
-            user.cover.url
-        ) if user.cover else None,
+        "avatar": request.build_absolute_uri(user.avatar.url) if user.avatar else None,
+        "cover": request.build_absolute_uri(user.cover.url) if user.cover else None,
         "email": user.email
     })
 
