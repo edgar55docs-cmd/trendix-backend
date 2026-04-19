@@ -8,7 +8,6 @@ urlpatterns = [
     path('api/users/', include('apps.users.urls'))
 ]
 
-# ✅ MEDIA (avatars, covers)
 urlpatterns += static(
     settings.MEDIA_URL,
     document_root=settings.MEDIA_ROOT

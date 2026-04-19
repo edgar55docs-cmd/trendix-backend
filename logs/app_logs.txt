@@ -1,0 +1,109 @@
+
+📱 LOG START [2026-04-19 10:43:03]
+app_version: 1.0
+step: screen_visible
+build: 20
+screen: welcome
+timestamp: 2026-04-19T10:43:02Z
+device: arm64
+user_id: guest
+ios: 26.2
+event: welcome_opened
+📱 LOG END
+
+
+📱 LOG START [2026-04-19 10:43:03]
+step: pressed
+user_id: guest
+timestamp: 2026-04-19T10:43:03Z
+ios: 26.2
+app_version: 1.0
+build: 20
+device: arm64
+event: welcome_get_started_tap
+📱 LOG END
+
+
+📱 LOG START [2026-04-19 10:43:06]
+ios: 26.2
+user_id: guest
+step: pressed
+build: 20
+app_version: 1.0
+event: google_button_tap
+device: arm64
+timestamp: 2026-04-19T10:43:06Z
+📱 LOG END
+
+
+📱 LOG START [2026-04-19 10:43:06]
+ios: 26.2
+user_id: guest
+step: init
+build: 20
+app_version: 1.0
+event: google_start
+device: arm64
+timestamp: 2026-04-19T10:43:06Z
+📱 LOG END
+
+
+📱 LOG START [2026-04-19 10:43:15]
+app_version: 1.0
+step: token_ok
+timestamp: 2026-04-19T10:43:15Z
+device: arm64
+user_id: guest
+ios: 26.2
+build: 20
+event: google_token_received
+📱 LOG END
+
+
+📱 LOG START [2026-04-19 10:43:15]
+ios: 26.2
+device: arm64
+user_id: guest
+event: api_request
+step: /users/auth/google/
+timestamp: 2026-04-19T10:43:15Z
+app_version: 1.0
+build: 20
+📱 LOG END
+
+
+📱 LOG START [2026-04-19 10:43:16]
+ios: 26.2
+user_id: guest
+step: /users/auth/google/
+build: 20
+app_version: 1.0
+event: api_success
+device: arm64
+timestamp: 2026-04-19T10:43:16Z
+📱 LOG END
+
+
+📱 LOG START [2026-04-19 10:43:16]
+device: arm64
+user_id: guest
+build: 20
+timestamp: 2026-04-19T10:43:16Z
+app_version: 1.0
+event: google_backend_success
+ios: 26.2
+step: completed
+📱 LOG END
+
+
+📱 LOG START [2026-04-19 10:43:16]
+event: google_login_success
+step: completed
+user_id: guest
+ios: 26.2
+build: 20
+timestamp: 2026-04-19T10:43:16Z
+device: arm64
+app_version: 1.0
+📱 LOG END
+

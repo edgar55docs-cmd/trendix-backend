@@ -3,6 +3,7 @@ from google.oauth2 import id_token
 from google.auth.transport.requests import Request
 from django.utils.translation import gettext_lazy as _
 import jwt
+import re
 from .models import CustomUser
 import json
 from rest_framework.permissions import IsAuthenticated
@@ -71,7 +72,6 @@ def register(request):
     password = request.data.get("password")
     name = request.data.get("name")
 
-    # 👇 ԱՅՍ ԱՎԵԼԱՑՐՈՒ
     language = request.data.get("language") or extract_language(request)
 
     if not email or not password:
@@ -101,7 +101,7 @@ def register(request):
             password=password,
             username=username,
             name=base_name,
-            language=language   # 👈 ԱՅՍ Է ԿԱՐԵՎՈՐԸ
+            language=language
         )
 
         user.provider = "email"
@@ -121,6 +121,117 @@ def register(request):
             {"error": "Something went wrong"},
             status=500
         )
+
+
+@api_view(['POST'])
+@permission_classes([AllowAny])
+def google_auth(request):
+
+    token = request.data.get("id_token")
+
+    if not token:
+        return Response({"error": _("No token provided")}, status=400)
+
+    try:
+        idinfo = None
+
+        for client_id in GOOGLE_CLIENT_IDS:
+            try:
+                idinfo = id_token.verify_oauth2_token(
+                    token,
+                    Request(),
+                    client_id
+                )
+                break
+            except ValueError:
+                continue
+
+        if not idinfo:
+            return Response({"error": _("Invalid token")}, status=400)
+
+        google_id = idinfo.get("sub")
+        email = idinfo.get("email")
+
+        if not email:
+            return Response({"error": _("Email not found")}, status=400)
+
+        raw_name = email.split("@")[0]
+        name = re.sub(r'[^a-zA-Z0-9_]', '', raw_name).lower()
+
+        if not name:
+            name = "user"
+
+        user, created = User.objects.get_or_create(
+            email=email,
+            defaults={
+                "name": name,
+                "provider": "google",
+                "google_id": google_id,
+            }
+        )
+        if not created:
+            if not user.google_id:
+                user.google_id = google_id
+                user.save()
+
+        tokens = get_tokens_for_user(user)
+
+        return Response({
+            "access": tokens["access"],
+            "refresh": tokens["refresh"]
+        })
+
+    except Exception as e:
+        print("❌ GOOGLE AUTH ERROR:", str(e))
+        return Response({"error": _("Something went wrong")}, status=500)
+
+
+@api_view(['POST'])
+@permission_classes([AllowAny])
+def apple_auth(request):
+    token = request.data.get("id_token")
+
+    if not token:
+        return Response({"error": _("No token provided")}, status=400)
+
+    try:
+        decoded = jwt.decode(token, options={"verify_signature": False})
+
+        apple_id = decoded.get("sub")
+        email = decoded.get("email")
+
+        if not email:
+            return Response({"error": _("Email not found")}, status=400)
+
+        raw_name = email.split("@")[0]
+        name = re.sub(r'[^a-zA-Z0-9_]', '', raw_name).lower()
+
+        if not name:
+            name = "user"
+
+        user, created = User.objects.get_or_create(
+            email=email,
+            defaults={
+                "name": name,
+                "provider": "apple",
+                "apple_id": apple_id,
+            }
+        )
+        if not created:
+            if not user.apple_id:
+                user.apple_id = apple_id
+                user.save()
+
+        tokens = get_tokens_for_user(user)
+
+        return Response({
+            "access": tokens["access"],
+            "refresh": tokens["refresh"]
+        })
+
+    except Exception as e:
+        print("❌ APPLE AUTH ERROR:", str(e))
+        return Response({"error": _("Something went wrong")}, status=500)
 
 @api_view(['POST'])
 @permission_classes([AllowAny])
