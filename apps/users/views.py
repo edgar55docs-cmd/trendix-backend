@@ -4,6 +4,7 @@ from google.auth.transport.requests import Request
 from django.utils.translation import gettext_lazy as _
 import jwt
 import re
+import requests
 from .models import CustomUser
 import json
 from rest_framework.permissions import IsAuthenticated
@@ -264,6 +265,7 @@ def verify_code(request):
 
     return Response({"success": True})
 
+
 @api_view(['POST'])
 @permission_classes([AllowAny])
 def send_code(request):
@@ -281,15 +283,27 @@ def send_code(request):
 
     print("📩 OTP:", code)
 
-    send_mail(
-        subject="Verification Code",
-        message=f"Your code is: {code}",
-        from_email=settings.EMAIL_HOST_USER,
-        recipient_list=[email],
-        fail_silently=False,
-    )
+    send_verification_email(email, code)
 
     return Response({"message": "Code sent"})
+
+def send_verification_email(email, code):
+    response = requests.post(
+        "https://api.resend.com/emails",
+        headers={
+            "Authorization": f"Bearer {os.getenv('RESEND_API_KEY')}",
+            "Content-Type": "application/json",
+        },
+        json={
+            "from": "noreply@trendix.app",
+            "to": [email],
+            "subject": "Verification Code",
+            "html": f"<h2>Your code is: {code}</h2>"
+        }
+    )
+
+    print("📨 RESEND STATUS:", response.status_code)
+    print("📨 RESPONSE:", response.text)
 
 @api_view(['POST'])
 @permission_classes([AllowAny])
