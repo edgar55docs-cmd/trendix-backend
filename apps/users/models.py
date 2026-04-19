@@ -55,7 +55,9 @@ class OTP(models.Model):
     is_verified = models.BooleanField(default=False)
     attempts = models.IntegerField(default=0)
 
-    def generate_code(self):
+    @staticmethod
+    def generate_code():
+        import random
         return str(random.randint(100000, 999999))
 
     def __str__(self):
