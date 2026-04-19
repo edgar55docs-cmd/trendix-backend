@@ -1,6 +1,8 @@
 from django.contrib.auth.models import AbstractUser
 from django.db import models
 import random
+from django.utils import timezone
+from datetime import timedelta
 
 class CustomUser(AbstractUser):
     username = models.CharField(
@@ -59,6 +61,9 @@ class OTP(models.Model):
     def generate_code():
         import random
         return str(random.randint(100000, 999999))
+
+    def is_expired(self):
+        return timezone.now() > self.created_at + timedelta(minutes=5)
 
     def __str__(self):
         return f"{self.email} - {self.code}"
