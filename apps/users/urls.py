@@ -1,5 +1,11 @@
 from django.urls import path
-from .views import register, app_start, logs, google_auth, apple_auth
+from .views import (register,
+                    app_start,
+                    logs,
+                    google_auth,
+                    apple_auth,
+                    send_code,
+                    verify_code)
 
 urlpatterns = [
 
@@ -8,4 +14,6 @@ urlpatterns = [
     path("logs/", logs),
     path("auth/google/", google_auth),
     path("auth/apple/", apple_auth),
+    path("auth/send-code/", send_code, name="send_code"),
+    path("auth/verify/", verify_code, name="verify_code"),
 ]

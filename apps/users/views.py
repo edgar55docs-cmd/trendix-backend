@@ -20,7 +20,7 @@ from rest_framework.permissions import AllowAny
 from rest_framework.response import Response
 from datetime import datetime
 import os
-
+from config.config.settings import EMAIL_HOST_USER
 User = get_user_model()
 verification_codes = {}
 
@@ -127,7 +127,10 @@ def register(request):
 @permission_classes([AllowAny])
 def google_auth(request):
 
+    language = request.data.get("language", "en")
     token = request.data.get("id_token")
+    print("📥 FULL REQUEST DATA:", request.data)
+    print("🌍 LANGUAGE:", request.data.get("language"))
 
     if not token:
         return Response({"error": _("No token provided")}, status=400)
@@ -167,12 +170,15 @@ def google_auth(request):
                 "name": name,
                 "provider": "google",
                 "google_id": google_id,
+                "language": language,
             }
         )
         if not created:
             if not user.google_id:
                 user.google_id = google_id
-                user.save()
+
+            user.language = language
+            user.save()
 
         tokens = get_tokens_for_user(user)
 
@@ -210,16 +216,16 @@ def apple_auth(request):
             name = "user"
 
         user, created = User.objects.get_or_create(
-            email=email,
+            apple_id=apple_id,
             defaults={
+                "email": email,
                 "name": name,
                 "provider": "apple",
-                "apple_id": apple_id,
             }
         )
         if not created:
-            if not user.apple_id:
-                user.apple_id = apple_id
+            if not user.email and email:
+                user.email = email
                 user.save()
 
         tokens = get_tokens_for_user(user)
@@ -232,6 +238,58 @@ def apple_auth(request):
     except Exception as e:
         print("❌ APPLE AUTH ERROR:", str(e))
         return Response({"error": _("Something went wrong")}, status=500)
+
+
+@api_view(['POST'])
+@permission_classes([AllowAny])
+def verify_code(request):
+    email = request.data.get("email")
+    code = request.data.get("code")
+
+    otp = OTP.objects.filter(email=email).order_by("-created_at").first()
+
+    if not otp:
+        return Response({"error": "Code not found"}, status=400)
+
+    if otp.is_expired():
+        return Response({"error": "Code expired"}, status=400)
+
+    if otp.code != code:
+        otp.attempts += 1
+        otp.save()
+        return Response({"error": "Invalid code"}, status=400)
+
+    otp.is_verified = True
+    otp.save()
+
+    return Response({"success": True})
+
+@api_view(['POST'])
+@permission_classes([AllowAny])
+def send_code(request):
+    email = request.data.get("email")
+
+    if not email:
+        return Response({"error": "Email required"}, status=400)
+
+    code = OTP.generate_code()
+
+    OTP.objects.create(
+        email=email,
+        code=code
+    )
+
+    print("📩 OTP:", code)
+
+    send_mail(
+        subject="Verification Code",
+        message=f"Your code is: {code}",
+        from_email=EMAIL_HOST_USER,
+        recipient_list=[email],
+        fail_silently=False,
+    )
+
+    return Response({"message": "Code sent"})
 
 @api_view(['POST'])
 @permission_classes([AllowAny])
