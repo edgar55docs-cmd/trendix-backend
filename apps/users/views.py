@@ -20,7 +20,7 @@ from rest_framework.permissions import AllowAny
 from rest_framework.response import Response
 from datetime import datetime
 import os
-from config.config.settings import EMAIL_HOST_USER
+from config.config import settings
 User = get_user_model()
 verification_codes = {}
 
@@ -284,7 +284,7 @@ def send_code(request):
     send_mail(
         subject="Verification Code",
         message=f"Your code is: {code}",
-        from_email=EMAIL_HOST_USER,
+        from_email=settings.EMAIL_HOST_USER,
         recipient_list=[email],
         fail_silently=False,
     )
