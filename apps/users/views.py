@@ -5,6 +5,9 @@ from django.utils.translation import gettext_lazy as _
 import jwt
 import re
 import requests
+from rest_framework.decorators import api_view, permission_classes, parser_classes
+from rest_framework.parsers import MultiPartParser, FormParser
+from django.utils.translation import gettext as _
 from .models import CustomUser
 import json
 from rest_framework.permissions import IsAuthenticated
@@ -304,6 +307,72 @@ def send_verification_email(email, code):
 
     print("📨 RESEND STATUS:", response.status_code)
     print("📨 RESPONSE:", response.text)
+
+
+@api_view(['POST'])
+@permission_classes([IsAuthenticated])
+@parser_classes([MultiPartParser, FormParser])
+def setup_profile(request):
+    user = request.user
+
+    username = request.data.get("username")
+    avatar = request.FILES.get("avatar")
+    language = request.data.get("language")
+
+    print("🟡 SETUP PROFILE START")
+    print("👤 USER:", user.id)
+    print("👤 USERNAME:", username)
+
+    if not username:
+        return Response({"error": _("Username is required")}, status=400)
+
+    if len(username) < 5:
+        return Response({"error": _("Username too short")}, status=400)
+
+    if len(username) > 15:
+        return Response({"error": _("Username too long")}, status=400)
+
+    if " " in username:
+        return Response({"error": _("Username must not contain spaces")}, status=400)
+
+    if not re.match(r'^[A-Za-z0-9_]+$', username):
+        return Response({"error": _("Invalid username format")}, status=400)
+
+    if User.objects.filter(username=username).exclude(id=user.id).exists():
+        return Response({"error": _("Username already taken")}, status=400)
+
+    user.username = username
+
+    if avatar:
+        user.avatar = avatar
+
+    if language:
+        user.language = language
+
+    user.save()
+
+    print("🟢 SETUP PROFILE SUCCESS")
+
+    return Response({
+        "success": True,
+        "username": user.username,
+        "avatar": user.avatar.url if user.avatar else None
+    })
+
+@api_view(['GET'])
+@permission_classes([IsAuthenticated])
+def get_me(request):
+    user = request.user
+
+    print("\n🟡 GET ME START")
+    print("👤 USER ID:", user.id)
+    print("📧 EMAIL:", user.email)
+
+    return Response({
+        "id": user.id,
+        "username": user.username,
+        "avatar": user.avatar.url if user.avatar else None
+    })
 
 @api_view(['POST'])
 @permission_classes([AllowAny])

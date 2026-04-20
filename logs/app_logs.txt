@@ -1842,3 +1842,4683 @@ ios: 26.2
 timestamp: 2026-04-19T13:02:42Z
 📱 LOG END
 
+
+📱 LOG START [2026-04-19 17:34:27]
+user_id: guest
+build: 25
+event: welcome_opened
+ios: 26.2
+screen: welcome
+app_version: 1.0
+step: screen_visible
+timestamp: 2026-04-19T17:34:27Z
+device: arm64
+📱 LOG END
+
+
+📱 LOG START [2026-04-19 17:34:30]
+ios: 26.2
+event: welcome_get_started_tap
+user_id: guest
+step: pressed
+build: 25
+timestamp: 2026-04-19T17:34:30Z
+app_version: 1.0
+device: arm64
+📱 LOG END
+
+
+📱 LOG START [2026-04-19 17:40:45]
+step: screen_visible
+ios: 26.2
+event: welcome_opened
+device: arm64
+app_version: 1.0
+build: 25
+timestamp: 2026-04-19T17:40:45Z
+user_id: guest
+screen: welcome
+📱 LOG END
+
+
+📱 LOG START [2026-04-19 17:40:59]
+device: arm64
+app_version: 1.0
+user_id: guest
+step: pressed
+event: welcome_get_started_tap
+ios: 26.2
+build: 25
+timestamp: 2026-04-19T17:40:59Z
+📱 LOG END
+
+
+📱 LOG START [2026-04-19 17:41:28]
+ios: 26.2
+password_length: 12
+timestamp: 2026-04-19T17:41:28Z
+user_id: guest
+build: 25
+event: register_button_tap
+step: pressed
+device: arm64
+app_version: 1.0
+email: Edvhsfgrg@gmail.com
+📱 LOG END
+
+
+📱 LOG START [2026-04-19 17:41:28]
+timestamp: 2026-04-19T17:41:28Z
+user_id: guest
+build: 25
+event: register_api_start
+device: arm64
+app_version: 1.0
+step: auth
+ios: 26.2
+📱 LOG END
+
+
+📱 LOG START [2026-04-19 17:41:28]
+timestamp: 2026-04-19T17:41:28Z
+user_id: guest
+build: 25
+event: api_request
+device: arm64
+app_version: 1.0
+step: /users/auth/register/
+ios: 26.2
+📱 LOG END
+
+
+📱 LOG START [2026-04-19 17:41:29]
+step: /users/auth/register/
+timestamp: 2026-04-19T17:41:29Z
+build: 25
+app_version: 1.0
+ios: 26.2
+device: arm64
+event: api_success
+user_id: guest
+📱 LOG END
+
+
+📱 LOG START [2026-04-19 17:41:29]
+step: auth
+timestamp: 2026-04-19T17:41:29Z
+build: 25
+app_version: 1.0
+ios: 26.2
+device: arm64
+event: register_api_success
+user_id: guest
+📱 LOG END
+
+
+📱 LOG START [2026-04-19 17:41:29]
+event: api_request
+build: 25
+step: /users/auth/send-code/
+device: arm64
+user_id: guest
+ios: 26.2
+app_version: 1.0
+timestamp: 2026-04-19T17:41:29Z
+📱 LOG END
+
+
+📱 LOG START [2026-04-19 17:41:31]
+event: api_success
+step: /users/auth/send-code/
+device: arm64
+ios: 26.2
+user_id: guest
+app_version: 1.0
+build: 25
+timestamp: 2026-04-19T17:41:31Z
+📱 LOG END
+
+
+📱 LOG START [2026-04-19 17:42:22]
+app_version: 1.0
+event: welcome_opened
+step: screen_visible
+device: arm64
+screen: welcome
+ios: 26.2
+user_id: guest
+build: 25
+timestamp: 2026-04-19T17:42:22Z
+📱 LOG END
+
+
+📱 LOG START [2026-04-19 17:42:33]
+device: arm64
+event: welcome_get_started_tap
+app_version: 1.0
+step: pressed
+user_id: guest
+ios: 26.2
+build: 25
+timestamp: 2026-04-19T17:42:33Z
+📱 LOG END
+
+
+📱 LOG START [2026-04-19 17:42:44]
+password_length: 7
+user_id: guest
+event: register_button_tap
+build: 25
+timestamp: 2026-04-19T17:42:44Z
+step: pressed
+ios: 26.2
+device: arm64
+app_version: 1.0
+email: Adfdsvgfs@mail.com
+📱 LOG END
+
+
+📱 LOG START [2026-04-19 17:42:44]
+timestamp: 2026-04-19T17:42:44Z
+step: auth
+device: arm64
+app_version: 1.0
+user_id: guest
+event: register_api_start
+ios: 26.2
+build: 25
+📱 LOG END
+
+
+📱 LOG START [2026-04-19 17:42:44]
+timestamp: 2026-04-19T17:42:44Z
+device: arm64
+ios: 26.2
+app_version: 1.0
+user_id: guest
+event: api_request
+step: /users/auth/register/
+build: 25
+📱 LOG END
+
+
+📱 LOG START [2026-04-19 17:42:46]
+user_id: guest
+build: 25
+ios: 26.2
+event: api_success
+device: arm64
+timestamp: 2026-04-19T17:42:46Z
+app_version: 1.0
+step: /users/auth/register/
+📱 LOG END
+
+
+📱 LOG START [2026-04-19 17:42:46]
+user_id: guest
+build: 25
+ios: 26.2
+event: api_request
+device: arm64
+timestamp: 2026-04-19T17:42:46Z
+app_version: 1.0
+step: /users/auth/send-code/
+📱 LOG END
+
+
+📱 LOG START [2026-04-19 17:42:46]
+user_id: guest
+build: 25
+ios: 26.2
+event: register_api_success
+device: arm64
+timestamp: 2026-04-19T17:42:46Z
+app_version: 1.0
+step: auth
+📱 LOG END
+
+
+📱 LOG START [2026-04-19 17:42:47]
+ios: 26.2
+event: api_success
+device: arm64
+user_id: guest
+build: 25
+step: /users/auth/send-code/
+timestamp: 2026-04-19T17:42:47Z
+app_version: 1.0
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 13:53:44]
+device: arm64
+ios: 26.2
+app_version: 1.0
+build: 27
+step: vm
+has_avatar: False
+username: ffcfc
+timestamp: 2026-04-20T13:53:44Z
+event: setup_profile_start
+user_id: guest
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 13:53:44]
+device: arm64
+ios: 26.2
+app_version: 1.0
+build: 27
+step: auth
+timestamp: 2026-04-20T13:53:44Z
+user_id: guest
+event: setup_profile_start
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 13:53:44]
+event: error
+message: Не удалось завершить операцию. (NSURLErrorDomain, ошибка -1011)
+app_version: 1.0
+timestamp: 2026-04-20T13:53:44Z
+ios: 26.2
+step: setup_profile
+build: 27
+device: arm64
+user_id: guest
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 13:53:44]
+event: error
+message: Не удалось завершить операцию. (NSURLErrorDomain, ошибка -1011)
+app_version: 1.0
+timestamp: 2026-04-20T13:53:44Z
+ios: 26.2
+step: setup_profile_vm
+build: 27
+device: arm64
+user_id: guest
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 13:58:50]
+app_version: 1.0
+username: ggasdsdf
+timestamp: 2026-04-20T13:58:50Z
+build: 27
+ios: 26.2
+step: vm
+has_avatar: False
+event: setup_profile_start
+user_id: guest
+device: arm64
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 13:58:50]
+ios: 26.2
+user_id: guest
+timestamp: 2026-04-20T13:58:50Z
+device: arm64
+step: auth
+app_version: 1.0
+build: 27
+event: setup_profile_start
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 13:58:50]
+build: 27
+app_version: 1.0
+step: setup_profile_vm
+device: arm64
+timestamp: 2026-04-20T13:58:50Z
+user_id: guest
+ios: 26.2
+message: Не удалось завершить операцию. (NSURLErrorDomain, ошибка -1011)
+event: error
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 13:58:50]
+build: 27
+app_version: 1.0
+step: setup_profile
+device: arm64
+timestamp: 2026-04-20T13:58:50Z
+user_id: guest
+ios: 26.2
+message: Не удалось завершить операцию. (NSURLErrorDomain, ошибка -1011)
+event: error
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 14:13:10]
+device: arm64
+username: ghvshgvs
+event: setup_profile_start
+ios: 26.2
+app_version: 1.0
+step: vm
+build: 27
+user_id: guest
+timestamp: 2026-04-20T14:13:10Z
+has_avatar: False
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 14:13:10]
+device: arm64
+step: auth
+timestamp: 2026-04-20T14:13:10Z
+event: setup_profile_start
+build: 27
+user_id: guest
+ios: 26.2
+app_version: 1.0
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 14:13:10]
+app_version: 1.0
+timestamp: 2026-04-20T14:13:10Z
+message: Не удалось завершить операцию. (NSURLErrorDomain, ошибка -1011)
+user_id: guest
+step: setup_profile
+device: arm64
+ios: 26.2
+build: 27
+event: error
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 14:13:10]
+app_version: 1.0
+timestamp: 2026-04-20T14:13:10Z
+message: Не удалось завершить операцию. (NSURLErrorDomain, ошибка -1011)
+user_id: guest
+step: setup_profile_vm
+device: arm64
+ios: 26.2
+build: 27
+event: error
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 14:14:30]
+step: screen_visible
+timestamp: 2026-04-20T14:14:30Z
+app_version: 1.0
+ios: 26.2
+build: 27
+user_id: guest
+device: arm64
+screen: welcome
+event: welcome_opened
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 14:14:32]
+device: arm64
+event: welcome_get_started_tap
+build: 27
+timestamp: 2026-04-20T14:14:32Z
+app_version: 1.0
+user_id: guest
+step: pressed
+ios: 26.2
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 14:29:10]
+build: 27
+timestamp: 2026-04-20T14:29:10Z
+step: screen_visible
+app_version: 1.0
+ios: 26.2
+event: welcome_opened
+device: arm64
+user_id: guest
+screen: welcome
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 14:29:14]
+app_version: 1.0
+event: welcome_get_started_tap
+timestamp: 2026-04-20T14:29:14Z
+step: pressed
+device: arm64
+user_id: guest
+ios: 26.2
+build: 27
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 14:29:47]
+user_id: guest
+build: 27
+has_token: True
+app_version: 1.0
+ios: 26.2
+event: auth_header_set
+token_length: 232
+device: arm64
+timestamp: 2026-04-20T14:29:47Z
+step: api_client
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 14:29:47]
+user_id: guest
+ios: 26.2
+timestamp: 2026-04-20T14:29:47Z
+step: pressed
+password_length: 6
+event: register_button_tap
+email: edgar55docs@gmail.com
+app_version: 1.0
+build: 27
+device: arm64
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 14:29:47]
+ios: 26.2
+timestamp: 2026-04-20T14:29:47Z
+build: 27
+step: auth
+event: register_api_start
+app_version: 1.0
+device: arm64
+user_id: guest
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 14:29:47]
+user_id: guest
+build: 27
+app_version: 1.0
+ios: 26.2
+event: api_request
+timestamp: 2026-04-20T14:29:47Z
+device: arm64
+step: /users/auth/register/
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 14:29:47]
+step: /users/auth/register/
+event: api_error
+timestamp: 2026-04-20T14:29:47Z
+status: 401
+app_version: 1.0
+build: 27
+device: arm64
+user_id: guest
+ios: 26.2
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 14:29:47]
+step: /users/auth/register/
+device: arm64
+app_version: 1.0
+build: 27
+user_id: guest
+event: error
+timestamp: 2026-04-20T14:29:47Z
+ios: 26.2
+message: Не удалось завершить операцию. (NSURLErrorDomain, ошибка -1011)
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 14:29:47]
+step: register_api
+device: arm64
+app_version: 1.0
+build: 27
+user_id: guest
+event: error
+timestamp: 2026-04-20T14:29:47Z
+ios: 26.2
+message: Не удалось завершить операцию. (NSURLErrorDomain, ошибка -1011)
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 14:29:47]
+device: arm64
+ios: 26.2
+user_id: guest
+timestamp: 2026-04-20T14:29:47Z
+message: Не удалось завершить операцию. (NSURLErrorDomain, ошибка -1011)
+build: 27
+event: error
+step: register_flow
+app_version: 1.0
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:06:35]
+ios: 26.2
+build: 27
+screen: welcome
+app_version: 1.0
+event: welcome_opened
+timestamp: 2026-04-20T16:06:35Z
+step: screen_visible
+user_id: guest
+device: arm64
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:07:19]
+timestamp: 2026-04-20T16:07:19Z
+step: pressed
+device: arm64
+user_id: guest
+app_version: 1.0
+event: welcome_get_started_tap
+ios: 26.2
+build: 27
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:08:01]
+password_length: 6
+timestamp: 2026-04-20T16:08:01Z
+email: edgar55docs@gmail.com
+event: register_button_tap
+user_id: guest
+app_version: 1.0
+step: pressed
+build: 27
+device: arm64
+ios: 26.2
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:08:01]
+user_id: guest
+step: auth
+build: 27
+ios: 26.2
+timestamp: 2026-04-20T16:08:01Z
+app_version: 1.0
+event: register_api_start
+device: arm64
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:08:01]
+has_token: True
+step: api_client
+user_id: guest
+timestamp: 2026-04-20T16:08:01Z
+token_length: 232
+device: arm64
+ios: 26.2
+app_version: 1.0
+build: 27
+event: auth_header_set
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:08:01]
+user_id: guest
+step: /users/auth/register/
+timestamp: 2026-04-20T16:08:01Z
+app_version: 1.0
+ios: 26.2
+device: arm64
+build: 27
+event: api_request
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:08:01]
+ios: 26.2
+user_id: guest
+app_version: 1.0
+timestamp: 2026-04-20T16:08:01Z
+step: /users/auth/register/
+device: arm64
+status: 401
+event: api_error
+build: 27
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:08:01]
+build: 27
+user_id: guest
+ios: 26.2
+device: arm64
+timestamp: 2026-04-20T16:08:01Z
+step: register_api
+message: Не удалось завершить операцию. (NSURLErrorDomain, ошибка -1011)
+event: error
+app_version: 1.0
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:08:01]
+build: 27
+user_id: guest
+ios: 26.2
+device: arm64
+timestamp: 2026-04-20T16:08:01Z
+step: /users/auth/register/
+message: Не удалось завершить операцию. (NSURLErrorDomain, ошибка -1011)
+event: error
+app_version: 1.0
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:08:01]
+ios: 26.2
+user_id: guest
+app_version: 1.0
+timestamp: 2026-04-20T16:08:01Z
+step: register_flow
+device: arm64
+event: error
+message: Не удалось завершить операцию. (NSURLErrorDomain, ошибка -1011)
+build: 27
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:11:08]
+screen: welcome
+device: arm64
+timestamp: 2026-04-20T16:11:08Z
+user_id: guest
+ios: 26.2
+app_version: 1.0
+event: welcome_opened
+build: 27
+step: screen_visible
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:11:10]
+user_id: guest
+timestamp: 2026-04-20T16:11:10Z
+ios: 26.2
+device: arm64
+build: 27
+event: welcome_get_started_tap
+step: pressed
+app_version: 1.0
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:11:29]
+email: edgar55docs@gmail.com
+build: 27
+password_length: 6
+app_version: 1.0
+user_id: guest
+ios: 26.2
+timestamp: 2026-04-20T16:11:29Z
+event: register_button_tap
+device: arm64
+step: pressed
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:11:29]
+step: auth
+timestamp: 2026-04-20T16:11:29Z
+user_id: guest
+app_version: 1.0
+event: register_api_start
+build: 27
+device: arm64
+ios: 26.2
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:11:29]
+event: auth_skipped
+build: 27
+ios: 26.2
+step: api_client
+app_version: 1.0
+endpoint: /users/auth/register/
+user_id: guest
+device: arm64
+timestamp: 2026-04-20T16:11:29Z
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:11:29]
+event: api_request
+build: 27
+ios: 26.2
+step: /users/auth/register/
+app_version: 1.0
+user_id: guest
+device: arm64
+timestamp: 2026-04-20T16:11:29Z
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:11:30]
+event: api_success
+user_id: guest
+device: arm64
+ios: 26.2
+app_version: 1.0
+step: /users/auth/register/
+timestamp: 2026-04-20T16:11:30Z
+build: 27
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:11:30]
+event: register_api_success
+step: auth
+device: arm64
+user_id: guest
+build: 27
+ios: 26.2
+timestamp: 2026-04-20T16:11:30Z
+app_version: 1.0
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:11:30]
+app_version: 1.0
+device: arm64
+ios: 26.2
+step: api_client
+build: 27
+timestamp: 2026-04-20T16:11:30Z
+event: auth_skipped
+endpoint: /users/auth/send-code/
+user_id: guest
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:11:30]
+build: 27
+step: /users/auth/send-code/
+timestamp: 2026-04-20T16:11:30Z
+event: api_request
+ios: 26.2
+device: arm64
+app_version: 1.0
+user_id: guest
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:11:33]
+event: api_success
+user_id: guest
+device: arm64
+ios: 26.2
+app_version: 1.0
+step: /users/auth/send-code/
+timestamp: 2026-04-20T16:11:33Z
+build: 27
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:12:02]
+event: verify_code_start
+app_version: 1.0
+device: arm64
+build: 27
+ios: 26.2
+user_id: guest
+timestamp: 2026-04-20T16:12:02Z
+step: auth
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:12:02]
+event: auth_skipped
+device: arm64
+app_version: 1.0
+build: 27
+ios: 26.2
+endpoint: /users/auth/verify/
+user_id: guest
+timestamp: 2026-04-20T16:12:02Z
+step: api_client
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:12:02]
+event: api_request
+app_version: 1.0
+device: arm64
+build: 27
+ios: 26.2
+user_id: guest
+timestamp: 2026-04-20T16:12:02Z
+step: /users/auth/verify/
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:12:03]
+timestamp: 2026-04-20T16:12:03Z
+app_version: 1.0
+build: 27
+user_id: guest
+ios: 26.2
+step: /users/auth/verify/
+event: api_success
+device: arm64
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:12:03]
+app_version: 1.0
+ios: 26.2
+device: arm64
+build: 27
+user_id: guest
+step: auth
+event: verify_code_success
+timestamp: 2026-04-20T16:12:03Z
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:12:10]
+has_avatar: False
+user_id: guest
+timestamp: 2026-04-20T16:12:10Z
+build: 27
+device: arm64
+event: setup_profile_start
+app_version: 1.0
+step: vm
+username: dvfgdf
+ios: 26.2
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:12:10]
+ios: 26.2
+device: arm64
+timestamp: 2026-04-20T16:12:10Z
+app_version: 1.0
+event: setup_profile_start
+build: 27
+user_id: guest
+step: auth
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:12:11]
+app_version: 1.0
+event: setup_profile_success
+build: 27
+timestamp: 2026-04-20T16:12:11Z
+device: arm64
+user_id: guest
+step: vm
+ios: 26.2
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:12:11]
+app_version: 1.0
+event: setup_profile_success
+build: 27
+timestamp: 2026-04-20T16:12:11Z
+device: arm64
+user_id: guest
+step: auth
+ios: 26.2
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:20:24]
+device: arm64
+timestamp: 2026-04-20T16:20:24Z
+app_version: 1.0
+step: screen_visible
+screen: welcome
+event: welcome_opened
+ios: 26.2
+user_id: guest
+build: 27
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:20:27]
+user_id: guest
+app_version: 1.0
+timestamp: 2026-04-20T16:20:27Z
+event: welcome_get_started_tap
+device: arm64
+step: pressed
+ios: 26.2
+build: 27
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:20:52]
+event: register_button_tap
+user_id: guest
+build: 27
+email: edgar55docs@gmail.com
+device: arm64
+step: pressed
+password_length: 6
+timestamp: 2026-04-20T16:20:52Z
+ios: 26.2
+app_version: 1.0
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:20:52]
+event: register_api_start
+device: arm64
+step: auth
+user_id: guest
+timestamp: 2026-04-20T16:20:52Z
+ios: 26.2
+build: 27
+app_version: 1.0
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:20:52]
+ios: 26.2
+app_version: 1.0
+timestamp: 2026-04-20T16:20:52Z
+device: arm64
+event: auth_skipped
+endpoint: /users/auth/register/
+build: 27
+step: api_client
+user_id: guest
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:20:52]
+ios: 26.2
+app_version: 1.0
+timestamp: 2026-04-20T16:20:52Z
+device: arm64
+event: api_request
+build: 27
+step: /users/auth/register/
+user_id: guest
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:20:53]
+event: api_success
+app_version: 1.0
+ios: 26.2
+step: /users/auth/register/
+build: 27
+timestamp: 2026-04-20T16:20:53Z
+user_id: guest
+device: arm64
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:20:53]
+ios: 26.2
+timestamp: 2026-04-20T16:20:53Z
+user_id: guest
+app_version: 1.0
+step: auth
+device: arm64
+build: 27
+event: register_api_success
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:20:53]
+device: arm64
+build: 27
+timestamp: 2026-04-20T16:20:53Z
+user_id: guest
+ios: 26.2
+endpoint: /users/auth/send-code/
+event: auth_skipped
+step: api_client
+app_version: 1.0
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:20:53]
+device: arm64
+build: 27
+timestamp: 2026-04-20T16:20:53Z
+user_id: guest
+ios: 26.2
+event: api_request
+step: /users/auth/send-code/
+app_version: 1.0
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:20:55]
+build: 27
+device: arm64
+user_id: guest
+ios: 26.2
+event: api_success
+app_version: 1.0
+timestamp: 2026-04-20T16:20:55Z
+step: /users/auth/send-code/
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:21:12]
+event: api_request
+build: 27
+ios: 26.2
+app_version: 1.0
+timestamp: 2026-04-20T16:21:12Z
+device: arm64
+step: /users/auth/verify/
+user_id: guest
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:21:12]
+event: auth_skipped
+build: 27
+ios: 26.2
+app_version: 1.0
+timestamp: 2026-04-20T16:21:12Z
+device: arm64
+step: api_client
+endpoint: /users/auth/verify/
+user_id: guest
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:21:12]
+event: verify_code_start
+build: 27
+ios: 26.2
+app_version: 1.0
+timestamp: 2026-04-20T16:21:12Z
+device: arm64
+step: auth
+user_id: guest
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:21:13]
+step: auth
+app_version: 1.0
+timestamp: 2026-04-20T16:21:13Z
+ios: 26.2
+event: verify_code_success
+device: arm64
+build: 27
+user_id: guest
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:21:13]
+step: /users/auth/verify/
+app_version: 1.0
+timestamp: 2026-04-20T16:21:13Z
+ios: 26.2
+event: api_success
+device: arm64
+build: 27
+user_id: guest
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:21:26]
+ios: 26.2
+app_version: 1.0
+event: setup_profile_start
+timestamp: 2026-04-20T16:21:26Z
+device: arm64
+build: 27
+username: ceotrendix
+step: vm
+has_avatar: True
+user_id: guest
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:21:26]
+app_version: 1.0
+ios: 26.2
+event: setup_profile_start
+timestamp: 2026-04-20T16:21:26Z
+device: arm64
+build: 27
+step: auth
+user_id: guest
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:21:27]
+build: 27
+user_id: guest
+step: vm
+event: setup_profile_success
+timestamp: 2026-04-20T16:21:27Z
+app_version: 1.0
+device: arm64
+ios: 26.2
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:21:27]
+timestamp: 2026-04-20T16:21:27Z
+app_version: 1.0
+step: auth
+ios: 26.2
+device: arm64
+build: 27
+event: setup_profile_success
+user_id: guest
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:24:37]
+build: 27
+ios: 26.2
+app_version: 1.0
+user_id: guest
+event: welcome_opened
+step: screen_visible
+device: arm64
+timestamp: 2026-04-20T16:24:37Z
+screen: welcome
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:24:48]
+step: pressed
+app_version: 1.0
+timestamp: 2026-04-20T16:24:48Z
+device: arm64
+build: 27
+ios: 26.2
+user_id: guest
+event: welcome_get_started_tap
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:24:58]
+password_length: 6
+ios: 26.2
+user_id: guest
+email: edgar55docs@gmail.com
+event: register_button_tap
+timestamp: 2026-04-20T16:24:58Z
+step: pressed
+build: 27
+app_version: 1.0
+device: arm64
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:24:58]
+event: register_api_start
+build: 27
+step: auth
+app_version: 1.0
+timestamp: 2026-04-20T16:24:58Z
+user_id: guest
+ios: 26.2
+device: arm64
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:24:58]
+event: auth_skipped
+build: 27
+step: api_client
+endpoint: /users/auth/register/
+app_version: 1.0
+timestamp: 2026-04-20T16:24:58Z
+user_id: guest
+ios: 26.2
+device: arm64
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:24:58]
+event: api_request
+build: 27
+step: /users/auth/register/
+app_version: 1.0
+timestamp: 2026-04-20T16:24:58Z
+user_id: guest
+ios: 26.2
+device: arm64
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:24:59]
+event: api_success
+user_id: guest
+device: arm64
+timestamp: 2026-04-20T16:24:59Z
+step: /users/auth/register/
+app_version: 1.0
+build: 27
+ios: 26.2
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:24:59]
+event: register_api_success
+build: 27
+step: auth
+app_version: 1.0
+timestamp: 2026-04-20T16:24:59Z
+user_id: guest
+ios: 26.2
+device: arm64
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:24:59]
+event: auth_skipped
+build: 27
+endpoint: /users/auth/send-code/
+step: api_client
+app_version: 1.0
+timestamp: 2026-04-20T16:24:59Z
+user_id: guest
+ios: 26.2
+device: arm64
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:24:59]
+user_id: guest
+ios: 26.2
+step: /users/auth/send-code/
+build: 27
+timestamp: 2026-04-20T16:24:59Z
+app_version: 1.0
+event: api_request
+device: arm64
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:25:01]
+user_id: guest
+build: 27
+step: /users/auth/send-code/
+device: arm64
+app_version: 1.0
+timestamp: 2026-04-20T16:25:01Z
+event: api_success
+ios: 26.2
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:25:20]
+step: /users/auth/verify/
+timestamp: 2026-04-20T16:25:20Z
+ios: 26.2
+event: api_request
+app_version: 1.0
+user_id: guest
+build: 27
+device: arm64
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:25:20]
+endpoint: /users/auth/verify/
+step: api_client
+timestamp: 2026-04-20T16:25:20Z
+ios: 26.2
+event: auth_skipped
+app_version: 1.0
+user_id: guest
+build: 27
+device: arm64
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:25:20]
+build: 27
+timestamp: 2026-04-20T16:25:20Z
+ios: 26.2
+event: verify_code_start
+app_version: 1.0
+user_id: guest
+device: arm64
+step: auth
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:25:21]
+device: arm64
+ios: 26.2
+app_version: 1.0
+step: /users/auth/verify/
+user_id: guest
+status: 400
+build: 27
+timestamp: 2026-04-20T16:25:21Z
+event: api_error
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:25:21]
+step: /users/auth/verify/
+build: 27
+event: error
+device: arm64
+timestamp: 2026-04-20T16:25:21Z
+ios: 26.2
+message: Не удалось завершить операцию. (NSURLErrorDomain, ошибка -1011)
+user_id: guest
+app_version: 1.0
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:25:21]
+step: verify_code
+build: 27
+event: error
+device: arm64
+timestamp: 2026-04-20T16:25:21Z
+ios: 26.2
+message: Не удалось завершить операцию. (NSURLErrorDomain, ошибка -1011)
+user_id: guest
+app_version: 1.0
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:25:33]
+device: arm64
+app_version: 1.0
+step: api_client
+event: auth_skipped
+ios: 26.2
+build: 27
+timestamp: 2026-04-20T16:25:33Z
+user_id: guest
+endpoint: /users/auth/verify/
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:25:33]
+ios: 26.2
+app_version: 1.0
+device: arm64
+build: 27
+event: verify_code_start
+timestamp: 2026-04-20T16:25:33Z
+user_id: guest
+step: auth
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:25:33]
+device: arm64
+app_version: 1.0
+step: /users/auth/verify/
+event: api_request
+ios: 26.2
+build: 27
+timestamp: 2026-04-20T16:25:33Z
+user_id: guest
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:25:34]
+user_id: guest
+ios: 26.2
+timestamp: 2026-04-20T16:25:34Z
+step: auth
+device: arm64
+build: 27
+event: verify_code_success
+app_version: 1.0
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:25:34]
+user_id: guest
+ios: 26.2
+timestamp: 2026-04-20T16:25:34Z
+step: /users/auth/verify/
+device: arm64
+build: 27
+event: api_success
+app_version: 1.0
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:25:45]
+step: vm
+username: ceotrendix
+device: arm64
+ios: 26.2
+has_avatar: True
+event: setup_profile_start
+timestamp: 2026-04-20T16:25:45Z
+build: 27
+app_version: 1.0
+user_id: guest
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:25:45]
+event: setup_profile_start
+step: auth
+ios: 26.2
+build: 27
+device: arm64
+timestamp: 2026-04-20T16:25:45Z
+user_id: guest
+app_version: 1.0
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:25:46]
+ios: 26.2
+device: arm64
+build: 27
+step: auth
+user_id: guest
+event: setup_profile_success
+app_version: 1.0
+timestamp: 2026-04-20T16:25:46Z
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:25:46]
+ios: 26.2
+device: arm64
+build: 27
+step: vm
+user_id: guest
+event: setup_profile_success
+app_version: 1.0
+timestamp: 2026-04-20T16:25:46Z
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:25:46]
+step: screen_visible
+screen: welcome
+user_id: guest
+ios: 26.2
+build: 27
+device: arm64
+timestamp: 2026-04-20T16:25:46Z
+event: welcome_opened
+app_version: 1.0
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:30:40]
+device: arm64
+step: screen_visible
+event: welcome_opened
+timestamp: 2026-04-20T16:30:39Z
+screen: welcome
+ios: 26.2
+user_id: guest
+app_version: 1.0
+build: 27
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:30:40]
+ios: 26.2
+event: welcome_get_started_tap
+build: 27
+timestamp: 2026-04-20T16:30:40Z
+device: arm64
+app_version: 1.0
+step: pressed
+user_id: guest
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:30:46]
+password_length: 6
+app_version: 1.0
+email: edgar55docs@gmail.com
+device: arm64
+event: register_button_tap
+step: pressed
+build: 27
+ios: 26.2
+timestamp: 2026-04-20T16:30:46Z
+user_id: guest
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:30:46]
+app_version: 1.0
+device: arm64
+event: register_api_start
+step: auth
+build: 27
+ios: 26.2
+timestamp: 2026-04-20T16:30:46Z
+user_id: guest
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:30:46]
+endpoint: /users/auth/register/
+app_version: 1.0
+device: arm64
+event: auth_skipped
+step: api_client
+build: 27
+ios: 26.2
+timestamp: 2026-04-20T16:30:46Z
+user_id: guest
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:30:46]
+app_version: 1.0
+device: arm64
+event: api_request
+step: /users/auth/register/
+build: 27
+ios: 26.2
+timestamp: 2026-04-20T16:30:46Z
+user_id: guest
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:30:48]
+timestamp: 2026-04-20T16:30:48Z
+device: arm64
+user_id: guest
+event: api_success
+ios: 26.2
+app_version: 1.0
+step: /users/auth/register/
+build: 27
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:30:48]
+app_version: 1.0
+ios: 26.2
+user_id: guest
+device: arm64
+build: 27
+step: auth
+event: register_api_success
+timestamp: 2026-04-20T16:30:48Z
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:30:48]
+event: auth_skipped
+ios: 26.2
+app_version: 1.0
+user_id: guest
+timestamp: 2026-04-20T16:30:48Z
+endpoint: /users/auth/send-code/
+device: arm64
+step: api_client
+build: 27
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:30:48]
+step: /users/auth/send-code/
+device: arm64
+user_id: guest
+app_version: 1.0
+build: 27
+event: api_request
+ios: 26.2
+timestamp: 2026-04-20T16:30:48Z
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:30:50]
+device: arm64
+ios: 26.2
+app_version: 1.0
+timestamp: 2026-04-20T16:30:50Z
+user_id: guest
+build: 27
+event: api_success
+step: /users/auth/send-code/
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:31:01]
+user_id: guest
+ios: 26.2
+device: arm64
+app_version: 1.0
+timestamp: 2026-04-20T16:31:01Z
+event: verify_code_start
+build: 27
+step: auth
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:31:01]
+user_id: guest
+ios: 26.2
+device: arm64
+app_version: 1.0
+timestamp: 2026-04-20T16:31:01Z
+event: api_request
+build: 27
+step: /users/auth/verify/
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:31:01]
+user_id: guest
+ios: 26.2
+endpoint: /users/auth/verify/
+device: arm64
+app_version: 1.0
+timestamp: 2026-04-20T16:31:01Z
+event: auth_skipped
+build: 27
+step: api_client
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:31:02]
+device: arm64
+user_id: guest
+ios: 26.2
+step: auth
+event: verify_code_success
+app_version: 1.0
+timestamp: 2026-04-20T16:31:02Z
+build: 27
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:31:02]
+timestamp: 2026-04-20T16:31:02Z
+ios: 26.2
+app_version: 1.0
+user_id: guest
+step: /users/auth/verify/
+device: arm64
+event: api_success
+build: 27
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:31:15]
+timestamp: 2026-04-20T16:31:15Z
+username: ceoedf
+event: setup_profile_start
+device: arm64
+build: 27
+user_id: guest
+app_version: 1.0
+ios: 26.2
+step: vm
+has_avatar: True
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:31:15]
+app_version: 1.0
+device: arm64
+event: setup_profile_start
+user_id: guest
+build: 27
+ios: 26.2
+timestamp: 2026-04-20T16:31:15Z
+step: auth
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:31:16]
+build: 27
+app_version: 1.0
+device: arm64
+step: vm
+event: setup_profile_success
+timestamp: 2026-04-20T16:31:16Z
+ios: 26.2
+user_id: guest
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:31:16]
+build: 27
+app_version: 1.0
+device: arm64
+step: auth
+event: setup_profile_success
+timestamp: 2026-04-20T16:31:16Z
+ios: 26.2
+user_id: guest
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:31:16]
+user_id: guest
+build: 27
+ios: 26.2
+timestamp: 2026-04-20T16:31:16Z
+step: screen_visible
+device: arm64
+event: welcome_opened
+app_version: 1.0
+screen: welcome
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:32:42]
+step: screen_visible
+screen: welcome
+ios: 26.2
+app_version: 1.0
+timestamp: 2026-04-20T16:32:42Z
+event: welcome_opened
+user_id: guest
+device: arm64
+build: 27
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:32:45]
+app_version: 1.0
+timestamp: 2026-04-20T16:32:45Z
+build: 27
+user_id: guest
+device: arm64
+step: pressed
+event: welcome_get_started_tap
+ios: 26.2
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:32:51]
+step: pressed
+ios: 26.2
+app_version: 1.0
+device: arm64
+user_id: guest
+email: edgar55docs@gmail.com
+password_length: 6
+build: 27
+event: register_button_tap
+timestamp: 2026-04-20T16:32:51Z
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:32:51]
+device: arm64
+user_id: guest
+app_version: 1.0
+build: 27
+event: register_api_start
+timestamp: 2026-04-20T16:32:51Z
+step: auth
+ios: 26.2
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:32:51]
+device: arm64
+user_id: guest
+app_version: 1.0
+build: 27
+event: auth_skipped
+timestamp: 2026-04-20T16:32:51Z
+step: api_client
+endpoint: /users/auth/register/
+ios: 26.2
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:32:51]
+device: arm64
+user_id: guest
+app_version: 1.0
+build: 27
+event: api_request
+timestamp: 2026-04-20T16:32:51Z
+step: /users/auth/register/
+ios: 26.2
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:32:52]
+step: /users/auth/register/
+ios: 26.2
+user_id: guest
+event: api_success
+device: arm64
+app_version: 1.0
+build: 27
+timestamp: 2026-04-20T16:32:52Z
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:32:52]
+step: auth
+ios: 26.2
+user_id: guest
+event: register_api_success
+device: arm64
+app_version: 1.0
+build: 27
+timestamp: 2026-04-20T16:32:52Z
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:32:52]
+step: api_client
+ios: 26.2
+user_id: guest
+event: auth_skipped
+device: arm64
+endpoint: /users/auth/send-code/
+app_version: 1.0
+build: 27
+timestamp: 2026-04-20T16:32:52Z
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:32:52]
+step: /users/auth/send-code/
+ios: 26.2
+user_id: guest
+event: api_request
+device: arm64
+app_version: 1.0
+build: 27
+timestamp: 2026-04-20T16:32:52Z
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:32:53]
+timestamp: 2026-04-20T16:32:53Z
+ios: 26.2
+app_version: 1.0
+step: /users/auth/send-code/
+event: api_success
+device: arm64
+user_id: guest
+build: 27
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:33:10]
+event: auth_skipped
+step: api_client
+endpoint: /users/auth/verify/
+app_version: 1.0
+build: 27
+ios: 26.2
+user_id: guest
+timestamp: 2026-04-20T16:33:10Z
+device: arm64
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:33:10]
+event: api_request
+step: /users/auth/verify/
+app_version: 1.0
+build: 27
+ios: 26.2
+user_id: guest
+timestamp: 2026-04-20T16:33:10Z
+device: arm64
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:33:10]
+event: verify_code_start
+step: auth
+app_version: 1.0
+build: 27
+ios: 26.2
+user_id: guest
+timestamp: 2026-04-20T16:33:10Z
+device: arm64
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:33:11]
+build: 27
+timestamp: 2026-04-20T16:33:11Z
+ios: 26.2
+app_version: 1.0
+event: api_success
+user_id: guest
+step: /users/auth/verify/
+device: arm64
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:33:11]
+build: 27
+timestamp: 2026-04-20T16:33:11Z
+ios: 26.2
+app_version: 1.0
+event: verify_code_success
+user_id: guest
+step: auth
+device: arm64
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:33:19]
+timestamp: 2026-04-20T16:33:19Z
+user_id: guest
+device: arm64
+app_version: 1.0
+event: setup_profile_start
+step: vm
+has_avatar: True
+username: sgfys
+build: 27
+ios: 26.2
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:33:19]
+timestamp: 2026-04-20T16:33:19Z
+user_id: guest
+step: auth
+ios: 26.2
+event: setup_profile_start
+device: arm64
+app_version: 1.0
+build: 27
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:33:19]
+device: arm64
+build: 27
+timestamp: 2026-04-20T16:33:19Z
+user_id: guest
+ios: 26.2
+app_version: 1.0
+event: setup_profile_success
+step: vm
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:33:19]
+device: arm64
+build: 27
+timestamp: 2026-04-20T16:33:19Z
+user_id: guest
+ios: 26.2
+app_version: 1.0
+event: setup_profile_success
+step: auth
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:33:35]
+step: vm
+build: 27
+username: sgfys
+timestamp: 2026-04-20T16:33:35Z
+user_id: guest
+device: arm64
+ios: 26.2
+has_avatar: True
+app_version: 1.0
+event: setup_profile_start
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:33:35]
+event: setup_profile_start
+build: 27
+ios: 26.2
+app_version: 1.0
+user_id: guest
+device: arm64
+step: auth
+timestamp: 2026-04-20T16:33:35Z
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:33:36]
+ios: 26.2
+app_version: 1.0
+build: 27
+device: arm64
+user_id: guest
+event: setup_profile_success
+timestamp: 2026-04-20T16:33:36Z
+step: auth
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:33:36]
+ios: 26.2
+app_version: 1.0
+build: 27
+device: arm64
+user_id: guest
+event: setup_profile_success
+timestamp: 2026-04-20T16:33:36Z
+step: vm
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:45:20]
+event: welcome_opened
+app_version: 1.0
+device: arm64
+ios: 26.2
+user_id: guest
+timestamp: 2026-04-20T16:45:20Z
+step: screen_visible
+screen: welcome
+build: 27
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:45:28]
+app_version: 1.0
+device: arm64
+event: welcome_get_started_tap
+timestamp: 2026-04-20T16:45:28Z
+ios: 26.2
+build: 27
+user_id: guest
+step: pressed
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:45:34]
+timestamp: 2026-04-20T16:45:34Z
+password_length: 6
+build: 27
+user_id: guest
+event: register_button_tap
+email: edgar55docs@gmail.com
+device: arm64
+ios: 26.2
+step: pressed
+app_version: 1.0
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:45:34]
+ios: 26.2
+app_version: 1.0
+event: register_api_start
+user_id: guest
+timestamp: 2026-04-20T16:45:34Z
+device: arm64
+build: 27
+step: auth
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:45:34]
+ios: 26.2
+app_version: 1.0
+event: auth_skipped
+user_id: guest
+timestamp: 2026-04-20T16:45:34Z
+device: arm64
+build: 27
+endpoint: /users/auth/register/
+step: api_client
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:45:34]
+ios: 26.2
+app_version: 1.0
+event: api_request
+user_id: guest
+timestamp: 2026-04-20T16:45:34Z
+device: arm64
+build: 27
+step: /users/auth/register/
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:45:36]
+user_id: guest
+build: 27
+event: api_success
+app_version: 1.0
+ios: 26.2
+step: /users/auth/register/
+device: arm64
+timestamp: 2026-04-20T16:45:36Z
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:45:36]
+ios: 26.2
+app_version: 1.0
+event: register_api_success
+user_id: guest
+timestamp: 2026-04-20T16:45:36Z
+device: arm64
+build: 27
+step: auth
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:45:36]
+device: arm64
+ios: 26.2
+step: /users/auth/send-code/
+app_version: 1.0
+user_id: guest
+event: api_request
+build: 27
+timestamp: 2026-04-20T16:45:36Z
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:45:36]
+ios: 26.2
+app_version: 1.0
+event: auth_skipped
+user_id: guest
+timestamp: 2026-04-20T16:45:36Z
+device: arm64
+build: 27
+endpoint: /users/auth/send-code/
+step: api_client
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:45:38]
+step: /users/auth/send-code/
+app_version: 1.0
+device: arm64
+event: api_success
+user_id: guest
+build: 27
+timestamp: 2026-04-20T16:45:38Z
+ios: 26.2
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:45:51]
+device: arm64
+timestamp: 2026-04-20T16:45:51Z
+user_id: guest
+ios: 26.2
+event: auth_skipped
+app_version: 1.0
+endpoint: /users/auth/verify/
+build: 27
+step: api_client
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:45:51]
+device: arm64
+timestamp: 2026-04-20T16:45:51Z
+app_version: 1.0
+ios: 26.2
+user_id: guest
+event: verify_code_start
+build: 27
+step: auth
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:45:51]
+device: arm64
+timestamp: 2026-04-20T16:45:51Z
+app_version: 1.0
+ios: 26.2
+user_id: guest
+event: api_request
+build: 27
+step: /users/auth/verify/
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:45:52]
+step: auth
+app_version: 1.0
+build: 27
+user_id: guest
+timestamp: 2026-04-20T16:45:52Z
+ios: 26.2
+device: arm64
+event: verify_code_success
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:45:52]
+step: /users/auth/verify/
+app_version: 1.0
+build: 27
+user_id: guest
+timestamp: 2026-04-20T16:45:52Z
+ios: 26.2
+device: arm64
+event: api_success
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:45:55]
+ios: 26.2
+build: 27
+username: sjydfjsdf
+app_version: 1.0
+has_avatar: False
+user_id: guest
+event: setup_profile_start
+timestamp: 2026-04-20T16:45:55Z
+device: arm64
+step: vm
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:45:55]
+ios: 26.2
+build: 27
+app_version: 1.0
+user_id: guest
+event: setup_profile_start
+timestamp: 2026-04-20T16:45:55Z
+device: arm64
+step: auth
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:45:56]
+ios: 26.2
+event: setup_profile_success
+timestamp: 2026-04-20T16:45:56Z
+user_id: guest
+app_version: 1.0
+device: arm64
+build: 27
+step: auth
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 16:45:56]
+device: arm64
+app_version: 1.0
+timestamp: 2026-04-20T16:45:56Z
+build: 27
+user_id: guest
+step: vm
+ios: 26.2
+event: setup_profile_success
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:06:16]
+ios: 26.2
+event: welcome_opened
+user_id: guest
+step: screen_visible
+device: arm64
+timestamp: 2026-04-20T17:06:16Z
+screen: welcome
+app_version: 1.0
+build: 27
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:06:24]
+step: pressed
+device: arm64
+app_version: 1.0
+build: 27
+ios: 26.2
+event: welcome_get_started_tap
+timestamp: 2026-04-20T17:06:24Z
+user_id: guest
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:06:31]
+timestamp: 2026-04-20T17:06:31Z
+event: register_button_tap
+device: arm64
+build: 27
+app_version: 1.0
+password_length: 6
+ios: 26.2
+step: pressed
+email: edgar55docs@gmail.com
+user_id: guest
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:06:32]
+timestamp: 2026-04-20T17:06:32Z
+app_version: 1.0
+ios: 26.2
+step: auth
+event: register_api_start
+device: arm64
+build: 27
+user_id: guest
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:06:32]
+timestamp: 2026-04-20T17:06:32Z
+step: api_client
+ios: 26.2
+app_version: 1.0
+event: auth_skipped
+device: arm64
+endpoint: /users/auth/register/
+build: 27
+user_id: guest
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:06:32]
+timestamp: 2026-04-20T17:06:32Z
+app_version: 1.0
+ios: 26.2
+step: /users/auth/register/
+event: api_request
+device: arm64
+build: 27
+user_id: guest
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:06:33]
+event: api_success
+device: arm64
+build: 27
+app_version: 1.0
+ios: 26.2
+step: /users/auth/register/
+timestamp: 2026-04-20T17:06:33Z
+user_id: guest
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:06:33]
+user_id: guest
+build: 27
+device: arm64
+event: register_api_success
+ios: 26.2
+timestamp: 2026-04-20T17:06:33Z
+step: auth
+app_version: 1.0
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:06:33]
+step: api_client
+build: 27
+device: arm64
+ios: 26.2
+app_version: 1.0
+timestamp: 2026-04-20T17:06:33Z
+event: auth_skipped
+endpoint: /users/auth/send-code/
+user_id: guest
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:06:33]
+user_id: guest
+build: 27
+device: arm64
+event: api_request
+ios: 26.2
+timestamp: 2026-04-20T17:06:33Z
+step: /users/auth/send-code/
+app_version: 1.0
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:06:35]
+build: 27
+device: arm64
+ios: 26.2
+app_version: 1.0
+timestamp: 2026-04-20T17:06:35Z
+event: api_success
+step: /users/auth/send-code/
+user_id: guest
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:06:54]
+ios: 26.2
+event: verify_code_start
+build: 27
+user_id: guest
+app_version: 1.0
+step: auth
+device: arm64
+timestamp: 2026-04-20T17:06:54Z
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:06:54]
+ios: 26.2
+event: api_request
+build: 27
+user_id: guest
+app_version: 1.0
+step: /users/auth/verify/
+device: arm64
+timestamp: 2026-04-20T17:06:54Z
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:06:54]
+ios: 26.2
+event: auth_skipped
+build: 27
+user_id: guest
+app_version: 1.0
+endpoint: /users/auth/verify/
+step: api_client
+device: arm64
+timestamp: 2026-04-20T17:06:54Z
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:06:55]
+ios: 26.2
+timestamp: 2026-04-20T17:06:55Z
+app_version: 1.0
+user_id: guest
+device: arm64
+step: /users/auth/verify/
+build: 27
+event: api_error
+status: 400
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:06:55]
+event: error
+ios: 26.2
+user_id: guest
+app_version: 1.0
+step: /users/auth/verify/
+build: 27
+timestamp: 2026-04-20T17:06:55Z
+device: arm64
+message: Не удалось завершить операцию. (NSURLErrorDomain, ошибка -1011)
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:06:55]
+event: error
+ios: 26.2
+user_id: guest
+app_version: 1.0
+step: verify_code
+build: 27
+timestamp: 2026-04-20T17:06:55Z
+device: arm64
+message: Не удалось завершить операцию. (NSURLErrorDomain, ошибка -1011)
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:07:13]
+build: 27
+event: api_request
+device: arm64
+timestamp: 2026-04-20T17:07:13Z
+app_version: 1.0
+step: /users/auth/verify/
+ios: 26.2
+user_id: guest
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:07:13]
+build: 27
+timestamp: 2026-04-20T17:07:13Z
+event: auth_skipped
+device: arm64
+endpoint: /users/auth/verify/
+step: api_client
+app_version: 1.0
+ios: 26.2
+user_id: guest
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:07:13]
+build: 27
+event: verify_code_start
+device: arm64
+timestamp: 2026-04-20T17:07:13Z
+app_version: 1.0
+step: auth
+ios: 26.2
+user_id: guest
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:07:14]
+event: verify_code_success
+user_id: guest
+build: 27
+step: auth
+timestamp: 2026-04-20T17:07:14Z
+ios: 26.2
+device: arm64
+app_version: 1.0
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:07:14]
+event: api_success
+user_id: guest
+build: 27
+step: /users/auth/verify/
+timestamp: 2026-04-20T17:07:14Z
+ios: 26.2
+device: arm64
+app_version: 1.0
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:07:24]
+build: 27
+device: arm64
+has_avatar: True
+user_id: guest
+username: edgar
+timestamp: 2026-04-20T17:07:24Z
+step: vm
+event: setup_profile_start
+ios: 26.2
+app_version: 1.0
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:07:24]
+timestamp: 2026-04-20T17:07:24Z
+user_id: guest
+build: 27
+ios: 26.2
+event: setup_profile_start
+app_version: 1.0
+step: auth
+device: arm64
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:07:25]
+event: setup_profile_success
+build: 27
+user_id: guest
+timestamp: 2026-04-20T17:07:25Z
+step: vm
+ios: 26.2
+device: arm64
+app_version: 1.0
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:07:25]
+event: setup_profile_success
+build: 27
+user_id: guest
+timestamp: 2026-04-20T17:07:25Z
+step: auth
+ios: 26.2
+device: arm64
+app_version: 1.0
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:07:25]
+event: get_me_start
+build: 27
+step: profile
+ios: 26.2
+user_id: guest
+timestamp: 2026-04-20T17:07:25Z
+app_version: 1.0
+device: arm64
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:07:25]
+step: vm
+build: 27
+device: arm64
+timestamp: 2026-04-20T17:07:25Z
+app_version: 1.0
+event: welcome_profile_load_start
+user_id: guest
+ios: 26.2
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:07:25]
+event: auth_header_set
+build: 27
+has_token: True
+step: api_client
+endpoint: /users/me/
+ios: 26.2
+user_id: guest
+timestamp: 2026-04-20T17:07:25Z
+app_version: 1.0
+token_length: 231
+device: arm64
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:07:25]
+event: api_request
+build: 27
+step: /users/me/
+ios: 26.2
+user_id: guest
+timestamp: 2026-04-20T17:07:25Z
+app_version: 1.0
+device: arm64
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:07:26]
+timestamp: 2026-04-20T17:07:26Z
+event: api_success
+user_id: guest
+step: /users/me/
+device: arm64
+ios: 26.2
+build: 27
+app_version: 1.0
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:07:26]
+timestamp: 2026-04-20T17:07:26Z
+event: welcome_profile_success
+has_avatar: True
+user_id: guest
+step: vm
+device: arm64
+ios: 26.2
+build: 27
+avatar_url: /media/avatars/avatar_LYDEZRL.jpg
+app_version: 1.0
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:07:26]
+timestamp: 2026-04-20T17:07:26Z
+event: get_me_success
+has_avatar: True
+user_id: guest
+step: profile
+device: arm64
+ios: 26.2
+build: 27
+username: edgar
+app_version: 1.0
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:13:57]
+build: 27
+device: arm64
+timestamp: 2026-04-20T17:13:57Z
+event: welcome_opened
+app_version: 1.0
+step: screen_visible
+user_id: guest
+ios: 26.2
+screen: welcome
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:14:05]
+user_id: guest
+build: 27
+device: arm64
+event: welcome_get_started_tap
+timestamp: 2026-04-20T17:14:05Z
+app_version: 1.0
+step: pressed
+ios: 26.2
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:14:15]
+event: register_button_tap
+step: pressed
+ios: 26.2
+email: edgar55docs@gmail.com
+user_id: guest
+password_length: 6
+app_version: 1.0
+build: 27
+timestamp: 2026-04-20T17:14:15Z
+device: arm64
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:14:15]
+user_id: guest
+device: arm64
+event: register_api_start
+step: auth
+build: 27
+ios: 26.2
+timestamp: 2026-04-20T17:14:15Z
+app_version: 1.0
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:14:15]
+user_id: guest
+device: arm64
+event: auth_skipped
+step: api_client
+build: 27
+ios: 26.2
+timestamp: 2026-04-20T17:14:15Z
+endpoint: /users/auth/register/
+app_version: 1.0
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:14:15]
+user_id: guest
+event: api_request
+device: arm64
+ios: 26.2
+app_version: 1.0
+build: 27
+timestamp: 2026-04-20T17:14:15Z
+step: /users/auth/register/
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:14:17]
+event: api_success
+device: arm64
+app_version: 1.0
+ios: 26.2
+build: 27
+user_id: guest
+step: /users/auth/register/
+timestamp: 2026-04-20T17:14:17Z
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:14:17]
+event: register_api_success
+device: arm64
+app_version: 1.0
+ios: 26.2
+build: 27
+user_id: guest
+step: auth
+timestamp: 2026-04-20T17:14:17Z
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:14:17]
+user_id: guest
+step: api_client
+event: auth_skipped
+ios: 26.2
+build: 27
+timestamp: 2026-04-20T17:14:17Z
+device: arm64
+endpoint: /users/auth/send-code/
+app_version: 1.0
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:14:17]
+user_id: guest
+step: /users/auth/send-code/
+event: api_request
+app_version: 1.0
+device: arm64
+build: 27
+ios: 26.2
+timestamp: 2026-04-20T17:14:17Z
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:14:18]
+build: 27
+step: /users/auth/send-code/
+device: arm64
+timestamp: 2026-04-20T17:14:18Z
+user_id: guest
+event: api_success
+app_version: 1.0
+ios: 26.2
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:14:34]
+build: 27
+user_id: guest
+event: api_request
+app_version: 1.0
+step: /users/auth/verify/
+ios: 26.2
+timestamp: 2026-04-20T17:14:34Z
+device: arm64
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:14:34]
+build: 27
+user_id: guest
+event: verify_code_start
+app_version: 1.0
+step: auth
+ios: 26.2
+timestamp: 2026-04-20T17:14:34Z
+device: arm64
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:14:34]
+build: 27
+user_id: guest
+event: auth_skipped
+ios: 26.2
+step: api_client
+endpoint: /users/auth/verify/
+app_version: 1.0
+timestamp: 2026-04-20T17:14:34Z
+device: arm64
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:14:35]
+device: arm64
+build: 27
+event: api_success
+app_version: 1.0
+ios: 26.2
+user_id: guest
+step: /users/auth/verify/
+timestamp: 2026-04-20T17:14:35Z
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:14:35]
+device: arm64
+build: 27
+event: verify_code_success
+app_version: 1.0
+ios: 26.2
+user_id: guest
+step: auth
+timestamp: 2026-04-20T17:14:35Z
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:14:46]
+device: arm64
+event: setup_profile_start
+user_id: guest
+app_version: 1.0
+build: 27
+timestamp: 2026-04-20T17:14:46Z
+ios: 26.2
+username: gfcfc
+step: vm
+has_avatar: True
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:14:46]
+device: arm64
+user_id: guest
+event: setup_profile_start
+step: auth
+ios: 26.2
+app_version: 1.0
+build: 27
+timestamp: 2026-04-20T17:14:46Z
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:14:47]
+app_version: 1.0
+event: setup_profile_success
+step: vm
+user_id: guest
+ios: 26.2
+build: 27
+timestamp: 2026-04-20T17:14:47Z
+device: arm64
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:14:47]
+timestamp: 2026-04-20T17:14:47Z
+step: auth
+device: arm64
+app_version: 1.0
+build: 27
+user_id: guest
+event: setup_profile_success
+ios: 26.2
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:14:47]
+step: api_client
+event: auth_header_set
+device: arm64
+ios: 26.2
+build: 27
+endpoint: /users/me/
+user_id: guest
+app_version: 1.0
+timestamp: 2026-04-20T17:14:47Z
+token_length: 231
+has_token: True
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:14:47]
+user_id: guest
+app_version: 1.0
+build: 27
+step: /users/me/
+ios: 26.2
+timestamp: 2026-04-20T17:14:47Z
+device: arm64
+event: api_request
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:14:47]
+build: 27
+user_id: guest
+timestamp: 2026-04-20T17:14:47Z
+app_version: 1.0
+device: arm64
+event: welcome_profile_load_start
+step: vm
+ios: 26.2
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:14:47]
+step: profile
+ios: 26.2
+device: arm64
+event: get_me_start
+build: 27
+app_version: 1.0
+user_id: guest
+timestamp: 2026-04-20T17:14:47Z
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:14:48]
+user_id: guest
+ios: 26.2
+timestamp: 2026-04-20T17:14:48Z
+device: arm64
+app_version: 1.0
+step: /users/me/
+build: 27
+event: api_success
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:14:48]
+has_avatar: True
+app_version: 1.0
+event: welcome_profile_success
+step: vm
+user_id: guest
+ios: 26.2
+build: 27
+timestamp: 2026-04-20T17:14:48Z
+avatar_url: /media/avatars/avatar_1kW7oPz.jpg
+device: arm64
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:14:48]
+device: arm64
+ios: 26.2
+timestamp: 2026-04-20T17:14:48Z
+user_id: guest
+app_version: 1.0
+event: get_me_success
+has_avatar: True
+username: gfcfc
+build: 27
+step: profile
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:18:35]
+user_id: guest
+build: 27
+event: welcome_opened
+app_version: 1.0
+timestamp: 2026-04-20T17:18:35Z
+device: arm64
+screen: welcome
+ios: 26.2
+step: screen_visible
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:18:49]
+timestamp: 2026-04-20T17:18:49Z
+build: 27
+step: pressed
+device: arm64
+ios: 26.2
+event: welcome_get_started_tap
+app_version: 1.0
+user_id: guest
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:19:02]
+timestamp: 2026-04-20T17:19:02Z
+ios: 26.2
+password_length: 6
+event: register_button_tap
+user_id: guest
+build: 27
+step: pressed
+device: arm64
+email: edgar55docs@gmail.com
+app_version: 1.0
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:19:02]
+step: auth
+app_version: 1.0
+user_id: guest
+timestamp: 2026-04-20T17:19:02Z
+build: 27
+event: register_api_start
+device: arm64
+ios: 26.2
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:19:02]
+ios: 26.2
+app_version: 1.0
+user_id: guest
+device: arm64
+endpoint: /users/auth/register/
+event: auth_skipped
+build: 27
+timestamp: 2026-04-20T17:19:02Z
+step: api_client
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:19:02]
+app_version: 1.0
+ios: 26.2
+device: arm64
+user_id: guest
+build: 27
+event: api_request
+timestamp: 2026-04-20T17:19:02Z
+step: /users/auth/register/
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:19:04]
+device: arm64
+app_version: 1.0
+timestamp: 2026-04-20T17:19:04Z
+event: api_success
+build: 27
+step: /users/auth/register/
+user_id: guest
+ios: 26.2
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:19:04]
+user_id: guest
+app_version: 1.0
+step: auth
+ios: 26.2
+event: register_api_success
+timestamp: 2026-04-20T17:19:04Z
+build: 27
+device: arm64
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:19:04]
+build: 27
+endpoint: /users/auth/send-code/
+event: auth_skipped
+app_version: 1.0
+timestamp: 2026-04-20T17:19:04Z
+device: arm64
+user_id: guest
+ios: 26.2
+step: api_client
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:19:04]
+build: 27
+timestamp: 2026-04-20T17:19:04Z
+event: api_request
+app_version: 1.0
+device: arm64
+user_id: guest
+ios: 26.2
+step: /users/auth/send-code/
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:19:07]
+timestamp: 2026-04-20T17:19:07Z
+app_version: 1.0
+step: /users/auth/send-code/
+device: arm64
+event: api_success
+user_id: guest
+build: 27
+ios: 26.2
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:19:28]
+step: /users/auth/verify/
+device: arm64
+user_id: guest
+build: 27
+app_version: 1.0
+ios: 26.2
+timestamp: 2026-04-20T17:19:28Z
+event: api_request
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:19:28]
+user_id: guest
+step: api_client
+app_version: 1.0
+timestamp: 2026-04-20T17:19:28Z
+endpoint: /users/auth/verify/
+ios: 26.2
+device: arm64
+event: auth_skipped
+build: 27
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:19:28]
+build: 27
+device: arm64
+ios: 26.2
+user_id: guest
+timestamp: 2026-04-20T17:19:28Z
+step: auth
+app_version: 1.0
+event: verify_code_start
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:19:29]
+ios: 26.2
+timestamp: 2026-04-20T17:19:29Z
+build: 27
+event: api_success
+step: /users/auth/verify/
+user_id: guest
+device: arm64
+app_version: 1.0
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:19:29]
+step: auth
+ios: 26.2
+timestamp: 2026-04-20T17:19:29Z
+user_id: guest
+app_version: 1.0
+device: arm64
+build: 27
+event: verify_code_success
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:19:38]
+app_version: 1.0
+step: vm
+event: setup_profile_start
+username: gsvchvcs
+device: arm64
+has_avatar: True
+ios: 26.2
+build: 27
+user_id: guest
+timestamp: 2026-04-20T17:19:38Z
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:19:38]
+device: arm64
+app_version: 1.0
+ios: 26.2
+step: auth
+event: setup_profile_start
+timestamp: 2026-04-20T17:19:38Z
+user_id: guest
+build: 27
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:19:39]
+build: 27
+user_id: guest
+ios: 26.2
+app_version: 1.0
+timestamp: 2026-04-20T17:19:39Z
+step: vm
+device: arm64
+event: setup_profile_success
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:19:39]
+ios: 26.2
+build: 27
+event: setup_profile_success
+device: arm64
+user_id: guest
+timestamp: 2026-04-20T17:19:39Z
+app_version: 1.0
+step: auth
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:19:39]
+app_version: 1.0
+build: 27
+event: welcome_profile_load_start
+step: vm
+device: arm64
+ios: 26.2
+timestamp: 2026-04-20T17:19:39Z
+user_id: guest
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:19:39]
+build: 27
+timestamp: 2026-04-20T17:19:39Z
+event: get_me_start
+user_id: guest
+app_version: 1.0
+device: arm64
+ios: 26.2
+step: profile
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:19:39]
+build: 27
+timestamp: 2026-04-20T17:19:39Z
+event: api_request
+user_id: guest
+app_version: 1.0
+device: arm64
+ios: 26.2
+step: /users/me/
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:19:39]
+build: 27
+timestamp: 2026-04-20T17:19:39Z
+event: auth_header_set
+user_id: guest
+app_version: 1.0
+device: arm64
+ios: 26.2
+token_length: 232
+has_token: True
+step: api_client
+endpoint: /users/me/
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:19:40]
+event: api_success
+app_version: 1.0
+user_id: guest
+build: 27
+ios: 26.2
+device: arm64
+timestamp: 2026-04-20T17:19:40Z
+step: /users/me/
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:19:40]
+username: gsvchvcs
+ios: 26.2
+step: profile
+event: get_me_success
+has_avatar: True
+user_id: guest
+build: 27
+timestamp: 2026-04-20T17:19:40Z
+device: arm64
+app_version: 1.0
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:19:40]
+has_avatar: True
+build: 27
+device: arm64
+avatar_url: /media/avatars/avatar_ElsRpD6.jpg
+user_id: guest
+step: vm
+event: welcome_profile_success
+app_version: 1.0
+ios: 26.2
+timestamp: 2026-04-20T17:19:40Z
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:24:36]
+build: 27
+event: welcome_opened
+ios: 26.2
+step: screen_visible
+user_id: guest
+screen: welcome
+app_version: 1.0
+timestamp: 2026-04-20T17:24:36Z
+device: arm64
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:24:37]
+step: pressed
+app_version: 1.0
+user_id: guest
+device: arm64
+build: 27
+ios: 26.2
+timestamp: 2026-04-20T17:24:37Z
+event: welcome_get_started_tap
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:24:44]
+event: register_button_tap
+user_id: guest
+timestamp: 2026-04-20T17:24:44Z
+ios: 26.2
+step: pressed
+device: arm64
+password_length: 6
+app_version: 1.0
+build: 27
+email: edgar55docs@gmail.com
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:24:45]
+timestamp: 2026-04-20T17:24:45Z
+app_version: 1.0
+event: register_api_start
+step: auth
+build: 27
+device: arm64
+user_id: guest
+ios: 26.2
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:24:45]
+endpoint: /users/auth/register/
+event: auth_skipped
+app_version: 1.0
+step: api_client
+build: 27
+timestamp: 2026-04-20T17:24:45Z
+device: arm64
+user_id: guest
+ios: 26.2
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:24:45]
+timestamp: 2026-04-20T17:24:45Z
+event: api_request
+app_version: 1.0
+ios: 26.2
+build: 27
+device: arm64
+step: /users/auth/register/
+user_id: guest
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:24:46]
+build: 27
+step: /users/auth/register/
+event: api_success
+app_version: 1.0
+user_id: guest
+ios: 26.2
+timestamp: 2026-04-20T17:24:46Z
+device: arm64
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:24:46]
+step: auth
+event: register_api_success
+device: arm64
+build: 27
+timestamp: 2026-04-20T17:24:46Z
+ios: 26.2
+user_id: guest
+app_version: 1.0
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:24:46]
+endpoint: /users/auth/send-code/
+step: api_client
+event: auth_skipped
+device: arm64
+build: 27
+timestamp: 2026-04-20T17:24:46Z
+ios: 26.2
+user_id: guest
+app_version: 1.0
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:24:46]
+step: /users/auth/send-code/
+event: api_request
+device: arm64
+build: 27
+timestamp: 2026-04-20T17:24:46Z
+ios: 26.2
+user_id: guest
+app_version: 1.0
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:24:48]
+step: /users/auth/send-code/
+build: 27
+device: arm64
+event: api_success
+ios: 26.2
+app_version: 1.0
+timestamp: 2026-04-20T17:24:48Z
+user_id: guest
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:24:59]
+ios: 26.2
+build: 27
+user_id: guest
+device: arm64
+event: auth_skipped
+endpoint: /users/auth/verify/
+step: api_client
+app_version: 1.0
+timestamp: 2026-04-20T17:24:59Z
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:24:59]
+ios: 26.2
+build: 27
+user_id: guest
+device: arm64
+event: api_request
+step: /users/auth/verify/
+app_version: 1.0
+timestamp: 2026-04-20T17:24:59Z
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:24:59]
+user_id: guest
+build: 27
+device: arm64
+ios: 26.2
+timestamp: 2026-04-20T17:24:59Z
+app_version: 1.0
+event: verify_code_start
+step: auth
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:25:01]
+timestamp: 2026-04-20T17:25:01Z
+step: auth
+build: 27
+user_id: guest
+app_version: 1.0
+ios: 26.2
+device: arm64
+event: verify_code_success
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:25:01]
+build: 27
+app_version: 1.0
+event: api_success
+device: arm64
+user_id: guest
+timestamp: 2026-04-20T17:25:01Z
+ios: 26.2
+step: /users/auth/verify/
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:25:10]
+user_id: guest
+username: gjvsjgfds
+ios: 26.2
+has_avatar: True
+timestamp: 2026-04-20T17:25:10Z
+event: setup_profile_start
+build: 27
+app_version: 1.0
+step: vm
+device: arm64
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:25:10]
+user_id: guest
+ios: 26.2
+step: auth
+build: 27
+device: arm64
+timestamp: 2026-04-20T17:25:10Z
+app_version: 1.0
+event: setup_profile_start
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:25:13]
+step: vm
+device: arm64
+user_id: guest
+ios: 26.2
+timestamp: 2026-04-20T17:25:13Z
+app_version: 1.0
+event: setup_profile_success
+build: 27
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:25:13]
+step: auth
+device: arm64
+user_id: guest
+ios: 26.2
+timestamp: 2026-04-20T17:25:13Z
+app_version: 1.0
+event: setup_profile_success
+build: 27
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:25:13]
+timestamp: 2026-04-20T17:25:13Z
+step: vm
+ios: 26.2
+user_id: guest
+device: arm64
+app_version: 1.0
+event: welcome_profile_load_start
+build: 27
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:25:13]
+timestamp: 2026-04-20T17:25:13Z
+step: /users/me/
+ios: 26.2
+user_id: guest
+device: arm64
+app_version: 1.0
+event: api_request
+build: 27
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:25:13]
+app_version: 1.0
+has_token: True
+step: api_client
+build: 27
+timestamp: 2026-04-20T17:25:13Z
+ios: 26.2
+user_id: guest
+event: auth_header_set
+token_length: 232
+device: arm64
+endpoint: /users/me/
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:25:13]
+build: 27
+event: get_me_start
+step: profile
+timestamp: 2026-04-20T17:25:13Z
+ios: 26.2
+app_version: 1.0
+user_id: guest
+device: arm64
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:25:14]
+event: api_success
+timestamp: 2026-04-20T17:25:14Z
+ios: 26.2
+app_version: 1.0
+user_id: guest
+step: /users/me/
+build: 27
+device: arm64
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:25:14]
+avatar_url: /media/avatars/avatar_RfQ1P9I.jpg
+user_id: guest
+event: welcome_profile_success
+timestamp: 2026-04-20T17:25:14Z
+step: vm
+ios: 26.2
+device: arm64
+app_version: 1.0
+build: 27
+has_avatar: True
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:25:14]
+event: get_me_success
+timestamp: 2026-04-20T17:25:14Z
+ios: 26.2
+app_version: 1.0
+has_avatar: True
+user_id: guest
+step: profile
+build: 27
+device: arm64
+username: gjvsjgfds
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:32:19]
+user_id: guest
+device: arm64
+event: welcome_opened
+step: screen_visible
+app_version: 1.0
+screen: welcome
+ios: 26.2
+timestamp: 2026-04-20T17:32:19Z
+build: 27
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:32:25]
+step: pressed
+event: welcome_get_started_tap
+device: arm64
+ios: 26.2
+user_id: guest
+app_version: 1.0
+build: 27
+timestamp: 2026-04-20T17:32:25Z
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:32:31]
+event: register_button_tap
+build: 27
+timestamp: 2026-04-20T17:32:31Z
+app_version: 1.0
+password_length: 6
+ios: 26.2
+email: edgar55docs@gmail.com
+step: pressed
+user_id: guest
+device: arm64
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:32:31]
+device: arm64
+timestamp: 2026-04-20T17:32:31Z
+build: 27
+ios: 26.2
+event: register_api_start
+app_version: 1.0
+user_id: guest
+step: auth
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:32:31]
+app_version: 1.0
+device: arm64
+timestamp: 2026-04-20T17:32:31Z
+build: 27
+ios: 26.2
+event: auth_skipped
+user_id: guest
+step: api_client
+endpoint: /users/auth/register/
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:32:31]
+device: arm64
+timestamp: 2026-04-20T17:32:31Z
+build: 27
+ios: 26.2
+event: api_request
+app_version: 1.0
+user_id: guest
+step: /users/auth/register/
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:32:32]
+build: 27
+status: 400
+app_version: 1.0
+timestamp: 2026-04-20T17:32:32Z
+device: arm64
+step: /users/auth/register/
+event: api_error
+ios: 26.2
+user_id: guest
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:32:32]
+user_id: guest
+step: /users/auth/register/
+message: Не удалось завершить операцию. (NSURLErrorDomain, ошибка -1011)
+build: 27
+timestamp: 2026-04-20T17:32:32Z
+device: arm64
+ios: 26.2
+event: error
+app_version: 1.0
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:32:32]
+event: error
+build: 27
+timestamp: 2026-04-20T17:32:32Z
+app_version: 1.0
+ios: 26.2
+message: Не удалось завершить операцию. (NSURLErrorDomain, ошибка -1011)
+step: register_flow
+user_id: guest
+device: arm64
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:32:32]
+event: error
+build: 27
+timestamp: 2026-04-20T17:32:32Z
+app_version: 1.0
+ios: 26.2
+message: Не удалось завершить операцию. (NSURLErrorDomain, ошибка -1011)
+step: register_api
+user_id: guest
+device: arm64
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:32:41]
+event: register_button_tap
+device: arm64
+timestamp: 2026-04-20T17:32:41Z
+build: 27
+ios: 26.2
+password_length: 6
+app_version: 1.0
+user_id: guest
+step: pressed
+email: edgar55docs@gmail.com
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:32:41]
+device: arm64
+endpoint: /users/auth/register/
+app_version: 1.0
+build: 27
+timestamp: 2026-04-20T17:32:41Z
+user_id: guest
+event: auth_skipped
+ios: 26.2
+step: api_client
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:32:41]
+build: 27
+step: auth
+timestamp: 2026-04-20T17:32:41Z
+ios: 26.2
+user_id: guest
+device: arm64
+app_version: 1.0
+event: register_api_start
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:32:41]
+device: arm64
+app_version: 1.0
+build: 27
+timestamp: 2026-04-20T17:32:41Z
+user_id: guest
+event: api_request
+ios: 26.2
+step: /users/auth/register/
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:32:41]
+event: api_error
+build: 27
+device: arm64
+step: /users/auth/register/
+ios: 26.2
+user_id: guest
+status: 400
+timestamp: 2026-04-20T17:32:41Z
+app_version: 1.0
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:32:41]
+event: error
+build: 27
+device: arm64
+message: Не удалось завершить операцию. (NSURLErrorDomain, ошибка -1011)
+step: register_flow
+user_id: guest
+ios: 26.2
+timestamp: 2026-04-20T17:32:41Z
+app_version: 1.0
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:32:41]
+event: error
+build: 27
+device: arm64
+message: Не удалось завершить операцию. (NSURLErrorDomain, ошибка -1011)
+step: register_api
+ios: 26.2
+user_id: guest
+timestamp: 2026-04-20T17:32:41Z
+app_version: 1.0
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:32:41]
+event: error
+build: 27
+device: arm64
+message: Не удалось завершить операцию. (NSURLErrorDomain, ошибка -1011)
+step: /users/auth/register/
+ios: 26.2
+user_id: guest
+timestamp: 2026-04-20T17:32:41Z
+app_version: 1.0
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:33:30]
+timestamp: 2026-04-20T17:33:30Z
+screen: welcome
+user_id: guest
+build: 27
+ios: 26.2
+device: arm64
+step: screen_visible
+event: welcome_opened
+app_version: 1.0
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:33:33]
+user_id: guest
+build: 27
+timestamp: 2026-04-20T17:33:33Z
+app_version: 1.0
+ios: 26.2
+step: pressed
+event: welcome_get_started_tap
+device: arm64
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:33:54]
+password_length: 6
+ios: 26.2
+event: register_button_tap
+device: arm64
+build: 27
+email: edgar55docs@gmail.com
+step: pressed
+timestamp: 2026-04-20T17:33:54Z
+user_id: guest
+app_version: 1.0
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:33:54]
+user_id: guest
+build: 27
+ios: 26.2
+app_version: 1.0
+timestamp: 2026-04-20T17:33:54Z
+step: auth
+event: register_api_start
+device: arm64
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:33:54]
+user_id: guest
+endpoint: /users/auth/register/
+build: 27
+ios: 26.2
+app_version: 1.0
+timestamp: 2026-04-20T17:33:54Z
+step: api_client
+event: auth_skipped
+device: arm64
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:33:54]
+user_id: guest
+build: 27
+ios: 26.2
+app_version: 1.0
+timestamp: 2026-04-20T17:33:54Z
+step: /users/auth/register/
+event: api_request
+device: arm64
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:33:56]
+build: 27
+user_id: guest
+step: /users/auth/register/
+device: arm64
+app_version: 1.0
+event: api_success
+ios: 26.2
+timestamp: 2026-04-20T17:33:56Z
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:33:56]
+timestamp: 2026-04-20T17:33:56Z
+step: auth
+user_id: guest
+ios: 26.2
+event: register_api_success
+build: 27
+app_version: 1.0
+device: arm64
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:33:56]
+timestamp: 2026-04-20T17:33:56Z
+build: 27
+app_version: 1.0
+event: auth_skipped
+device: arm64
+user_id: guest
+endpoint: /users/auth/send-code/
+ios: 26.2
+step: api_client
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:33:56]
+timestamp: 2026-04-20T17:33:56Z
+device: arm64
+app_version: 1.0
+ios: 26.2
+step: /users/auth/send-code/
+build: 27
+event: api_request
+user_id: guest
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:33:57]
+user_id: guest
+step: /users/auth/send-code/
+event: api_success
+device: arm64
+build: 27
+ios: 26.2
+app_version: 1.0
+timestamp: 2026-04-20T17:33:57Z
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:34:14]
+user_id: guest
+step: auth
+event: verify_code_start
+build: 27
+ios: 26.2
+device: arm64
+timestamp: 2026-04-20T17:34:14Z
+app_version: 1.0
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:34:14]
+user_id: guest
+step: api_client
+event: auth_skipped
+build: 27
+ios: 26.2
+device: arm64
+endpoint: /users/auth/verify/
+timestamp: 2026-04-20T17:34:14Z
+app_version: 1.0
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:34:14]
+user_id: guest
+step: /users/auth/verify/
+event: api_request
+build: 27
+ios: 26.2
+device: arm64
+timestamp: 2026-04-20T17:34:14Z
+app_version: 1.0
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:34:15]
+step: auth
+timestamp: 2026-04-20T17:34:15Z
+device: arm64
+app_version: 1.0
+user_id: guest
+ios: 26.2
+event: verify_code_success
+build: 27
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:34:15]
+device: arm64
+step: /users/auth/verify/
+app_version: 1.0
+ios: 26.2
+user_id: guest
+event: api_success
+timestamp: 2026-04-20T17:34:15Z
+build: 27
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:34:24]
+timestamp: 2026-04-20T17:34:24Z
+username: ghgchg
+event: setup_profile_start
+device: arm64
+step: vm
+user_id: guest
+app_version: 1.0
+has_avatar: True
+build: 27
+ios: 26.2
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:34:24]
+timestamp: 2026-04-20T17:34:24Z
+event: setup_profile_start
+device: arm64
+user_id: guest
+step: auth
+app_version: 1.0
+build: 27
+ios: 26.2
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:34:25]
+timestamp: 2026-04-20T17:34:25Z
+ios: 26.2
+app_version: 1.0
+event: setup_profile_success
+device: arm64
+user_id: guest
+build: 27
+step: auth
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:34:25]
+timestamp: 2026-04-20T17:34:25Z
+ios: 26.2
+app_version: 1.0
+event: setup_profile_success
+device: arm64
+user_id: guest
+build: 27
+step: vm
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:34:25]
+app_version: 1.0
+build: 27
+ios: 26.2
+user_id: guest
+timestamp: 2026-04-20T17:34:25Z
+step: vm
+event: welcome_profile_load_start
+device: arm64
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:34:25]
+app_version: 1.0
+event: get_me_start
+user_id: guest
+step: profile
+ios: 26.2
+build: 27
+timestamp: 2026-04-20T17:34:25Z
+device: arm64
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:34:25]
+event: api_request
+ios: 26.2
+device: arm64
+build: 27
+user_id: guest
+step: /users/me/
+app_version: 1.0
+timestamp: 2026-04-20T17:34:25Z
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:34:25]
+app_version: 1.0
+token_length: 232
+event: auth_header_set
+user_id: guest
+step: api_client
+ios: 26.2
+build: 27
+endpoint: /users/me/
+has_token: True
+device: arm64
+timestamp: 2026-04-20T17:34:25Z
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:34:26]
+ios: 26.2
+user_id: guest
+step: /users/me/
+event: api_success
+build: 27
+device: arm64
+app_version: 1.0
+timestamp: 2026-04-20T17:34:26Z
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:34:26]
+build: 27
+ios: 26.2
+user_id: guest
+avatar_url: /media/avatars/avatar_KIjxZ3O.jpg
+event: welcome_profile_success
+step: vm
+app_version: 1.0
+timestamp: 2026-04-20T17:34:26Z
+has_avatar: True
+device: arm64
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:34:26]
+ios: 26.2
+step: profile
+has_avatar: True
+event: get_me_success
+device: arm64
+build: 27
+user_id: guest
+username: ghgchg
+timestamp: 2026-04-20T17:34:26Z
+app_version: 1.0
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:41:14]
+ios: 26.2
+user_id: guest
+step: screen_visible
+app_version: 1.0
+build: 27
+event: welcome_opened
+screen: welcome
+timestamp: 2026-04-20T17:41:14Z
+device: arm64
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:41:34]
+screen: welcome
+user_id: guest
+ios: 26.2
+build: 27
+step: screen_visible
+timestamp: 2026-04-20T17:41:34Z
+app_version: 1.0
+event: welcome_opened
+device: arm64
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:41:36]
+event: welcome_get_started_tap
+step: pressed
+app_version: 1.0
+build: 27
+timestamp: 2026-04-20T17:41:36Z
+device: arm64
+ios: 26.2
+user_id: guest
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:41:44]
+build: 27
+user_id: guest
+step: pressed
+password_length: 6
+email: edgar55docs@gmail.com
+timestamp: 2026-04-20T17:41:44Z
+device: arm64
+event: register_button_tap
+app_version: 1.0
+ios: 26.2
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:41:44]
+event: register_api_start
+build: 27
+device: arm64
+timestamp: 2026-04-20T17:41:44Z
+ios: 26.2
+app_version: 1.0
+user_id: guest
+step: auth
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:41:44]
+event: auth_skipped
+build: 27
+device: arm64
+timestamp: 2026-04-20T17:41:44Z
+endpoint: /users/auth/register/
+ios: 26.2
+app_version: 1.0
+step: api_client
+user_id: guest
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:41:44]
+device: arm64
+app_version: 1.0
+ios: 26.2
+build: 27
+step: /users/auth/register/
+timestamp: 2026-04-20T17:41:44Z
+user_id: guest
+event: api_request
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:41:45]
+app_version: 1.0
+event: api_success
+timestamp: 2026-04-20T17:41:45Z
+ios: 26.2
+user_id: guest
+step: /users/auth/register/
+device: arm64
+build: 27
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:41:45]
+ios: 26.2
+app_version: 1.0
+step: auth
+user_id: guest
+build: 27
+timestamp: 2026-04-20T17:41:45Z
+device: arm64
+event: register_api_success
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:41:45]
+ios: 26.2
+user_id: guest
+step: api_client
+app_version: 1.0
+build: 27
+timestamp: 2026-04-20T17:41:45Z
+endpoint: /users/auth/send-code/
+device: arm64
+event: auth_skipped
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:41:45]
+device: arm64
+app_version: 1.0
+ios: 26.2
+build: 27
+step: /users/auth/send-code/
+timestamp: 2026-04-20T17:41:45Z
+user_id: guest
+event: api_request
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:41:47]
+app_version: 1.0
+event: api_success
+timestamp: 2026-04-20T17:41:47Z
+user_id: guest
+ios: 26.2
+step: /users/auth/send-code/
+device: arm64
+build: 27
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:42:03]
+user_id: guest
+ios: 26.2
+app_version: 1.0
+event: verify_code_start
+device: arm64
+step: auth
+build: 27
+timestamp: 2026-04-20T17:42:03Z
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:42:03]
+user_id: guest
+ios: 26.2
+app_version: 1.0
+event: auth_skipped
+device: arm64
+step: api_client
+build: 27
+endpoint: /users/auth/verify/
+timestamp: 2026-04-20T17:42:03Z
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:42:03]
+user_id: guest
+ios: 26.2
+app_version: 1.0
+event: api_request
+device: arm64
+step: /users/auth/verify/
+build: 27
+timestamp: 2026-04-20T17:42:03Z
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:42:04]
+ios: 26.2
+step: auth
+app_version: 1.0
+timestamp: 2026-04-20T17:42:04Z
+event: verify_code_success
+user_id: guest
+device: arm64
+build: 27
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:42:04]
+ios: 26.2
+step: /users/auth/verify/
+app_version: 1.0
+timestamp: 2026-04-20T17:42:04Z
+event: api_success
+user_id: guest
+device: arm64
+build: 27
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:42:14]
+device: arm64
+step: vm
+event: setup_profile_start
+user_id: guest
+timestamp: 2026-04-20T17:42:14Z
+app_version: 1.0
+has_avatar: True
+ios: 26.2
+username: hsdfbsdf
+build: 27
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:42:14]
+device: arm64
+step: auth
+event: setup_profile_start
+user_id: guest
+timestamp: 2026-04-20T17:42:14Z
+app_version: 1.0
+ios: 26.2
+build: 27
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:42:15]
+event: setup_profile_success
+app_version: 1.0
+step: auth
+build: 27
+ios: 26.2
+timestamp: 2026-04-20T17:42:15Z
+device: arm64
+user_id: guest
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:42:15]
+build: 27
+device: arm64
+app_version: 1.0
+ios: 26.2
+user_id: guest
+step: vm
+timestamp: 2026-04-20T17:42:15Z
+event: setup_profile_success
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:42:15]
+token_length: 232
+ios: 26.2
+event: auth_header_set
+endpoint: /users/me/
+user_id: guest
+has_token: True
+step: api_client
+device: arm64
+app_version: 1.0
+build: 27
+timestamp: 2026-04-20T17:42:15Z
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:42:15]
+ios: 26.2
+event: api_request
+user_id: guest
+app_version: 1.0
+step: /users/me/
+device: arm64
+build: 27
+timestamp: 2026-04-20T17:42:15Z
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:42:15]
+user_id: guest
+step: vm
+event: welcome_profile_load_start
+build: 27
+timestamp: 2026-04-20T17:42:15Z
+device: arm64
+ios: 26.2
+app_version: 1.0
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:42:15]
+ios: 26.2
+event: get_me_start
+user_id: guest
+app_version: 1.0
+step: profile
+device: arm64
+build: 27
+timestamp: 2026-04-20T17:42:15Z
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:42:16]
+app_version: 1.0
+step: /users/me/
+build: 27
+event: api_success
+user_id: guest
+timestamp: 2026-04-20T17:42:16Z
+ios: 26.2
+device: arm64
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:42:16]
+username: hsdfbsdf
+app_version: 1.0
+step: profile
+build: 27
+event: get_me_success
+has_avatar: True
+user_id: guest
+timestamp: 2026-04-20T17:42:16Z
+ios: 26.2
+device: arm64
+📱 LOG END
+
+
+📱 LOG START [2026-04-20 17:42:16]
+app_version: 1.0
+step: vm
+build: 27
+event: welcome_profile_success
+has_avatar: True
+user_id: guest
+avatar_url: /media/avatars/avatar_F5oGfTi.jpg
+ios: 26.2
+timestamp: 2026-04-20T17:42:16Z
+device: arm64
+📱 LOG END
+
