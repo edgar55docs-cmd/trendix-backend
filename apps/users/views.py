@@ -5,6 +5,7 @@ from django.utils.translation import gettext_lazy as _
 import jwt
 import re
 import requests
+from django.contrib.auth.hashers import make_password
 from rest_framework.decorators import api_view, permission_classes, parser_classes
 from rest_framework.parsers import MultiPartParser, FormParser
 from django.utils.translation import gettext as _
@@ -93,19 +94,13 @@ def register(request):
     try:
         base_name = generate_name(email, name)
 
-        username = base_name
-        counter = 1
-
-        while User.objects.filter(username=username).exists():
-            username = f"{base_name}{counter}"
-            counter += 1
-
-        user = User.objects.create_user(
+        user = User.objects.create(
             email=email,
-            password=password,
-            username=username,
+            password=make_password(password),
+            username=None,
             name=base_name,
-            language=language
+            language=language,
+            provider="email"
         )
 
         user.provider = "email"
@@ -171,6 +166,7 @@ def google_auth(request):
         user, created = User.objects.get_or_create(
             email=email,
             defaults={
+                "username": None,
                 "name": name,
                 "provider": "google",
                 "google_id": google_id,
@@ -182,6 +178,10 @@ def google_auth(request):
                 user.google_id = google_id
 
             user.language = language
+
+            if not user.username:
+                user.username = None
+
             user.save()
 
         tokens = get_tokens_for_user(user)
@@ -224,6 +224,7 @@ def apple_auth(request):
             defaults={
                 "email": email,
                 "name": name,
+                "username": None,
                 "provider": "apple",
             }
         )
@@ -255,6 +256,9 @@ def verify_code(request):
     if not otp:
         return Response({"error": "Code not found"}, status=400)
 
+    if otp.is_verified:
+        return Response({"error": "Code already used"}, status=400)
+
     if otp.is_expired():
         return Response({"error": "Code expired"}, status=400)
 
@@ -265,6 +269,11 @@ def verify_code(request):
 
     otp.is_verified = True
     otp.save()
+
+    user = User.objects.filter(email=email).first()
+    if user:
+        user.is_email_verified = True
+        user.save()
 
     return Response({"success": True})
 
@@ -277,9 +286,11 @@ def send_code(request):
     if not email:
         return Response({"error": "Email required"}, status=400)
 
+    OTP.objects.filter(email=email).delete()
+
     code = OTP.generate_code()
 
-    OTP.objects.create(
+    otp = OTP.objects.create(
         email=email,
         code=code
     )
@@ -288,7 +299,10 @@ def send_code(request):
 
     send_verification_email(email, code)
 
-    return Response({"message": "Code sent"})
+    return Response({
+        "message": "Code sent",
+        "expires_in": 60
+    })
 
 def send_verification_email(email, code):
     response = requests.post(
@@ -359,19 +373,17 @@ def setup_profile(request):
         "avatar": user.avatar.url if user.avatar else None
     })
 
+
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
 def get_me(request):
     user = request.user
 
-    print("\n🟡 GET ME START")
-    print("👤 USER ID:", user.id)
-    print("📧 EMAIL:", user.email)
-
     return Response({
         "id": user.id,
         "username": user.username,
-        "avatar": user.avatar.url if user.avatar else None
+        "avatar": user.avatar.url if user.avatar else None,
+        "is_email_verified": user.is_email_verified
     })
 
 @api_view(['POST'])
