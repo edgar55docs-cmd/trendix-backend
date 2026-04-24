@@ -17,6 +17,7 @@ class CustomUser(AbstractUser):
     avatar = models.ImageField(upload_to="avatars/", null=True, blank=True)
     cover = models.ImageField(upload_to="covers/", null=True, blank=True)
     is_email_verified = models.BooleanField(default=False)
+    is_profile_completed = models.BooleanField(default=False)
 
     google_id = models.CharField(
         max_length=255,
@@ -40,6 +41,23 @@ class CustomUser(AbstractUser):
 
     def __str__(self):
         return self.email
+
+
+class UserSession(models.Model):
+    user = models.ForeignKey(
+        CustomUser,
+        on_delete=models.CASCADE,
+        related_name="sessions"
+    )
+
+    device_id = models.CharField(max_length=255)
+
+    refresh_token = models.TextField()
+
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"{self.user.email} - {self.device_id}"
 
 
 class OTP(models.Model):

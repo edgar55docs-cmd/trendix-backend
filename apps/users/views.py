@@ -5,6 +5,7 @@ from django.utils.translation import gettext_lazy as _
 import jwt
 import re
 import requests
+from .models import UserSession
 from django.contrib.auth.hashers import make_password
 from rest_framework.decorators import api_view, permission_classes, parser_classes
 from rest_framework.parsers import MultiPartParser, FormParser
@@ -108,6 +109,16 @@ def register(request):
 
         tokens = get_tokens_for_user(user)
 
+        device_id = request.headers.get("Device-Id")
+
+        print("📱 DEVICE ID:", device_id)
+
+        UserSession.objects.create(
+            user=user,
+            device_id=device_id,
+            refresh_token=tokens["refresh"]
+        )
+
         return Response({
             "access": tokens["access"],
             "refresh": tokens["refresh"]
@@ -185,6 +196,15 @@ def google_auth(request):
             user.save()
 
         tokens = get_tokens_for_user(user)
+        device_id = request.headers.get("Device-Id")
+
+        print("📱 DEVICE ID:", device_id)
+
+        UserSession.objects.create(
+            user=user,
+            device_id=device_id,
+            refresh_token=tokens["refresh"]
+        )
 
         return Response({
             "access": tokens["access"],
@@ -234,6 +254,15 @@ def apple_auth(request):
                 user.save()
 
         tokens = get_tokens_for_user(user)
+        device_id = request.headers.get("Device-Id")
+
+        print("📱 DEVICE ID:", device_id)
+
+        UserSession.objects.create(
+            user=user,
+            device_id=device_id,
+            refresh_token=tokens["refresh"]
+        )
 
         return Response({
             "access": tokens["access"],
@@ -363,6 +392,7 @@ def setup_profile(request):
     if language:
         user.language = language
 
+    user.is_profile_completed = True
     user.save()
 
     print("🟢 SETUP PROFILE SUCCESS")
@@ -383,7 +413,8 @@ def get_me(request):
         "id": user.id,
         "username": user.username,
         "avatar": user.avatar.url if user.avatar else None,
-        "is_email_verified": user.is_email_verified
+        "is_email_verified": user.is_email_verified,
+        "is_profile_completed": user.is_profile_completed,
     })
 
 @api_view(['POST'])
