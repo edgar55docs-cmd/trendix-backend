@@ -60566,3 +60566,2934 @@ step: vm
 timestamp: 2026-04-24T08:29:00Z
 📱 LOG END
 
+
+📱 LOG START [2026-04-24 08:40:49]
+ios: 26.2
+event: no_token
+user_id: guest
+device: arm64
+build: 37
+timestamp: 2026-04-24T08:40:48Z
+app_version: 1.0
+step: session
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 08:40:49]
+app_version: 1.0
+timestamp: 2026-04-24T08:40:48Z
+has_token: False
+event: token_get
+build: 37
+user_id: guest
+ios: 26.2
+step: token_store
+device: arm64
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 08:40:49]
+step: session
+build: 37
+device: arm64
+app_version: 1.0
+ios: 26.2
+user_id: guest
+timestamp: 2026-04-24T08:40:48Z
+event: check_auth_start
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 08:40:49]
+user_id: guest
+ios: 26.2
+screen: welcome
+build: 37
+step: screen_visible
+device: arm64
+app_version: 1.0
+timestamp: 2026-04-24T08:40:49Z
+event: welcome_opened
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 08:40:51]
+ios: 26.2
+event: welcome_get_started_tap
+user_id: guest
+device: arm64
+app_version: 1.0
+build: 37
+timestamp: 2026-04-24T08:40:51Z
+step: pressed
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 08:40:55]
+app_version: 1.0
+email: edgar55docs@gmail.com
+user_id: guest
+ios: 26.2
+build: 37
+password_length: 6
+event: register_button_tap
+device: arm64
+step: pressed
+timestamp: 2026-04-24T08:40:55Z
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 08:40:55]
+device: arm64
+ios: 26.2
+user_id: guest
+endpoint: /users/auth/register/
+build: 37
+event: auth_skipped
+step: api_client
+app_version: 1.0
+timestamp: 2026-04-24T08:40:55Z
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 08:40:55]
+event: register_api_start
+user_id: guest
+step: auth
+app_version: 1.0
+device: arm64
+build: 37
+timestamp: 2026-04-24T08:40:55Z
+ios: 26.2
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 08:40:55]
+device: arm64
+timestamp: 2026-04-24T08:40:55Z
+event: api_request
+user_id: guest
+app_version: 1.0
+ios: 26.2
+build: 37
+step: /users/auth/register/
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 08:40:56]
+timestamp: 2026-04-24T08:40:56Z
+status: 400
+build: 37
+event: api_error
+device: arm64
+step: /users/auth/register/
+app_version: 1.0
+ios: 26.2
+user_id: guest
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 08:40:56]
+event: error
+user_id: guest
+message: Не удалось завершить операцию. (TrendiX.APIError, ошибка 1)
+step: register_flow
+app_version: 1.0
+device: arm64
+build: 37
+timestamp: 2026-04-24T08:40:56Z
+ios: 26.2
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 08:40:56]
+device: arm64
+message: Не удалось завершить операцию. (TrendiX.APIError, ошибка 1)
+ios: 26.2
+user_id: guest
+build: 37
+event: error
+step: register_api
+app_version: 1.0
+timestamp: 2026-04-24T08:40:56Z
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 08:40:56]
+device: arm64
+message: Не удалось завершить операцию. (TrendiX.APIError, ошибка 1)
+ios: 26.2
+user_id: guest
+build: 37
+event: error
+step: /users/auth/register/
+app_version: 1.0
+timestamp: 2026-04-24T08:40:56Z
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 08:51:28]
+user_id: guest
+event: check_auth_start
+device: arm64
+step: session
+build: 37
+timestamp: 2026-04-24T08:51:28Z
+app_version: 1.0
+ios: 26.2
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 08:51:28]
+has_token: False
+device: arm64
+timestamp: 2026-04-24T08:51:28Z
+build: 37
+app_version: 1.0
+user_id: guest
+ios: 26.2
+step: token_store
+event: token_get
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 08:51:28]
+step: session
+device: arm64
+user_id: guest
+ios: 26.2
+app_version: 1.0
+event: no_token
+build: 37
+timestamp: 2026-04-24T08:51:28Z
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 08:51:28]
+screen: welcome
+build: 37
+device: arm64
+ios: 26.2
+event: welcome_opened
+app_version: 1.0
+timestamp: 2026-04-24T08:51:28Z
+user_id: guest
+step: screen_visible
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 08:51:38]
+ios: 26.2
+step: pressed
+user_id: guest
+device: arm64
+event: welcome_get_started_tap
+build: 37
+timestamp: 2026-04-24T08:51:38Z
+app_version: 1.0
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 08:51:39]
+user_id: guest
+app_version: 1.0
+step: pressed
+device: arm64
+ios: 26.2
+event: google_button_tap
+timestamp: 2026-04-24T08:51:39Z
+build: 37
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 08:51:39]
+ios: 26.2
+user_id: guest
+build: 37
+app_version: 1.0
+timestamp: 2026-04-24T08:51:39Z
+event: google_start
+step: init
+device: arm64
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 08:51:45]
+step: google_login
+event: error
+app_version: 1.0
+device: arm64
+message: The user canceled the sign-in flow.
+user_id: guest
+ios: 26.2
+build: 37
+timestamp: 2026-04-24T08:51:45Z
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 08:51:45]
+timestamp: 2026-04-24T08:51:45Z
+device: arm64
+ios: 26.2
+event: error
+app_version: 1.0
+build: 37
+user_id: guest
+message: The user canceled the sign-in flow.
+step: google_signin_failed
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 08:52:32]
+timestamp: 2026-04-24T08:52:32Z
+event: google_button_tap
+step: pressed
+app_version: 1.0
+build: 37
+device: arm64
+user_id: guest
+ios: 26.2
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 08:52:32]
+timestamp: 2026-04-24T08:52:32Z
+event: google_start
+step: init
+app_version: 1.0
+build: 37
+device: arm64
+user_id: guest
+ios: 26.2
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 08:53:33]
+timestamp: 2026-04-24T08:53:33Z
+device: arm64
+app_version: 1.0
+event: api_request
+user_id: guest
+step: /users/auth/google/
+build: 37
+ios: 26.2
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 08:53:33]
+timestamp: 2026-04-24T08:53:33Z
+ios: 26.2
+event: auth_skipped
+build: 37
+step: api_client
+device: arm64
+endpoint: /users/auth/google/
+app_version: 1.0
+user_id: guest
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 08:53:33]
+build: 37
+timestamp: 2026-04-24T08:53:33Z
+ios: 26.2
+event: google_token_received
+app_version: 1.0
+user_id: guest
+step: token_ok
+device: arm64
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 08:53:33]
+user_id: guest
+event: google_api_start
+app_version: 1.0
+ios: 26.2
+build: 37
+timestamp: 2026-04-24T08:53:33Z
+step: auth
+device: arm64
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 08:53:35]
+device: arm64
+build: 37
+event: api_success
+user_id: guest
+step: /users/auth/google/
+timestamp: 2026-04-24T08:53:35Z
+app_version: 1.0
+ios: 26.2
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 08:53:35]
+device: arm64
+build: 37
+event: token_set
+user_id: guest
+step: token_store
+timestamp: 2026-04-24T08:53:35Z
+ios: 26.2
+app_version: 1.0
+has_token: True
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 08:53:35]
+device: arm64
+build: 37
+event: google_api_success
+user_id: guest
+step: auth
+timestamp: 2026-04-24T08:53:35Z
+app_version: 1.0
+ios: 26.2
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 08:53:35]
+device: arm64
+build: 37
+event: token_saved
+user_id: guest
+step: token_store
+access_length: 231
+ios: 26.2
+app_version: 1.0
+timestamp: 2026-04-24T08:53:35Z
+refresh_length: 232
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 08:53:35]
+device: arm64
+build: 37
+event: google_backend_success
+user_id: guest
+step: completed
+timestamp: 2026-04-24T08:53:35Z
+app_version: 1.0
+ios: 26.2
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 08:53:35]
+device: arm64
+build: 37
+event: token_set
+user_id: guest
+step: token_store
+timestamp: 2026-04-24T08:53:35Z
+ios: 26.2
+app_version: 1.0
+has_token: True
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 08:53:35]
+device: arm64
+build: 37
+event: token_saved
+access_length: 231
+step: token_store
+user_id: guest
+ios: 26.2
+app_version: 1.0
+timestamp: 2026-04-24T08:53:35Z
+refresh_length: 232
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 08:53:44]
+device: arm64
+timestamp: 2026-04-24T08:53:44Z
+has_token: True
+event: token_get
+user_id: guest
+app_version: 1.0
+step: token_store
+ios: 26.2
+build: 37
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 08:53:44]
+app_version: 1.0
+build: 37
+ios: 26.2
+event: token_get
+timestamp: 2026-04-24T08:53:44Z
+step: token_store
+user_id: guest
+has_token: True
+device: arm64
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 08:53:44]
+device: arm64
+timestamp: 2026-04-24T08:53:44Z
+event: setup_profile_start
+user_id: guest
+app_version: 1.0
+step: auth
+ios: 26.2
+build: 37
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 08:53:44]
+device: arm64
+timestamp: 2026-04-24T08:53:44Z
+has_avatar: False
+username: edgars
+event: setup_profile_start
+user_id: guest
+app_version: 1.0
+step: vm
+ios: 26.2
+build: 37
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 08:53:44]
+step: token_store
+ios: 26.2
+user_id: guest
+device: arm64
+app_version: 1.0
+build: 37
+event: token_get
+has_token: True
+timestamp: 2026-04-24T08:53:44Z
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 08:53:45]
+step: vm
+timestamp: 2026-04-24T08:53:45Z
+device: arm64
+event: setup_profile_success
+build: 37
+app_version: 1.0
+ios: 26.2
+user_id: guest
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 08:53:45]
+timestamp: 2026-04-24T08:53:45Z
+step: auth
+user_id: guest
+app_version: 1.0
+build: 37
+device: arm64
+ios: 26.2
+event: setup_profile_success
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 08:53:45]
+build: 37
+ios: 26.2
+device: arm64
+step: session
+user_id: guest
+event: onboarding_completed
+timestamp: 2026-04-24T08:53:45Z
+app_version: 1.0
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 08:53:45]
+user_id: guest
+device: arm64
+timestamp: 2026-04-24T08:53:45Z
+step: vm
+ios: 26.2
+app_version: 1.0
+build: 37
+event: welcome_profile_load_start
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 08:53:45]
+build: 37
+user_id: guest
+timestamp: 2026-04-24T08:53:45Z
+device: arm64
+app_version: 1.0
+event: api_request
+step: /users/me/
+ios: 26.2
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 08:53:45]
+user_id: guest
+device: arm64
+timestamp: 2026-04-24T08:53:45Z
+step: token_store
+ios: 26.2
+has_token: True
+app_version: 1.0
+build: 37
+event: token_get
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 08:53:45]
+user_id: guest
+device: arm64
+timestamp: 2026-04-24T08:53:45Z
+step: profile
+ios: 26.2
+app_version: 1.0
+build: 37
+event: get_me_start
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 08:53:45]
+user_id: guest
+device: arm64
+timestamp: 2026-04-24T08:53:45Z
+has_token: True
+step: api_client
+ios: 26.2
+app_version: 1.0
+token_length: 231
+build: 37
+event: auth_header_set
+endpoint: /users/me/
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 08:53:46]
+build: 37
+step: /users/me/
+timestamp: 2026-04-24T08:53:46Z
+ios: 26.2
+device: arm64
+event: api_success
+user_id: guest
+app_version: 1.0
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 08:53:46]
+device: arm64
+event: welcome_profile_success
+avatar_url: nil
+step: vm
+ios: 26.2
+user_id: guest
+app_version: 1.0
+has_avatar: False
+build: 37
+timestamp: 2026-04-24T08:53:46Z
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 08:53:46]
+username: edgars
+device: arm64
+step: profile
+event: get_me_success
+ios: 26.2
+user_id: guest
+app_version: 1.0
+has_avatar: False
+build: 37
+timestamp: 2026-04-24T08:53:46Z
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 08:56:54]
+event: check_auth_start
+user_id: guest
+build: 37
+app_version: 1.0
+ios: 26.2
+step: session
+device: arm64
+timestamp: 2026-04-24T08:56:53Z
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 08:56:54]
+event: get_me_start
+user_id: guest
+ios: 26.2
+app_version: 1.0
+step: profile
+build: 37
+device: arm64
+timestamp: 2026-04-24T08:56:53Z
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 08:56:54]
+event: token_get
+has_token: True
+user_id: guest
+ios: 26.2
+step: token_store
+app_version: 1.0
+build: 37
+device: arm64
+timestamp: 2026-04-24T08:56:53Z
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 08:56:54]
+app_version: 1.0
+build: 37
+device: arm64
+event: auth_header_set
+user_id: guest
+timestamp: 2026-04-24T08:56:53Z
+has_token: True
+step: api_client
+token_length: 231
+ios: 26.2
+endpoint: /users/me/
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 08:56:54]
+event: token_get
+has_token: True
+user_id: guest
+ios: 26.2
+step: token_store
+app_version: 1.0
+build: 37
+device: arm64
+timestamp: 2026-04-24T08:56:53Z
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 08:56:54]
+token_length: 231
+event: token_found
+user_id: guest
+ios: 26.2
+step: session
+app_version: 1.0
+build: 37
+device: arm64
+timestamp: 2026-04-24T08:56:53Z
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 08:56:54]
+user_id: guest
+app_version: 1.0
+device: arm64
+step: /users/me/
+event: api_request
+timestamp: 2026-04-24T08:56:53Z
+build: 37
+ios: 26.2
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 08:56:55]
+user_id: guest
+event: token_valid
+timestamp: 2026-04-24T08:56:55Z
+device: arm64
+step: session
+app_version: 1.0
+build: 37
+ios: 26.2
+username: edgars
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 08:56:55]
+needsSetup: False
+build: 37
+isAuthorized: True
+ios: 26.2
+app_version: 1.0
+user_id: guest
+step: session
+event: check_auth_finished
+device: arm64
+timestamp: 2026-04-24T08:56:55Z
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 08:56:55]
+step: /users/me/
+user_id: guest
+timestamp: 2026-04-24T08:56:55Z
+build: 37
+device: arm64
+app_version: 1.0
+ios: 26.2
+event: api_success
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 08:56:55]
+user_id: guest
+event: get_me_success
+timestamp: 2026-04-24T08:56:55Z
+device: arm64
+has_avatar: False
+step: profile
+app_version: 1.0
+ios: 26.2
+username: edgars
+build: 37
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 08:57:37]
+app_version: 1.0
+ios: 26.2
+build: 37
+timestamp: 2026-04-24T08:57:36Z
+step: session
+user_id: guest
+event: check_auth_start
+device: arm64
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 08:57:37]
+step: token_store
+event: token_get
+ios: 26.2
+has_token: True
+device: arm64
+user_id: guest
+build: 37
+timestamp: 2026-04-24T08:57:36Z
+app_version: 1.0
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 08:57:37]
+token_length: 231
+event: token_found
+step: session
+device: arm64
+ios: 26.2
+user_id: guest
+build: 37
+timestamp: 2026-04-24T08:57:36Z
+app_version: 1.0
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 08:57:37]
+event: get_me_start
+step: profile
+device: arm64
+ios: 26.2
+user_id: guest
+build: 37
+timestamp: 2026-04-24T08:57:36Z
+app_version: 1.0
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 08:57:37]
+event: token_get
+step: token_store
+device: arm64
+has_token: True
+ios: 26.2
+user_id: guest
+build: 37
+timestamp: 2026-04-24T08:57:36Z
+app_version: 1.0
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 08:57:37]
+token_length: 231
+event: auth_header_set
+step: api_client
+device: arm64
+has_token: True
+ios: 26.2
+user_id: guest
+build: 37
+timestamp: 2026-04-24T08:57:36Z
+app_version: 1.0
+endpoint: /users/me/
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 08:57:37]
+user_id: guest
+app_version: 1.0
+build: 37
+event: api_request
+ios: 26.2
+step: /users/me/
+timestamp: 2026-04-24T08:57:36Z
+device: arm64
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 08:57:37]
+endpoint: /users/auth/token/refresh/
+app_version: 1.0
+user_id: guest
+step: api_client
+event: auth_skipped
+device: arm64
+build: 37
+timestamp: 2026-04-24T08:57:37Z
+ios: 26.2
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 08:57:37]
+app_version: 1.0
+device: arm64
+timestamp: 2026-04-24T08:57:37Z
+ios: 26.2
+user_id: guest
+status: 401
+step: /users/me/
+build: 37
+event: api_error
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 08:57:37]
+user_id: guest
+app_version: 1.0
+step: /users/auth/token/refresh/
+device: arm64
+build: 37
+event: api_request
+timestamp: 2026-04-24T08:57:37Z
+ios: 26.2
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 08:57:37]
+device: arm64
+event: token_cleared
+timestamp: 2026-04-24T08:57:37Z
+user_id: guest
+app_version: 1.0
+build: 37
+ios: 26.2
+step: token_store
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 08:57:37]
+timestamp: 2026-04-24T08:57:37Z
+status: 401
+event: api_error
+device: arm64
+step: /users/auth/token/refresh/
+build: 37
+ios: 26.2
+user_id: guest
+app_version: 1.0
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 08:57:37]
+ios: 26.2
+device: arm64
+event: error
+app_version: 1.0
+timestamp: 2026-04-24T08:57:37Z
+message: The operation couldn’t be completed. (TrendiX.APIError error 1.)
+step: /users/auth/token/refresh/
+user_id: guest
+build: 37
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 08:57:37]
+message: The operation couldn’t be completed. (TrendiX.APIError error 1.)
+user_id: guest
+ios: 26.2
+step: get_me
+device: arm64
+build: 37
+app_version: 1.0
+event: error
+timestamp: 2026-04-24T08:57:37Z
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 08:57:37]
+ios: 26.2
+device: arm64
+event: token_cleared
+app_version: 1.0
+timestamp: 2026-04-24T08:57:37Z
+step: token_store
+user_id: guest
+build: 37
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 08:57:37]
+ios: 26.2
+device: arm64
+event: error
+app_version: 1.0
+timestamp: 2026-04-24T08:57:37Z
+message: The operation couldn’t be completed. (TrendiX.APIError error 1.)
+step: session_check_auth
+user_id: guest
+build: 37
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 08:57:37]
+ios: 26.2
+device: arm64
+event: token_cleared
+app_version: 1.0
+timestamp: 2026-04-24T08:57:37Z
+step: token_store
+user_id: guest
+build: 37
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 08:57:37]
+ios: 26.2
+device: arm64
+event: token_cleared
+app_version: 1.0
+timestamp: 2026-04-24T08:57:37Z
+step: session
+user_id: guest
+build: 37
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 08:57:37]
+ios: 26.2
+device: arm64
+event: error
+app_version: 1.0
+timestamp: 2026-04-24T08:57:37Z
+message: The operation couldn’t be completed. (TrendiX.APIError error 1.)
+step: /users/me/
+user_id: guest
+build: 37
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 08:57:37]
+ios: 26.2
+timestamp: 2026-04-24T08:57:37Z
+event: check_auth_finished
+device: arm64
+isAuthorized: False
+app_version: 1.0
+user_id: guest
+needsSetup: False
+build: 37
+step: session
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 08:57:38]
+step: screen_visible
+user_id: guest
+event: welcome_opened
+screen: welcome
+build: 37
+app_version: 1.0
+timestamp: 2026-04-24T08:57:38Z
+device: arm64
+ios: 26.2
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 08:57:39]
+event: welcome_get_started_tap
+build: 37
+step: pressed
+timestamp: 2026-04-24T08:57:39Z
+user_id: guest
+device: arm64
+ios: 26.2
+app_version: 1.0
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 08:57:40]
+user_id: guest
+timestamp: 2026-04-24T08:57:40Z
+event: google_button_tap
+device: arm64
+ios: 26.2
+build: 37
+app_version: 1.0
+step: pressed
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 08:57:40]
+build: 37
+timestamp: 2026-04-24T08:57:40Z
+app_version: 1.0
+step: init
+device: arm64
+user_id: guest
+event: google_start
+ios: 26.2
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 08:58:29]
+event: google_token_received
+user_id: guest
+ios: 26.2
+build: 37
+timestamp: 2026-04-24T08:58:29Z
+app_version: 1.0
+device: arm64
+step: token_ok
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 08:58:29]
+ios: 26.2
+app_version: 1.0
+build: 37
+timestamp: 2026-04-24T08:58:29Z
+event: google_api_start
+device: arm64
+step: auth
+user_id: guest
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 08:58:29]
+step: api_client
+endpoint: /users/auth/google/
+build: 37
+device: arm64
+ios: 26.2
+user_id: guest
+app_version: 1.0
+timestamp: 2026-04-24T08:58:29Z
+event: auth_skipped
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 08:58:29]
+build: 37
+user_id: guest
+event: api_request
+step: /users/auth/google/
+timestamp: 2026-04-24T08:58:29Z
+ios: 26.2
+device: arm64
+app_version: 1.0
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 08:58:30]
+device: arm64
+step: /users/auth/google/
+status: 400
+user_id: guest
+ios: 26.2
+app_version: 1.0
+build: 37
+event: api_error
+timestamp: 2026-04-24T08:58:30Z
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 08:58:30]
+device: arm64
+step: google_backend_error
+message: The operation couldn’t be completed. (TrendiX.APIError error 1.)
+user_id: guest
+ios: 26.2
+app_version: 1.0
+build: 37
+event: error
+timestamp: 2026-04-24T08:58:30Z
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 08:58:30]
+message: The operation couldn’t be completed. (TrendiX.APIError error 1.)
+user_id: guest
+ios: 26.2
+event: error
+step: google_login
+device: arm64
+app_version: 1.0
+build: 37
+timestamp: 2026-04-24T08:58:30Z
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 08:58:30]
+device: arm64
+step: google_api
+message: The operation couldn’t be completed. (TrendiX.APIError error 1.)
+user_id: guest
+ios: 26.2
+app_version: 1.0
+build: 37
+event: error
+timestamp: 2026-04-24T08:58:30Z
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 08:58:30]
+step: /users/auth/google/
+device: arm64
+message: The operation couldn’t be completed. (TrendiX.APIError error 1.)
+user_id: guest
+ios: 26.2
+app_version: 1.0
+build: 37
+event: error
+timestamp: 2026-04-24T08:58:30Z
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:02:40]
+ios: 26.2
+user_id: guest
+step: token_store
+app_version: 1.0
+timestamp: 2026-04-24T09:02:40Z
+build: 37
+event: token_get
+has_token: False
+device: arm64
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:02:40]
+app_version: 1.0
+device: arm64
+step: session
+ios: 26.2
+user_id: guest
+build: 37
+timestamp: 2026-04-24T09:02:40Z
+event: no_token
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:02:40]
+ios: 26.2
+timestamp: 2026-04-24T09:02:40Z
+step: session
+user_id: guest
+event: check_auth_start
+device: arm64
+build: 37
+app_version: 1.0
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:02:40]
+event: welcome_opened
+app_version: 1.0
+timestamp: 2026-04-24T09:02:40Z
+step: screen_visible
+screen: welcome
+device: arm64
+user_id: guest
+ios: 26.2
+build: 37
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:02:41]
+build: 37
+event: welcome_get_started_tap
+ios: 26.2
+step: pressed
+device: arm64
+user_id: guest
+timestamp: 2026-04-24T09:02:41Z
+app_version: 1.0
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:02:43]
+user_id: guest
+step: pressed
+app_version: 1.0
+device: arm64
+build: 37
+event: google_button_tap
+timestamp: 2026-04-24T09:02:43Z
+ios: 26.2
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:02:43]
+user_id: guest
+step: init
+app_version: 1.0
+device: arm64
+build: 37
+event: google_start
+timestamp: 2026-04-24T09:02:43Z
+ios: 26.2
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:02:50]
+build: 37
+event: auth_skipped
+app_version: 1.0
+device: arm64
+ios: 26.2
+timestamp: 2026-04-24T09:02:50Z
+step: api_client
+endpoint: /users/auth/google/
+user_id: guest
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:02:50]
+device: arm64
+event: google_token_received
+build: 37
+timestamp: 2026-04-24T09:02:50Z
+step: token_ok
+user_id: guest
+ios: 26.2
+app_version: 1.0
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:02:50]
+step: auth
+device: arm64
+timestamp: 2026-04-24T09:02:50Z
+build: 37
+ios: 26.2
+user_id: guest
+app_version: 1.0
+event: google_api_start
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:02:50]
+ios: 26.2
+device: arm64
+build: 37
+app_version: 1.0
+event: api_request
+timestamp: 2026-04-24T09:02:50Z
+step: /users/auth/google/
+user_id: guest
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:02:51]
+build: 37
+user_id: guest
+event: api_error
+app_version: 1.0
+ios: 26.2
+step: /users/auth/google/
+device: arm64
+timestamp: 2026-04-24T09:02:51Z
+status: 400
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:02:51]
+timestamp: 2026-04-24T09:02:51Z
+user_id: guest
+device: arm64
+ios: 26.2
+event: error
+app_version: 1.0
+step: google_login
+build: 37
+message: The operation couldn’t be completed. (TrendiX.APIError error 1.)
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:02:51]
+event: error
+user_id: guest
+ios: 26.2
+device: arm64
+step: /users/auth/google/
+app_version: 1.0
+build: 37
+message: The operation couldn’t be completed. (TrendiX.APIError error 1.)
+timestamp: 2026-04-24T09:02:51Z
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:02:51]
+user_id: guest
+event: error
+ios: 26.2
+device: arm64
+step: google_api
+app_version: 1.0
+build: 37
+message: The operation couldn’t be completed. (TrendiX.APIError error 1.)
+timestamp: 2026-04-24T09:02:51Z
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:08:56]
+device: arm64
+timestamp: 2026-04-24T09:08:55Z
+app_version: 1.0
+step: session
+user_id: guest
+ios: 26.2
+build: 37
+event: check_auth_start
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:08:56]
+step: token_store
+user_id: guest
+ios: 26.2
+device: arm64
+event: token_get
+has_token: False
+build: 37
+app_version: 1.0
+timestamp: 2026-04-24T09:08:55Z
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:08:56]
+device: arm64
+step: session
+event: no_token
+app_version: 1.0
+timestamp: 2026-04-24T09:08:55Z
+build: 37
+user_id: guest
+ios: 26.2
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:08:56]
+device: arm64
+ios: 26.2
+app_version: 1.0
+build: 37
+user_id: guest
+step: screen_visible
+event: welcome_opened
+screen: welcome
+timestamp: 2026-04-24T09:08:56Z
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:08:58]
+user_id: guest
+step: pressed
+device: arm64
+build: 37
+app_version: 1.0
+timestamp: 2026-04-24T09:08:58Z
+event: welcome_get_started_tap
+ios: 26.2
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:08:59]
+step: init
+user_id: guest
+event: google_start
+ios: 26.2
+device: arm64
+build: 37
+app_version: 1.0
+timestamp: 2026-04-24T09:08:59Z
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:08:59]
+ios: 26.2
+device: arm64
+build: 37
+timestamp: 2026-04-24T09:08:59Z
+user_id: guest
+event: google_button_tap
+app_version: 1.0
+step: pressed
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:09:07]
+user_id: guest
+device: arm64
+event: auth_skipped
+timestamp: 2026-04-24T09:09:07Z
+ios: 26.2
+endpoint: /users/auth/google/
+step: api_client
+build: 37
+app_version: 1.0
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:09:07]
+build: 37
+ios: 26.2
+app_version: 1.0
+event: google_api_start
+device: arm64
+timestamp: 2026-04-24T09:09:07Z
+step: auth
+user_id: guest
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:09:07]
+user_id: guest
+device: arm64
+event: google_token_received
+timestamp: 2026-04-24T09:09:07Z
+step: token_ok
+ios: 26.2
+build: 37
+app_version: 1.0
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:09:07]
+event: api_request
+ios: 26.2
+app_version: 1.0
+step: /users/auth/google/
+device: arm64
+user_id: guest
+build: 37
+timestamp: 2026-04-24T09:09:07Z
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:09:09]
+app_version: 1.0
+event: api_success
+timestamp: 2026-04-24T09:09:09Z
+ios: 26.2
+build: 37
+step: /users/auth/google/
+device: arm64
+user_id: guest
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:09:09]
+ios: 26.2
+event: token_set
+user_id: guest
+step: token_store
+device: arm64
+timestamp: 2026-04-24T09:09:09Z
+has_token: True
+app_version: 1.0
+build: 37
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:09:09]
+user_id: guest
+app_version: 1.0
+event: google_api_success
+ios: 26.2
+step: auth
+timestamp: 2026-04-24T09:09:09Z
+build: 37
+device: arm64
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:09:09]
+user_id: guest
+ios: 26.2
+step: token_store
+event: token_saved
+access_length: 231
+app_version: 1.0
+refresh_length: 232
+timestamp: 2026-04-24T09:09:09Z
+build: 37
+device: arm64
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:09:09]
+user_id: guest
+build: 37
+ios: 26.2
+app_version: 1.0
+event: token_set
+device: arm64
+timestamp: 2026-04-24T09:09:09Z
+step: token_store
+has_token: True
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:09:09]
+event: token_saved
+refresh_length: 232
+ios: 26.2
+app_version: 1.0
+step: token_store
+device: arm64
+user_id: guest
+access_length: 231
+build: 37
+timestamp: 2026-04-24T09:09:09Z
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:09:09]
+event: google_backend_success
+app_version: 1.0
+ios: 26.2
+step: completed
+device: arm64
+user_id: guest
+build: 37
+timestamp: 2026-04-24T09:09:09Z
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:09:13]
+timestamp: 2026-04-24T09:09:13Z
+device: arm64
+user_id: guest
+has_token: True
+ios: 26.2
+app_version: 1.0
+step: token_store
+event: token_get
+build: 37
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:09:13]
+timestamp: 2026-04-24T09:09:13Z
+username: edgars
+event: setup_profile_start
+user_id: guest
+step: vm
+has_avatar: False
+device: arm64
+ios: 26.2
+build: 37
+app_version: 1.0
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:09:13]
+ios: 26.2
+user_id: guest
+has_token: True
+event: token_get
+app_version: 1.0
+build: 37
+step: token_store
+timestamp: 2026-04-24T09:09:13Z
+device: arm64
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:09:13]
+app_version: 1.0
+step: auth
+user_id: guest
+ios: 26.2
+event: setup_profile_start
+timestamp: 2026-04-24T09:09:13Z
+build: 37
+device: arm64
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:09:13]
+ios: 26.2
+user_id: guest
+has_token: True
+event: token_get
+app_version: 1.0
+build: 37
+step: token_store
+timestamp: 2026-04-24T09:09:13Z
+device: arm64
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:09:14]
+device: arm64
+user_id: guest
+timestamp: 2026-04-24T09:09:14Z
+ios: 26.2
+step: auth
+build: 37
+event: setup_profile_success
+app_version: 1.0
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:09:14]
+build: 37
+ios: 26.2
+timestamp: 2026-04-24T09:09:14Z
+device: arm64
+user_id: guest
+step: vm
+app_version: 1.0
+event: setup_profile_success
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:09:14]
+timestamp: 2026-04-24T09:09:14Z
+device: arm64
+user_id: guest
+ios: 26.2
+app_version: 1.0
+step: session
+event: onboarding_completed
+build: 37
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:09:14]
+step: profile
+user_id: guest
+ios: 26.2
+timestamp: 2026-04-24T09:09:14Z
+app_version: 1.0
+device: arm64
+event: get_me_start
+build: 37
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:09:14]
+ios: 26.2
+user_id: guest
+step: /users/me/
+device: arm64
+app_version: 1.0
+event: api_request
+build: 37
+timestamp: 2026-04-24T09:09:14Z
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:09:14]
+step: token_store
+event: token_get
+user_id: guest
+timestamp: 2026-04-24T09:09:14Z
+ios: 26.2
+build: 37
+app_version: 1.0
+device: arm64
+has_token: True
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:09:14]
+timestamp: 2026-04-24T09:09:14Z
+ios: 26.2
+device: arm64
+event: welcome_profile_load_start
+build: 37
+step: vm
+app_version: 1.0
+user_id: guest
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:09:14]
+ios: 26.2
+endpoint: /users/me/
+timestamp: 2026-04-24T09:09:14Z
+build: 37
+token_length: 231
+event: auth_header_set
+has_token: True
+step: api_client
+user_id: guest
+app_version: 1.0
+device: arm64
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:09:15]
+device: arm64
+timestamp: 2026-04-24T09:09:15Z
+event: api_success
+build: 37
+user_id: guest
+app_version: 1.0
+step: /users/me/
+ios: 26.2
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:09:15]
+device: arm64
+timestamp: 2026-04-24T09:09:15Z
+event: get_me_success
+username: edgars
+build: 37
+user_id: guest
+step: profile
+ios: 26.2
+has_avatar: False
+app_version: 1.0
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:09:15]
+app_version: 1.0
+device: arm64
+timestamp: 2026-04-24T09:09:15Z
+event: welcome_profile_success
+build: 37
+user_id: guest
+step: vm
+avatar_url: nil
+has_avatar: False
+ios: 26.2
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:09:48]
+ios: 26.2
+app_version: 1.0
+user_id: guest
+timestamp: 2026-04-24T09:09:48Z
+event: check_auth_start
+build: 37
+step: session
+device: arm64
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:09:48]
+ios: 26.2
+app_version: 1.0
+step: session
+event: token_found
+device: arm64
+timestamp: 2026-04-24T09:09:48Z
+user_id: guest
+token_length: 231
+build: 37
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:09:48]
+endpoint: /users/me/
+ios: 26.2
+app_version: 1.0
+step: api_client
+event: auth_header_set
+device: arm64
+has_token: True
+user_id: guest
+token_length: 231
+timestamp: 2026-04-24T09:09:48Z
+build: 37
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:09:48]
+ios: 26.2
+app_version: 1.0
+step: token_store
+event: token_get
+device: arm64
+has_token: True
+user_id: guest
+timestamp: 2026-04-24T09:09:48Z
+build: 37
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:09:48]
+ios: 26.2
+app_version: 1.0
+step: profile
+event: get_me_start
+device: arm64
+timestamp: 2026-04-24T09:09:48Z
+user_id: guest
+build: 37
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:09:48]
+ios: 26.2
+app_version: 1.0
+step: token_store
+event: token_get
+device: arm64
+has_token: True
+user_id: guest
+timestamp: 2026-04-24T09:09:48Z
+build: 37
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:09:48]
+timestamp: 2026-04-24T09:09:48Z
+step: /users/me/
+app_version: 1.0
+device: arm64
+build: 37
+event: api_request
+ios: 26.2
+user_id: guest
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:09:48]
+event: api_success
+build: 37
+timestamp: 2026-04-24T09:09:48Z
+ios: 26.2
+step: /users/me/
+user_id: guest
+app_version: 1.0
+device: arm64
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:09:48]
+user_id: guest
+app_version: 1.0
+needsSetup: False
+build: 37
+step: session
+device: arm64
+event: check_auth_finished
+isAuthorized: True
+ios: 26.2
+timestamp: 2026-04-24T09:09:48Z
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:09:48]
+app_version: 1.0
+user_id: guest
+device: arm64
+ios: 26.2
+has_avatar: False
+username: edgars
+build: 37
+event: get_me_success
+step: profile
+timestamp: 2026-04-24T09:09:48Z
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:09:48]
+user_id: guest
+timestamp: 2026-04-24T09:09:48Z
+username: edgars
+event: token_valid
+step: session
+ios: 26.2
+build: 37
+device: arm64
+app_version: 1.0
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:10:29]
+device: arm64
+event: check_auth_start
+app_version: 1.0
+step: session
+user_id: guest
+ios: 26.2
+build: 37
+timestamp: 2026-04-24T09:10:29Z
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:10:29]
+app_version: 1.0
+step: token_store
+build: 37
+ios: 26.2
+timestamp: 2026-04-24T09:10:29Z
+user_id: guest
+device: arm64
+has_token: True
+event: token_get
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:10:29]
+app_version: 1.0
+step: session
+build: 37
+ios: 26.2
+timestamp: 2026-04-24T09:10:29Z
+user_id: guest
+device: arm64
+token_length: 231
+event: token_found
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:10:29]
+step: /users/me/
+event: api_request
+ios: 26.2
+user_id: guest
+timestamp: 2026-04-24T09:10:29Z
+build: 37
+device: arm64
+app_version: 1.0
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:10:29]
+status: 401
+app_version: 1.0
+step: /users/me/
+timestamp: 2026-04-24T09:10:29Z
+device: arm64
+user_id: guest
+ios: 26.2
+event: api_error
+build: 37
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:10:29]
+ios: 26.2
+app_version: 1.0
+event: get_me_start
+step: profile
+user_id: guest
+device: arm64
+build: 37
+timestamp: 2026-04-24T09:10:29Z
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:10:29]
+event: error
+step: /users/me/
+message: The operation couldn’t be completed. (TrendiX.APIError error 1.)
+ios: 26.2
+user_id: guest
+timestamp: 2026-04-24T09:10:29Z
+build: 37
+device: arm64
+app_version: 1.0
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:10:29]
+event: error
+step: session_check_auth
+message: The operation couldn’t be completed. (TrendiX.APIError error 1.)
+ios: 26.2
+user_id: guest
+timestamp: 2026-04-24T09:10:29Z
+build: 37
+device: arm64
+app_version: 1.0
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:10:29]
+event: error
+step: get_me
+message: The operation couldn’t be completed. (TrendiX.APIError error 1.)
+ios: 26.2
+user_id: guest
+timestamp: 2026-04-24T09:10:29Z
+build: 37
+device: arm64
+app_version: 1.0
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:10:29]
+timestamp: 2026-04-24T09:10:29Z
+user_id: guest
+ios: 26.2
+app_version: 1.0
+step: session
+device: arm64
+event: token_cleared
+build: 37
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:10:29]
+event: token_cleared
+step: token_store
+ios: 26.2
+user_id: guest
+timestamp: 2026-04-24T09:10:29Z
+build: 37
+device: arm64
+app_version: 1.0
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:10:29]
+ios: 26.2
+app_version: 1.0
+event: check_auth_finished
+isAuthorized: False
+step: session
+needsSetup: False
+build: 37
+user_id: guest
+device: arm64
+timestamp: 2026-04-24T09:10:29Z
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:10:29]
+endpoint: /users/me/
+ios: 26.2
+device: arm64
+step: api_client
+event: auth_header_set
+user_id: guest
+app_version: 1.0
+build: 37
+token_length: 231
+has_token: True
+timestamp: 2026-04-24T09:10:29Z
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:10:29]
+user_id: guest
+app_version: 1.0
+timestamp: 2026-04-24T09:10:29Z
+ios: 26.2
+has_token: True
+build: 37
+step: token_store
+device: arm64
+event: token_get
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:10:30]
+ios: 26.2
+timestamp: 2026-04-24T09:10:30Z
+screen: welcome
+event: welcome_opened
+user_id: guest
+step: screen_visible
+app_version: 1.0
+build: 37
+device: arm64
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:10:31]
+event: welcome_get_started_tap
+device: arm64
+user_id: guest
+ios: 26.2
+build: 37
+app_version: 1.0
+timestamp: 2026-04-24T09:10:31Z
+step: pressed
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:10:32]
+app_version: 1.0
+device: arm64
+step: init
+build: 37
+timestamp: 2026-04-24T09:10:32Z
+event: google_start
+user_id: guest
+ios: 26.2
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:10:32]
+event: google_button_tap
+user_id: guest
+step: pressed
+device: arm64
+ios: 26.2
+app_version: 1.0
+build: 37
+timestamp: 2026-04-24T09:10:32Z
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:10:42]
+device: arm64
+ios: 26.2
+event: api_request
+user_id: guest
+app_version: 1.0
+step: /users/auth/google/
+build: 37
+timestamp: 2026-04-24T09:10:42Z
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:10:42]
+timestamp: 2026-04-24T09:10:42Z
+step: token_ok
+app_version: 1.0
+ios: 26.2
+user_id: guest
+event: google_token_received
+build: 37
+device: arm64
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:10:42]
+device: arm64
+build: 37
+step: api_client
+ios: 26.2
+app_version: 1.0
+timestamp: 2026-04-24T09:10:42Z
+endpoint: /users/auth/google/
+user_id: guest
+event: auth_skipped
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:10:42]
+event: google_api_start
+step: auth
+build: 37
+device: arm64
+app_version: 1.0
+ios: 26.2
+user_id: guest
+timestamp: 2026-04-24T09:10:42Z
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:10:43]
+app_version: 1.0
+user_id: guest
+device: arm64
+step: /users/auth/google/
+build: 37
+timestamp: 2026-04-24T09:10:43Z
+ios: 26.2
+event: api_error
+status: 400
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:10:43]
+ios: 26.2
+timestamp: 2026-04-24T09:10:43Z
+event: error
+user_id: guest
+step: /users/auth/google/
+device: arm64
+app_version: 1.0
+build: 37
+message: The operation couldn’t be completed. (TrendiX.APIError error 1.)
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:10:43]
+app_version: 1.0
+build: 37
+event: error
+step: google_api
+message: The operation couldn’t be completed. (TrendiX.APIError error 1.)
+device: arm64
+user_id: guest
+ios: 26.2
+timestamp: 2026-04-24T09:10:43Z
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:10:43]
+ios: 26.2
+timestamp: 2026-04-24T09:10:43Z
+event: error
+user_id: guest
+step: google_login
+device: arm64
+app_version: 1.0
+build: 37
+message: The operation couldn’t be completed. (TrendiX.APIError error 1.)
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:14:13]
+ios: 26.2
+device: arm64
+build: 37
+timestamp: 2026-04-24T09:14:13Z
+user_id: guest
+app_version: 1.0
+step: session
+event: check_auth_start
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:14:13]
+app_version: 1.0
+user_id: guest
+device: arm64
+event: no_token
+ios: 26.2
+timestamp: 2026-04-24T09:14:13Z
+step: session
+build: 37
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:14:13]
+event: token_get
+has_token: False
+app_version: 1.0
+step: token_store
+ios: 26.2
+user_id: guest
+device: arm64
+build: 37
+timestamp: 2026-04-24T09:14:13Z
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:14:13]
+ios: 26.2
+event: welcome_opened
+step: screen_visible
+app_version: 1.0
+build: 37
+device: arm64
+user_id: guest
+timestamp: 2026-04-24T09:14:13Z
+screen: welcome
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:14:14]
+app_version: 1.0
+step: pressed
+device: arm64
+ios: 26.2
+event: welcome_get_started_tap
+user_id: guest
+build: 37
+timestamp: 2026-04-24T09:14:14Z
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:14:15]
+user_id: guest
+build: 37
+ios: 26.2
+timestamp: 2026-04-24T09:14:15Z
+device: arm64
+step: pressed
+event: google_button_tap
+app_version: 1.0
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:14:15]
+step: init
+device: arm64
+ios: 26.2
+build: 37
+timestamp: 2026-04-24T09:14:15Z
+app_version: 1.0
+user_id: guest
+event: google_start
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:14:24]
+ios: 26.2
+build: 37
+device: arm64
+app_version: 1.0
+step: token_ok
+user_id: guest
+event: google_token_received
+timestamp: 2026-04-24T09:14:24Z
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:14:24]
+ios: 26.2
+build: 37
+device: arm64
+app_version: 1.0
+step: auth
+user_id: guest
+event: google_api_start
+timestamp: 2026-04-24T09:14:24Z
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:14:24]
+build: 37
+ios: 26.2
+step: /users/auth/google/
+app_version: 1.0
+event: api_request
+user_id: guest
+timestamp: 2026-04-24T09:14:24Z
+device: arm64
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:14:24]
+user_id: guest
+event: auth_skipped
+device: arm64
+step: api_client
+app_version: 1.0
+build: 37
+ios: 26.2
+timestamp: 2026-04-24T09:14:24Z
+endpoint: /users/auth/google/
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:14:26]
+step: /users/auth/google/
+user_id: guest
+timestamp: 2026-04-24T09:14:26Z
+event: api_error
+device: arm64
+status: 400
+build: 37
+ios: 26.2
+app_version: 1.0
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:14:26]
+user_id: guest
+device: arm64
+app_version: 1.0
+step: google_login
+ios: 26.2
+build: 37
+event: error
+message: The operation couldn’t be completed. (TrendiX.APIError error 1.)
+timestamp: 2026-04-24T09:14:26Z
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:14:26]
+user_id: guest
+device: arm64
+app_version: 1.0
+step: google_api
+ios: 26.2
+build: 37
+event: error
+message: The operation couldn’t be completed. (TrendiX.APIError error 1.)
+timestamp: 2026-04-24T09:14:26Z
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:14:26]
+user_id: guest
+device: arm64
+app_version: 1.0
+step: /users/auth/google/
+ios: 26.2
+build: 37
+event: error
+message: The operation couldn’t be completed. (TrendiX.APIError error 1.)
+timestamp: 2026-04-24T09:14:26Z
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:17:06]
+event: check_auth_start
+step: session
+user_id: guest
+app_version: 1.0
+timestamp: 2026-04-24T09:17:06Z
+build: 37
+device: arm64
+ios: 26.2
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:17:06]
+build: 37
+event: no_token
+timestamp: 2026-04-24T09:17:06Z
+step: session
+user_id: guest
+app_version: 1.0
+ios: 26.2
+device: arm64
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:17:06]
+build: 37
+event: token_get
+timestamp: 2026-04-24T09:17:06Z
+step: token_store
+has_token: False
+user_id: guest
+app_version: 1.0
+ios: 26.2
+device: arm64
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:17:06]
+event: welcome_opened
+app_version: 1.0
+user_id: guest
+timestamp: 2026-04-24T09:17:06Z
+screen: welcome
+device: arm64
+ios: 26.2
+build: 37
+step: screen_visible
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:17:07]
+event: welcome_get_started_tap
+timestamp: 2026-04-24T09:17:07Z
+user_id: guest
+step: pressed
+device: arm64
+ios: 26.2
+app_version: 1.0
+build: 37
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:17:09]
+device: arm64
+step: init
+timestamp: 2026-04-24T09:17:09Z
+event: google_start
+build: 37
+ios: 26.2
+user_id: guest
+app_version: 1.0
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:17:09]
+ios: 26.2
+build: 37
+timestamp: 2026-04-24T09:17:09Z
+app_version: 1.0
+device: arm64
+step: pressed
+event: google_button_tap
+user_id: guest
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:17:17]
+device: arm64
+event: auth_skipped
+endpoint: /users/auth/google/
+app_version: 1.0
+build: 37
+timestamp: 2026-04-24T09:17:17Z
+step: api_client
+user_id: guest
+ios: 26.2
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:17:17]
+build: 37
+event: google_api_start
+app_version: 1.0
+timestamp: 2026-04-24T09:17:17Z
+ios: 26.2
+step: auth
+user_id: guest
+device: arm64
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:17:17]
+ios: 26.2
+event: google_token_received
+user_id: guest
+app_version: 1.0
+device: arm64
+build: 37
+timestamp: 2026-04-24T09:17:17Z
+step: token_ok
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:17:17]
+device: arm64
+user_id: guest
+step: /users/auth/google/
+event: api_request
+ios: 26.2
+app_version: 1.0
+timestamp: 2026-04-24T09:17:17Z
+build: 37
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:17:18]
+step: /users/auth/google/
+status: 400
+user_id: guest
+timestamp: 2026-04-24T09:17:18Z
+app_version: 1.0
+ios: 26.2
+device: arm64
+event: api_error
+build: 37
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:17:18]
+app_version: 1.0
+build: 37
+timestamp: 2026-04-24T09:17:18Z
+user_id: guest
+step: /users/auth/google/
+message: The operation couldn’t be completed. (TrendiX.APIError error 1.)
+device: arm64
+ios: 26.2
+event: error
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:17:18]
+step: google_login
+message: The operation couldn’t be completed. (TrendiX.APIError error 1.)
+user_id: guest
+ios: 26.2
+timestamp: 2026-04-24T09:17:18Z
+build: 37
+device: arm64
+event: error
+app_version: 1.0
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:17:18]
+app_version: 1.0
+build: 37
+timestamp: 2026-04-24T09:17:18Z
+user_id: guest
+message: The operation couldn’t be completed. (TrendiX.APIError error 1.)
+event: error
+device: arm64
+step: google_api
+ios: 26.2
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:19:52]
+event: check_auth_start
+step: session
+device: arm64
+timestamp: 2026-04-24T09:19:52Z
+app_version: 1.0
+ios: 26.2
+user_id: guest
+build: 37
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:19:52]
+ios: 26.2
+step: session
+event: no_token
+app_version: 1.0
+user_id: guest
+timestamp: 2026-04-24T09:19:52Z
+build: 37
+device: arm64
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:19:52]
+event: token_get
+step: token_store
+ios: 26.2
+has_token: False
+user_id: guest
+app_version: 1.0
+timestamp: 2026-04-24T09:19:52Z
+build: 37
+device: arm64
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:19:52]
+ios: 26.2
+build: 37
+user_id: guest
+device: arm64
+timestamp: 2026-04-24T09:19:52Z
+step: screen_visible
+app_version: 1.0
+event: welcome_opened
+screen: welcome
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:19:53]
+build: 37
+ios: 26.2
+event: welcome_get_started_tap
+device: arm64
+step: pressed
+user_id: guest
+app_version: 1.0
+timestamp: 2026-04-24T09:19:53Z
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:19:54]
+device: arm64
+user_id: guest
+build: 37
+app_version: 1.0
+step: pressed
+ios: 26.2
+timestamp: 2026-04-24T09:19:54Z
+event: google_button_tap
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:19:54]
+build: 37
+timestamp: 2026-04-24T09:19:54Z
+app_version: 1.0
+user_id: guest
+step: init
+device: arm64
+event: google_start
+ios: 26.2
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:20:02]
+step: /users/auth/google/
+ios: 26.2
+app_version: 1.0
+event: api_request
+device: arm64
+user_id: guest
+build: 37
+timestamp: 2026-04-24T09:20:02Z
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:20:02]
+step: auth
+ios: 26.2
+app_version: 1.0
+user_id: guest
+event: google_api_start
+device: arm64
+build: 37
+timestamp: 2026-04-24T09:20:02Z
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:20:02]
+device: arm64
+build: 37
+event: google_token_received
+step: token_ok
+ios: 26.2
+app_version: 1.0
+timestamp: 2026-04-24T09:20:02Z
+user_id: guest
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:20:02]
+build: 37
+endpoint: /users/auth/google/
+step: api_client
+app_version: 1.0
+user_id: guest
+device: arm64
+event: auth_skipped
+timestamp: 2026-04-24T09:20:02Z
+ios: 26.2
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:20:04]
+build: 37
+ios: 26.2
+device: arm64
+user_id: guest
+step: /users/auth/google/
+timestamp: 2026-04-24T09:20:04Z
+status: 400
+app_version: 1.0
+event: api_error
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:20:04]
+build: 37
+user_id: guest
+ios: 26.2
+step: /users/auth/google/
+app_version: 1.0
+message: The operation couldn’t be completed. (TrendiX.APIError error 1.)
+timestamp: 2026-04-24T09:20:04Z
+event: error
+device: arm64
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:20:04]
+timestamp: 2026-04-24T09:20:04Z
+message: The operation couldn’t be completed. (TrendiX.APIError error 1.)
+app_version: 1.0
+device: arm64
+event: error
+user_id: guest
+step: google_login
+build: 37
+ios: 26.2
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:20:04]
+build: 37
+user_id: guest
+ios: 26.2
+step: google_api
+app_version: 1.0
+message: The operation couldn’t be completed. (TrendiX.APIError error 1.)
+timestamp: 2026-04-24T09:20:04Z
+event: error
+device: arm64
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:20:15]
+event: google_start
+user_id: guest
+step: init
+timestamp: 2026-04-24T09:20:15Z
+device: arm64
+build: 37
+ios: 26.2
+app_version: 1.0
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:20:15]
+ios: 26.2
+device: arm64
+step: pressed
+app_version: 1.0
+timestamp: 2026-04-24T09:20:15Z
+event: google_button_tap
+build: 37
+user_id: guest
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:21:56]
+step: session
+device: arm64
+timestamp: 2026-04-24T09:21:55Z
+user_id: guest
+ios: 26.2
+event: check_auth_start
+build: 37
+app_version: 1.0
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:21:56]
+app_version: 1.0
+event: no_token
+timestamp: 2026-04-24T09:21:55Z
+device: arm64
+ios: 26.2
+step: session
+build: 37
+user_id: guest
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:21:56]
+app_version: 1.0
+event: token_get
+timestamp: 2026-04-24T09:21:55Z
+device: arm64
+ios: 26.2
+step: token_store
+build: 37
+has_token: False
+user_id: guest
+📱 LOG END
+
+
+📱 LOG START [2026-04-24 09:21:56]
+step: screen_visible
+user_id: guest
+event: welcome_opened
+screen: welcome
+build: 37
+timestamp: 2026-04-24T09:21:56Z
+ios: 26.2
+device: arm64
+app_version: 1.0
+📱 LOG END
+

@@ -11,7 +11,6 @@ from rest_framework.decorators import api_view, permission_classes, parser_class
 from rest_framework.parsers import MultiPartParser, FormParser
 from django.utils.translation import gettext as _
 from .models import CustomUser
-import json
 from rest_framework.permissions import IsAuthenticated
 import random
 from django.http import JsonResponse
@@ -19,6 +18,8 @@ from django.views.decorators.csrf import csrf_exempt
 from django.utils import timezone
 from datetime import timedelta
 from django.core.mail import send_mail
+import json
+from threading import Thread
 from .models import OTP
 from rest_framework_simplejwt.tokens import RefreshToken
 from rest_framework.decorators import api_view, permission_classes
@@ -174,26 +175,20 @@ def google_auth(request):
         if not name:
             name = "user"
 
-        user, created = User.objects.get_or_create(
+        if User.objects.filter(email=email).exists():
+            return Response(
+                {"error": "User already exists"},
+                status=400
+            )
+
+        user = User.objects.create(
             email=email,
-            defaults={
-                "username": None,
-                "name": name,
-                "provider": "google",
-                "google_id": google_id,
-                "language": language,
-            }
+            username=None,
+            name=name,
+            provider="google",
+            google_id=google_id,
+            language=language,
         )
-        if not created:
-            if not user.google_id:
-                user.google_id = google_id
-
-            user.language = language
-
-            if not user.username:
-                user.username = None
-
-            user.save()
 
         tokens = get_tokens_for_user(user)
         device_id = request.headers.get("Device-Id")
@@ -426,43 +421,70 @@ def logs(request):
     YELLOW = "\033[93m"
     GREEN = "\033[92m"
     CYAN = "\033[96m"
+    MAGENTA = "\033[95m"
 
     event = request.data.get("event", "")
     step = request.data.get("step", "")
 
-    if "error" in event or "fail" in step:
-        color = RED
-    elif "tap" in event or "pressed" in step:
-        color = YELLOW
-    elif "success" in event:
-        color = GREEN
-    else:
-        color = CYAN
+    def get_level_and_color(event, step):
+        if "error" in event or "fail" in step:
+            return "ERROR", RED
+        elif "success" in event:
+            return "SUCCESS", GREEN
+        elif "tap" in event or "pressed" in step:
+            return "ACTION", YELLOW
+        return "INFO", CYAN
 
-    now = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S")
+    level, color = get_level_and_color(event, step)
 
-    print(f"\n{color}📱 LOG START [{now}]{RESET}")
+    now = datetime.utcnow().isoformat()
+    SENSITIVE = ["access", "refresh", "token", "email"]
 
-    log_lines = []
-    log_lines.append(f"\n📱 LOG START [{now}]")
+    def sanitize(data):
+        clean = {}
+        for k, v in data.items():
+            if any(s in k.lower() for s in SENSITIVE):
+                clean[k] = "***"
+            else:
+                clean[k] = v
+        return clean
 
-    for key, value in request.data.items():
+    safe_data = sanitize(request.data)
+
+    log = {
+        "timestamp": now,
+        "event": event,
+        "step": step,
+        "level": level,
+        "data": safe_data,
+        "device": request.data.get("device"),
+        "ios": request.data.get("ios"),
+        "app_version": request.data.get("app_version")
+    }
+
+    print(f"\n{color}📱 LOG START [{now}] [{level}]{RESET}")
+
+    print(f"{MAGENTA}event: {event}{RESET}")
+    print(f"{MAGENTA}step: {step}{RESET}")
+
+    for key, value in safe_data.items():
         print(f"{color}{key}: {value}{RESET}")
-        log_lines.append(f"{key}: {value}")
 
     print(f"{color}📱 LOG END{RESET}\n")
-    log_lines.append("📱 LOG END\n")
 
     log_dir = os.path.join(os.getcwd(), "logs")
     os.makedirs(log_dir, exist_ok=True)
 
-    log_path = os.path.join(log_dir, "app_logs.txt")
+    log_path = os.path.join(log_dir, "app_logs.jsonl")
 
-    try:
-        with open(log_path, "a", encoding="utf-8") as f:
-            for line in log_lines:
-                f.write(line + "\n")
-    except Exception as e:
-        print(f"{RED}❌ FILE LOG ERROR: {e}{RESET}")
+    def write():
+        try:
+            with open(log_path, "a", encoding="utf-8") as f:
+                f.write(json.dumps(log) + "\n")
+        except Exception as e:
+            print(f"{RED}❌ FILE LOG ERROR: {e}{RESET}")
+
+    Thread(target=write).start()
 
     return Response({"ok": True})
+
