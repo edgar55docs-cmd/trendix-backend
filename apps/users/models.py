@@ -18,6 +18,7 @@ class CustomUser(AbstractUser):
     cover = models.ImageField(upload_to="covers/", null=True, blank=True)
     is_email_verified = models.BooleanField(default=False)
     is_profile_completed = models.BooleanField(default=False)
+    is_verified_for_reset = models.BooleanField(default=False)
 
     google_id = models.CharField(
         max_length=255,

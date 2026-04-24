@@ -8,7 +8,9 @@ from .views import (register,
                     send_code,
                     verify_code,
                     setup_profile,
-                    get_me)
+                    get_me,
+                    login,
+                    reset_password)
 
 urlpatterns = [
 
@@ -22,4 +24,7 @@ urlpatterns = [
     path("profile/setup/", setup_profile),
     path('me/', get_me),
     path('auth/token/refresh/', CustomTokenRefreshView.as_view()),
+    path("auth/login/", login),
+    path('auth/reset-password/', reset_password),
+
 ]

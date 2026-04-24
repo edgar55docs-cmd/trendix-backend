@@ -5,6 +5,7 @@ from django.utils.translation import gettext_lazy as _
 import jwt
 import re
 import requests
+from rest_framework import status
 from .models import UserSession
 from django.contrib.auth.hashers import make_password
 from rest_framework.decorators import api_view, permission_classes, parser_classes
@@ -133,6 +134,99 @@ def register(request):
             status=500
         )
 
+
+@api_view(['POST'])
+@permission_classes([AllowAny])
+def login(request):
+    email = request.data.get("email")
+    password = request.data.get("password")
+
+    print("🟡 LOGIN ATTEMPT:", email)
+
+    if not email or not password:
+        return Response(
+            {"error": _("Email and password required")},
+            status=status.HTTP_400_BAD_REQUEST
+        )
+
+    try:
+        user = CustomUser.objects.get(email=email)
+    except CustomUser.DoesNotExist:
+
+        print("❌ USER NOT FOUND")
+
+        return Response(
+            {"error": _("User not found")},
+            status=status.HTTP_404_NOT_FOUND
+        )
+
+    if not user.check_password(password):
+        print("❌ WRONG PASSWORD")
+
+        return Response(
+            {"error": _("Wrong password")},
+            status=status.HTTP_400_BAD_REQUEST
+        )
+
+    if not user.is_email_verified:
+        print("❌ EMAIL NOT VERIFIED")
+
+        return Response(
+            {"error": _("Email not verified")},
+            status=status.HTTP_403_FORBIDDEN
+        )
+
+    tokens = get_tokens_for_user(user)
+    device_id = request.headers.get("Device-Id")
+
+    print("📱 DEVICE ID:", device_id)
+
+    UserSession.objects.create(
+        user=user,
+        device_id=device_id,
+        refresh_token=tokens["refresh"]
+    )
+
+    print("🟢 LOGIN SUCCESS:", user.email)
+
+    return Response({
+        "access": tokens["access"],
+        "refresh": tokens["refresh"]
+    })
+
+@api_view(['POST'])
+@permission_classes([AllowAny])
+def reset_password(request):
+    email = request.data.get("email")
+    password = request.data.get("password")
+
+    print("🟡 RESET PASSWORD:", email)
+
+    if not email or not password:
+        return Response(
+            {"error": _("Email and password required")},
+            status=status.HTTP_400_BAD_REQUEST
+        )
+
+    try:
+        user = CustomUser.objects.get(email=email)
+    except CustomUser.DoesNotExist:
+
+        print("❌ USER NOT FOUND")
+
+        return Response(
+            {"error": _("User not found")},
+            status=status.HTTP_404_NOT_FOUND
+        )
+
+    user.set_password(password)
+    user.save()
+
+    print("🟢 PASSWORD UPDATED:", user.email)
+
+    return Response({
+        "success": True
+    })
 
 @api_view(['POST'])
 @permission_classes([AllowAny])
@@ -297,6 +391,7 @@ def verify_code(request):
     user = User.objects.filter(email=email).first()
     if user:
         user.is_email_verified = True
+        user.is_verified_for_reset = True
         user.save()
 
     return Response({"success": True})
