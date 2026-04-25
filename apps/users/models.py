@@ -2,6 +2,11 @@ from django.utils import timezone
 from datetime import timedelta
 from django.contrib.auth.models import AbstractUser
 from django.db import models
+import uuid
+
+def avatar_upload_path(instance, filename):
+    ext = filename.split('.')[-1]
+    return f"avatars/{instance.id}_{uuid.uuid4()}.{ext}"
 
 class CustomUser(AbstractUser):
 
@@ -14,7 +19,11 @@ class CustomUser(AbstractUser):
     email = models.EmailField(unique=True)
     language = models.CharField(max_length=5, default='en')
     name = models.CharField(max_length=255, null=True, blank=True)
-    avatar = models.ImageField(upload_to="avatars/", null=True, blank=True)
+    avatar = models.ImageField(
+        upload_to=avatar_upload_path,
+        null=True,
+        blank=True
+    )
     cover = models.ImageField(upload_to="covers/", null=True, blank=True)
     is_email_verified = models.BooleanField(default=False)
     is_profile_completed = models.BooleanField(default=False)

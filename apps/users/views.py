@@ -478,7 +478,13 @@ def setup_profile(request):
     user.username = username
 
     if avatar:
+
+        if user.avatar:
+            print("🗑 DELETING OLD AVATAR:", user.avatar.url)
+            user.avatar.delete(save=False)
+
         user.avatar = avatar
+        print("📸 NEW AVATAR SET:", avatar.name)
 
     if language:
         user.language = language
@@ -509,6 +515,7 @@ def get_me(request):
         "is_email_verified": user.is_email_verified,
         "is_profile_completed": user.is_profile_completed,
     })
+
 
 @api_view(["POST"])
 @permission_classes([IsAuthenticated])
