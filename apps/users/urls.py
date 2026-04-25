@@ -10,7 +10,9 @@ from .views import (register,
                     setup_profile,
                     get_me,
                     login,
-                    reset_password)
+                    reset_password,
+                    upload_cover,
+                    search_users)
 
 urlpatterns = [
 
@@ -26,5 +28,7 @@ urlpatterns = [
     path('auth/token/refresh/', CustomTokenRefreshView.as_view()),
     path("auth/login/", login),
     path('auth/reset-password/', reset_password),
+    path("upload-cover/", upload_cover),
+    path("search/", search_users),
 
 ]

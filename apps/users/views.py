@@ -12,6 +12,7 @@ from rest_framework.decorators import api_view, permission_classes, parser_class
 from rest_framework.parsers import MultiPartParser, FormParser
 from django.utils.translation import gettext as _
 from .models import CustomUser
+from django.db.models import Q
 from rest_framework.permissions import IsAuthenticated
 import random
 from django.http import JsonResponse
@@ -502,10 +503,72 @@ def get_me(request):
     return Response({
         "id": user.id,
         "username": user.username,
-        "avatar": user.avatar.url if user.avatar else None,
+        "name": user.name,
+        "avatar": request.build_absolute_uri(user.avatar.url) if user.avatar else None,
+        "cover": request.build_absolute_uri(user.cover.url) if user.cover else None,
         "is_email_verified": user.is_email_verified,
         "is_profile_completed": user.is_profile_completed,
     })
+
+@api_view(["POST"])
+@permission_classes([IsAuthenticated])
+def upload_cover(request):
+    print("📸 FILES:", request.FILES)
+
+    image = request.FILES.get("cover")
+
+    if not image:
+        print("❌ NO IMAGE")
+        return Response({"error": "No image"}, status=400)
+
+    user = request.user
+
+    if user.cover:
+        user.cover.delete(save=False)
+
+    user.cover = image
+    user.save()
+
+    print("✅ SAVED:", user.cover.url)
+
+    return Response({
+        "cover": user.cover.url
+    })
+
+@api_view(['GET'])
+@permission_classes([IsAuthenticated])
+def search_users(request):
+    query = request.GET.get("q", "").strip()
+    filter_type = request.GET.get("filter", "popular")
+
+    users = CustomUser.objects.all()
+
+    if query:
+        users = users.filter(
+            Q(username__icontains=query) |
+            Q(name__icontains=query)
+        )
+
+    if filter_type == "followers":
+        users = users.order_by("-id")
+    elif filter_type == "hashtags":
+        users = users.order_by("-id")
+    else:
+        users = users.order_by("-id")
+
+    users = users[:20]
+
+    data = []
+
+    for user in users:
+        data.append({
+            "id": user.id,
+            "name": user.name,
+            "username": user.username,
+            "avatar": request.build_absolute_uri(user.avatar.url) if user.avatar else None,
+        })
+
+    return Response(data)
 
 @api_view(['POST'])
 @permission_classes([AllowAny])
