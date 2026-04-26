@@ -12,7 +12,8 @@ from .views import (register,
                     login,
                     reset_password,
                     upload_cover,
-                    search_users)
+                    search_users,
+                    get_user_profile)
 
 urlpatterns = [
 
@@ -30,5 +31,6 @@ urlpatterns = [
     path('auth/reset-password/', reset_password),
     path("upload-cover/", upload_cover),
     path("search/", search_users),
+    path('<int:user_id>/', get_user_profile),
 
 ]

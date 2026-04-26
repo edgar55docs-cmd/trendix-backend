@@ -5,6 +5,7 @@ from django.utils.translation import gettext_lazy as _
 import jwt
 import re
 import requests
+from django.shortcuts import get_object_or_404
 import uuid
 from django.core.files.base import ContentFile
 from rest_framework import status
@@ -581,6 +582,22 @@ def search_users(request):
             "username": user.username,
             "avatar": request.build_absolute_uri(user.avatar.url) if user.avatar else None,
         })
+
+    return Response(data)
+
+@api_view(['GET'])
+@permission_classes([AllowAny])
+def get_user_profile(request, user_id):
+    user = get_object_or_404(User, id=user_id)
+
+    data = {
+        "id": user.id,
+        "username": user.username,
+        "name": user.name,
+        "avatar": user.avatar.url if user.avatar else None,
+        "cover": user.cover.url if user.cover else None,
+        "is_profile_completed": getattr(user, "is_profile_completed", False)
+    }
 
     return Response(data)
 
