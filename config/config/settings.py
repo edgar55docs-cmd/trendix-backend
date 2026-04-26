@@ -15,7 +15,7 @@ print("🔥 USING FILE:", env_file)
 
 SECRET_KEY = os.getenv("SECRET_KEY", "dev-secret")
 
-DEBUG = ENV == "dev"
+DEBUG = True
 MEDIA_URL = "/media/"
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 ALLOWED_HOSTS = ["*"] if DEBUG else ["yourdomain.com"]
