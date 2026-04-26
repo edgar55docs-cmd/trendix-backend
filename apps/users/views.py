@@ -5,6 +5,8 @@ from django.utils.translation import gettext_lazy as _
 import jwt
 import re
 import requests
+import uuid
+from django.core.files.base import ContentFile
 from rest_framework import status
 from .models import UserSession
 from django.contrib.auth.hashers import make_password
@@ -483,7 +485,12 @@ def setup_profile(request):
             print("🗑 DELETING OLD AVATAR:", user.avatar.url)
             user.avatar.delete(save=False)
 
+        import uuid
+        ext = avatar.name.split('.')[-1]
+        avatar.name = f"{user.id}_{uuid.uuid4()}.{ext}"
+
         user.avatar = avatar
+
         print("📸 NEW AVATAR SET:", avatar.name)
 
     if language:
