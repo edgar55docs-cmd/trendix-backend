@@ -8,7 +8,7 @@ from datetime import timedelta
 
 def avatar_upload_path(instance, filename):
     ext = filename.split('.')[-1]
-    return f"avatars/{instance.id}_{uuid.uuid4()}.{ext}"
+    return f"avatars/{uuid.uuid4()}.{ext}"
 
 
 def cover_upload_path(instance, filename):
