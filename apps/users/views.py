@@ -556,7 +556,7 @@ def search_users(request):
     query = request.GET.get("q", "").strip()
     filter_type = request.GET.get("filter", "popular")
 
-    users = CustomUser.objects.all()
+    users = CustomUser.objects.exclude(id=request.user.id)
 
     if query:
         users = users.filter(
@@ -594,8 +594,8 @@ def get_user_profile(request, user_id):
         "id": user.id,
         "username": user.username,
         "name": user.name,
-        "avatar": user.avatar.url if user.avatar else None,
-        "cover": user.cover.url if user.cover else None,
+        "avatar": request.build_absolute_uri(user.avatar.url) if user.avatar else None,
+        "cover": request.build_absolute_uri(user.cover.url) if user.cover else None,
         "is_profile_completed": getattr(user, "is_profile_completed", False)
     }
 
