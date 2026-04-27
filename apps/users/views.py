@@ -518,8 +518,8 @@ def get_me(request):
         "id": user.id,
         "username": user.username,
         "name": user.name,
-        "avatar": f"https://trendix.app{user.avatar.url}" if user.avatar else None,
-        "cover": f"https://trendix.app{user.cover.url}" if user.cover else None,
+        "avatar": f"http://trendix.app{user.avatar.url}" if user.avatar else None,
+        "cover": f"http://trendix.app{user.cover.url}" if user.cover else None,
         "is_email_verified": user.is_email_verified,
         "is_profile_completed": user.is_profile_completed,
     })
@@ -580,7 +580,7 @@ def search_users(request):
             "id": user.id,
             "name": user.name,
             "username": user.username,
-            "avatar": f"https://trendix.app{user.avatar.url}" if user.avatar else None,
+            "avatar": f"http://trendix.app{user.avatar.url}" if user.avatar else None,
         })
 
     return Response(data)
@@ -594,8 +594,8 @@ def get_user_profile(request, user_id):
         "id": user.id,
         "username": user.username,
         "name": user.name,
-        "avatar": f"https://trendix.app{user.avatar.url}" if user.avatar else None,
-        "cover": f"https://trendix.app{user.cover.url}" if user.cover else None,
+        "avatar": f"http://trendix.app{user.avatar.url}" if user.avatar else None,
+        "cover": f"http://trendix.app{user.cover.url}" if user.cover else None,
         "is_profile_completed": getattr(user, "is_profile_completed", False)
     }
 
