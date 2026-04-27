@@ -14,9 +14,10 @@ class UserSerializer(serializers.ModelSerializer):
             'cover_url'
         ]
 
+
     def get_avatar_url(self, obj):
         if obj.avatar:
-            return f"{obj.avatar.url}?v={obj.avatar_version}"
+            return f"https://trendix.app{obj.avatar.url}"
         return None
 
     def get_cover_url(self, obj):
