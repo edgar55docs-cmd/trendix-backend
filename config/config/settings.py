@@ -15,15 +15,24 @@ print("🔥 USING FILE:", env_file)
 
 SECRET_KEY = os.getenv("SECRET_KEY", "dev-secret")
 
-DEBUG = True
-MEDIA_URL = "/media/"
-MEDIA_ROOT = os.path.join(BASE_DIR, "media")
-ALLOWED_HOSTS = ["*"] if DEBUG else ["yourdomain.com"]
+# ✅ DEBUG
+DEBUG = ENV != "prod"
+
+# ✅ HOSTS
+if DEBUG:
+    ALLOWED_HOSTS = ["*"]
+else:
+    ALLOWED_HOSTS = [
+        "trendix.app",
+        "www.trendix.app",
+        "188.166.81.157"
+    ]
 
 # URLS
 ROOT_URLCONF = 'config.config.urls'
 WSGI_APPLICATION = 'config.config.wsgi.application'
 
+# ENV
 VONAGE_API_KEY = os.getenv("VONAGE_API_KEY")
 VONAGE_API_SECRET = os.getenv("VONAGE_API_SECRET")
 
@@ -40,6 +49,7 @@ INSTALLED_APPS = [
     'rest_framework',
 ]
 
+# MIDDLEWARE
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
 
@@ -57,7 +67,13 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-CORS_ALLOW_ALL_ORIGINS = True
+# ✅ CORS (SAFE)
+if DEBUG:
+    CORS_ALLOW_ALL_ORIGINS = True
+else:
+    CORS_ALLOWED_ORIGINS = [
+        "https://trendix.app",
+    ]
 
 # TEMPLATES
 TEMPLATES = [
@@ -77,7 +93,7 @@ TEMPLATES = [
     },
 ]
 
-# DATABASE (PostgreSQL)
+# DATABASE
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -101,9 +117,6 @@ REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     ],
-    # 'DEFAULT_PERMISSION_CLASSES': [
-    #     'rest_framework.permissions.IsAuthenticated',
-    # ],
     'DEFAULT_RENDERER_CLASSES': [
         'rest_framework.renderers.JSONRenderer',
     ],
@@ -123,12 +136,16 @@ SIMPLE_JWT = {
     'AUTH_HEADER_TYPES': ('Bearer',),
 }
 
-# STATIC / MEDIA
+# STATIC
 STATIC_URL = "/static/"
 STATIC_ROOT = BASE_DIR / "static"
 
+# MEDIA
 MEDIA_URL = "/media/"
 MEDIA_ROOT = BASE_DIR / "media"
+
+# 🔥 FILE PERMISSIONS (image delivery)
+FILE_UPLOAD_PERMISSIONS = 0o644
 
 # UPLOAD LIMITS
 DATA_UPLOAD_MAX_MEMORY_SIZE = 52428800
@@ -144,6 +161,7 @@ LANGUAGES = [
 LOCALE_PATHS = [
     BASE_DIR / "locale",
 ]
+
 TIME_ZONE = 'Asia/Yerevan'
 USE_I18N = True
 USE_TZ = True
@@ -182,4 +200,11 @@ CACHES = {
     }
 }
 
+# SECURITY (production)
+if not DEBUG:
+    SECURE_BROWSER_XSS_FILTER = True
+    SECURE_CONTENT_TYPE_NOSNIFF = True
+    X_FRAME_OPTIONS = "DENY"
+
+# USER MODEL
 AUTH_USER_MODEL = 'users.CustomUser'
