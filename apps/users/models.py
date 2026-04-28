@@ -2,7 +2,6 @@ import uuid
 import time
 from django.contrib.auth.models import AbstractUser
 from django.db import models
-from .utils import process_image
 from django.utils import timezone
 from datetime import timedelta
 
@@ -41,9 +40,6 @@ class CustomUser(AbstractUser):
         blank=True
     )
 
-    avatar_version = models.IntegerField(default=0)
-    cover_version = models.IntegerField(default=0)
-
     is_email_verified = models.BooleanField(default=False)
     is_profile_completed = models.BooleanField(default=False)
     is_verified_for_reset = models.BooleanField(default=False)
@@ -70,33 +66,6 @@ class CustomUser(AbstractUser):
 
     def __str__(self):
         return self.email
-
-    def save(self, *args, **kwargs):
-
-        if self.pk:
-            old = CustomUser.objects.filter(pk=self.pk).first()
-        else:
-            old = None
-
-        if self.avatar and (not old or old.avatar != self.avatar):
-            self.avatar = process_image(
-                self.avatar,
-                max_width=400,
-                quality=70
-            )
-            self.avatar.name = f"avatar_{int(time.time())}.jpg"
-            self.avatar_version += 1
-
-        if self.cover and (not old or old.cover != self.cover):
-            self.cover = process_image(
-                self.cover,
-                max_width=1200,
-                quality=75
-            )
-            self.cover.name = f"cover_{int(time.time())}.jpg"
-            self.cover_version += 1
-
-        super().save(*args, **kwargs)
 
 
 class UserSession(models.Model):

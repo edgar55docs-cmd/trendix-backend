@@ -18,7 +18,7 @@ def home(request):
     """)
 
 urlpatterns = [
-    path('', home),  # 🔥 ԱՅՍՆ Է ՊԱԿԱՍՈՒՄ
+    path('', home),
     path('admin/', admin.site.urls),
     path('api/users/', include('apps.users.urls')),
 ]
