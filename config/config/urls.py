@@ -4,11 +4,6 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.http import HttpResponse
 
-urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('api/users/', include('apps.users.urls'))
-]
-
 def home(request):
     return HttpResponse("""
     <html>
@@ -22,9 +17,14 @@ def home(request):
     </html>
     """)
 
+urlpatterns = [
+    path('', home),  # 🔥 ԱՅՍՆ Է ՊԱԿԱՍՈՒՄ
+    path('admin/', admin.site.urls),
+    path('api/users/', include('apps.users.urls')),
+]
+
 if settings.DEBUG:
     urlpatterns += static(
-        path('', home),
         settings.MEDIA_URL,
         document_root=settings.MEDIA_ROOT
     )
