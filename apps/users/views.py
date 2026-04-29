@@ -54,6 +54,14 @@ def generate_name(email, name=None):
         return name.strip()
     return email.split("@")[0]
 
+def safe_file_url(file):
+    if file and getattr(file, "name", None):
+        try:
+            return file.url
+        except Exception:
+            return None
+    return None
+
 @api_view(['POST'])
 @permission_classes([AllowAny])
 def app_start(request):
@@ -510,12 +518,17 @@ def setup_profile(request):
 def get_me(request):
     user = request.user
 
+    avatar_url = safe_file_url(user.avatar)
+    cover_url = safe_file_url(user.cover)
+
     return Response({
         "id": user.id,
         "username": user.username,
         "name": user.name,
-        "avatar": f"https://trendix.app{user.avatar.url}",
-        "cover": f"https://trendix.app{user.cover.url}",
+
+        "avatar": f"https://trendix.app{avatar_url}" if avatar_url else None,
+        "cover": f"https://trendix.app{cover_url}" if cover_url else None,
+
         "is_email_verified": user.is_email_verified,
         "is_profile_completed": user.is_profile_completed,
     })
@@ -546,6 +559,7 @@ def upload_cover(request):
         "cover": user.cover.url
     })
 
+
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
 def search_users(request):
@@ -572,11 +586,13 @@ def search_users(request):
     data = []
 
     for user in users:
+        avatar_url = safe_file_url(user.avatar)
+
         data.append({
             "id": user.id,
             "name": user.name,
             "username": user.username,
-            "avatar": f"https://trendix.app{user.avatar.url}",
+            "avatar": f"https://trendix.app{avatar_url}" if avatar_url else None,
         })
 
     return Response(data)
@@ -586,12 +602,17 @@ def search_users(request):
 def get_user_profile(request, user_id):
     user = get_object_or_404(User, id=user_id)
 
+    avatar_url = safe_file_url(user.avatar)
+    cover_url = safe_file_url(user.cover)
+
     data = {
         "id": user.id,
         "username": user.username,
         "name": user.name,
-        "avatar": f"https://trendix.app{user.avatar.url}",
-        "cover": f"https://trendix.app{user.cover.url}",
+
+        "avatar": f"https://trendix.app{avatar_url}" if avatar_url else None,
+        "cover": f"https://trendix.app{cover_url}" if cover_url else None,
+
         "is_profile_completed": getattr(user, "is_profile_completed", False)
     }
 
