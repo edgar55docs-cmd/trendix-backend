@@ -518,16 +518,13 @@ def setup_profile(request):
 def get_me(request):
     user = request.user
 
-    avatar_url = safe_file_url(user.avatar)
-    cover_url = safe_file_url(user.cover)
-
     return Response({
         "id": user.id,
         "username": user.username,
         "name": user.name,
 
-        "avatar": f"https://trendix.app{avatar_url}" if avatar_url else None,
-        "cover": f"https://trendix.app{cover_url}" if cover_url else None,
+        "avatar": request.build_absolute_uri(user.avatar.url) if user.avatar else None,
+        "cover": request.build_absolute_uri(user.cover.url) if user.cover else None,
 
         "is_email_verified": user.is_email_verified,
         "is_profile_completed": user.is_profile_completed,
@@ -592,7 +589,7 @@ def search_users(request):
             "id": user.id,
             "name": user.name,
             "username": user.username,
-            "avatar": f"https://trendix.app{avatar_url}" if avatar_url else None,
+            "avatar": request.build_absolute_uri(avatar_url) if avatar_url else None,
         })
 
     return Response(data)
@@ -602,16 +599,13 @@ def search_users(request):
 def get_user_profile(request, user_id):
     user = get_object_or_404(User, id=user_id)
 
-    avatar_url = safe_file_url(user.avatar)
-    cover_url = safe_file_url(user.cover)
-
     data = {
         "id": user.id,
         "username": user.username,
         "name": user.name,
 
-        "avatar": f"https://trendix.app{avatar_url}" if avatar_url else None,
-        "cover": f"https://trendix.app{cover_url}" if cover_url else None,
+        "avatar": request.build_absolute_uri(user.avatar.url) if user.avatar else None,
+        "cover": request.build_absolute_uri(user.cover.url) if user.cover else None,
 
         "is_profile_completed": getattr(user, "is_profile_completed", False)
     }
